@@ -1,0 +1,299 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`***Renders Correctly*** 1`] = `
+Array [
+  <nav
+    className="nav-extended"
+  >
+    <div
+      className="nav-wrapper"
+    >
+      <a
+        className="brand-logo brand-logo"
+        href="#"
+      >
+        <svg
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 24 24"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M21 3h-7a2.98 2.98 0 0 0-2 .78A2.98 2.98 0 0 0 10 3H3a1 1 0 0 0-1 1v15a1 1 0 0 0 1 1h5.758c.526 0 1.042.214 1.414.586l1.121 1.121c.009.009.021.012.03.021.086.079.182.149.294.196h.002a.996.996 0 0 0 .762 0h.002c.112-.047.208-.117.294-.196.009-.009.021-.012.03-.021l1.121-1.121A2.015 2.015 0 0 1 15.242 20H21a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM8.758 18H4V5h6c.552 0 1 .449 1 1v12.689A4.032 4.032 0 0 0 8.758 18zM20 18h-4.758c-.799 0-1.584.246-2.242.689V6c0-.551.448-1 1-1h6v13z"
+          />
+        </svg>
+      </a>
+      <a
+        className="sidenav-trigger"
+        data-target="mobile-nav"
+        href="#!"
+      >
+        <i
+          className="material-icons"
+        >
+          menu
+        </i>
+      </a>
+      <ul
+        className="hide-on-med-and-down right"
+      >
+        <li>
+          <a
+            href="#"
+          >
+            About
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+          >
+            News
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+          >
+            Contact
+          </a>
+        </li>
+        <li>
+          <a
+            className="dropdown-trigger"
+            data-target="Dropdown_14"
+            href="#"
+          >
+            Account
+             
+            <i
+              className="material-icons right"
+            >
+              arrow_drop_down
+            </i>
+          </a>
+          <ul
+            className="dropdown-content"
+            id="Dropdown_14"
+          >
+            <li>
+              <a
+                href="#"
+              >
+                Profile
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+              >
+                Orders
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+              >
+                Subscribe
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+              >
+                Billing
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+              >
+                Switch Account
+              </a>
+            </li>
+            <li
+              className="divider"
+              tabIndex="-1"
+            />
+            <li>
+              <a
+                href="#"
+              >
+                Sign Out
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div
+      className="nav-content"
+    >
+      <ul
+        className="tabs tabs-transparent"
+      >
+        <li
+          className="tab col className"
+        >
+          <a
+            className="active"
+            href="#tab_tabs-00"
+          >
+            Best Sellers
+          </a>
+        </li>
+        <li
+          className="tab col className"
+        >
+          <a
+            className=""
+            href="#tab_tabs-01"
+          >
+            Deals
+          </a>
+        </li>
+        <li
+          className="tab col className"
+        >
+          <a
+            className=""
+            href="#tab_tabs-02"
+          >
+            Coupons
+          </a>
+        </li>
+        <li
+          className="tab col className"
+        >
+          <a
+            className=""
+            href="#tab_tabs-03"
+          >
+            Buy Again
+          </a>
+        </li>
+      </ul>
+      <div
+        className="row"
+      >
+        <div
+          className="col s12 white-text"
+          id="tab_tabs-00"
+        />
+        <div
+          className="col s12 white-text"
+          id="tab_tabs-01"
+        />
+        <div
+          className="col s12 white-text"
+          id="tab_tabs-02"
+        />
+        <div
+          className="col s12 white-text"
+          id="tab_tabs-03"
+        />
+      </div>
+    </div>
+  </nav>,
+  <ul
+    className="sidenav right"
+    id="mobile-nav"
+  >
+    <li>
+      <a
+        href="#"
+      >
+        About
+      </a>
+    </li>
+    <li>
+      <a
+        href="#"
+      >
+        News
+      </a>
+    </li>
+    <li>
+      <a
+        href="#"
+      >
+        Contact
+      </a>
+    </li>
+    <li>
+      <a
+        className="dropdown-trigger"
+        data-target="sidenav-Dropdown_14"
+        href="#"
+      >
+        Account
+         
+        <i
+          className="material-icons right"
+        >
+          arrow_drop_down
+        </i>
+      </a>
+      <ul
+        className="dropdown-content"
+        id="sidenav-Dropdown_14"
+      >
+        <li>
+          <a
+            href="#"
+          >
+            Profile
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+          >
+            Orders
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+          >
+            Subscribe
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+          >
+            Billing
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+          >
+            Switch Account
+          </a>
+        </li>
+        <li
+          className="divider"
+          tabIndex="-1"
+        />
+        <li>
+          <a
+            href="#"
+          >
+            Sign Out
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>,
+]
+`;
