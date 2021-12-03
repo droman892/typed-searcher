@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`***Renders Correctly*** 1`] = `
+exports[`***TopNav Component Renders Correctly*** 1`] = `
 Array [
   <nav
     className="nav-extended"
