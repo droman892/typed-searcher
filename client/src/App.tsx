@@ -1,8 +1,8 @@
-import Index from './components/pages/index/Index';
+import {Home} from './pages/index';
 
 const App = () => {
   return (
-    <Index/>
+    <Home/>
   );
 }
 
