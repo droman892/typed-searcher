@@ -1,17 +1,13 @@
 import './Home.css';
-import TopNav from '../../components/layout/topNav/TopNav';
-import Footer from '../../components/layout/footer/Footer';
+import { TopNav, Footer} from '../../components/index';
 
 const Home = () => {
     return (
         <>
             <TopNav/>
-
                 <main>
                 
                 </main>
-            
-
             <Footer/>
         </>
     )
