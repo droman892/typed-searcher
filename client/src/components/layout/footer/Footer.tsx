@@ -1,3 +1,4 @@
+import React from 'react';
 import './Footer.css';
 
 const gemini: number = 55;

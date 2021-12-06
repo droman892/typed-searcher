@@ -1,7 +1,9 @@
 {
   "compilerOptions": {
     "rootDir": "src",
-    "outDir": "build",
+    "outDir": "dist",
+    "tsBuildInfoFile": "dist/bundle.js",
+    "noImplicitAny": true,
     "target": "es5",
     "lib": [
       "dom",
@@ -19,7 +21,7 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "react-jsx",
+    "jsx": "react",
     "sourceMap": true,
     "declaration": true,
     "noUnusedLocals": true,
