@@ -1,5 +1,7 @@
 ![Typed Searcher]()
 
+RUN "NPX WEBPACK" TO CREATE THE DIST FOLDER WITH INDEX.HTML AND BUNDLE.JS
+
 <p align="center"> This is a search application... </p>  
 
 <p align="center"> icons </p>
