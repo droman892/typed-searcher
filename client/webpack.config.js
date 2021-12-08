@@ -10,26 +10,32 @@ module.exports = {
     filename: 'bundle.js'
   },
   mode: process.env.NODE_ENV || "development",
-  watch: true,
-  resolve: {
-    extensions: ['.tsx', '.ts', '.js'],
+  devServer: { 
+    port: 3001,
+    watchContentBase: true
   },
-  devServer: { contentBase: path.join(__dirname, "src") },
   module: {
     rules: [
         {
             test: /\.(js|jsx)$/,
             exclude: /node_modules/,
-            use: ["babel-loader"],
+            use: {
+              loader: "babel-loader"
+            }
         },
         {
             test: /\.(ts|tsx)$/,
             exclude: /node_modules/,
-            use: ["babel-loader"],
+            use: {
+              loader: "babel-loader"
+            }
         },
         {
             test: /\.(css|scss)$/,
-            use: ["style-loader", "css-loader"],
+            use: [
+              "style-loader", 
+              "css-loader"
+            ]
         },
         {
             test: /\.(jpg|jpeg|png|gif|mp3|svg)$/,
@@ -39,8 +45,12 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-        title: 'Typed Searcher'
+        title: 'AMAZING Typed Searcher',
+        template: 'public/index.html'
     }),
     new MiniCssExtractPlugin()      
-  ]
+  ],
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js', '.json']
+  }
 };
