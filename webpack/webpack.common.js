@@ -43,9 +43,9 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         {
-          from: "source", 
-          to: "dest",
-          noErrorOnMissing: true
+          from: 'source',
+          to: 'dest',
+          noErrorOnMissing: true,
         },
       ],
     }),
