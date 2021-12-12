@@ -6,7 +6,7 @@ export const App = () => {
     return (
         <div>
             <h1>
-                It's working!!!!
+                It's working!!!! - {process.env.NODE_ENV} {process.env.name}
             </h1>
             <img src={MediaImg} alt='Media Icons PNG'></img>
             <img src={SunSVG} alt='Sun SVG'></img>
