@@ -1,7 +1,7 @@
 import { Counter } from './components/counter/Counter'
 import './styles/_index.scss'
-import MediaImg from './assets/media.png'
-import SunSVG from './assets/sun.svg'
+import MediaImg from './assets/images/media.png'
+import SunSVG from './assets//images/sun.svg'
 
 export const App = () => {
     const person = 'Tech Wizzzzzz'

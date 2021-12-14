@@ -10,7 +10,9 @@ https://www.youtube.com/watch?v=25kFcF54GNk
 
 <p align="center"> This application was built specifically...</p>
 
-<p align="center"> Users are able to enjoy a...</p>
+<p align="center"> Fonts are locally hosted with font-face </p>
+
+
 
 ## Preview
 
