@@ -11,7 +11,7 @@ export const App = () => {
                 WOW, the app is working, {person}!!!! - {process.env.NODE_ENV}{' '}
                 {process.env.name}
             </h1>
-            <p>Welcome to the template!!</p>
+            <p>Welcome to the template!!!!!</p>
             <Counter />
             <img src={MediaImg} alt="Media Icons PNG"></img>
             <img src={SunSVG} alt="Sun SVG"></img>
