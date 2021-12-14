@@ -1,0 +1,7 @@
+@use '../../styles' as *;
+
+.button-notifier {
+    color: $base-color;
+    font-weight: $base-font-weight;
+    font-family: $primary-font;
+}
