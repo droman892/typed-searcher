@@ -12,7 +12,7 @@
 
 <p align="center"> Fonts are locally hosted with font-face </p>
 
-<p> Font squirrel</p>
+<p> Font squirrel, Google Search API (https://rapidapi.com/apigeek/api/google-search3/)</p>
 
 ## Preview
 
