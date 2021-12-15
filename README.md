@@ -1,6 +1,6 @@
 ![Typed Searcher]()
 
-https://www.youtube.com/watch?v=25kFcF54GNk
+
 
 <p align="center"> This is a search application... </p>  
 
@@ -12,7 +12,7 @@ https://www.youtube.com/watch?v=25kFcF54GNk
 
 <p align="center"> Fonts are locally hosted with font-face </p>
 
-
+<p> Font squirrel</p>
 
 ## Preview
 
