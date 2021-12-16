@@ -35,8 +35,16 @@
 }
 
 body {
-    padding: 100px;
+    padding: 0px;
     margin: 0;
-    background: #fff;
-    padding: 30px;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.page-flexbox-wrapper {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }

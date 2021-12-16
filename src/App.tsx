@@ -4,10 +4,12 @@ import { QueryContainer } from './containers/queryContainer/QueryContainer'
 
 export const App = () => {
     return (
-        <>
+        <div className="page-flexbox-wrapper">
             <LayoutNavigation />
-            <QueryContainer />
+            <main>
+                <QueryContainer />
+            </main>
             <LayoutFooter />
-        </>
+        </div>
     )
 }
