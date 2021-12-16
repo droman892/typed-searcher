@@ -28,8 +28,10 @@
   "homepage": "https://github.com/droman892/typed-searcher#readme",
   "dependencies": {
     "axios": "^0.24.0",
+    "materialize-css": "^1.0.0-rc.2",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-materialize": "^3.10.0"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
@@ -39,6 +41,7 @@
     "@babel/preset-typescript": "^7.16.0",
     "@babel/runtime": "^7.16.3",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.3",
+    "@types/materialize-css": "^1.0.11",
     "@types/react": "^17.0.37",
     "@types/react-dom": "^17.0.11",
     "@typescript-eslint/eslint-plugin": "^5.6.0",

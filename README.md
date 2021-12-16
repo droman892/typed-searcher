@@ -13,6 +13,9 @@
 <p align="center"> Fonts are locally hosted with font-face </p>
 
 <p> Font squirrel, Google Search API (https://rapidapi.com/apigeek/api/google-search3/)</p>
+<p> React-Materialize: http://react-materialize.github.io/react-materialize/?path=/story/components-textinput--default </p>
+
+<p>****may need to have onClick function execute axios from within button; context api for passing down props for different kinds of buttons****</p>
 
 ## Preview
 

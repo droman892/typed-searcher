@@ -6,4 +6,18 @@
     max-width: 584px;
     margin: 0 auto;
     box-shadow: none;
+    padding: 5px 8px 0px 14px;
+}
+
+.search-input {
+    min-width: 263px;
+    width: 487px;
+    height: 34px;
+    padding: 0px;
+    border: 0px;
+    margin: 0 auto;
+}
+
+.search-input:focus-visible {
+    outline: 0px;
 }
