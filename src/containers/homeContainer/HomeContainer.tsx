@@ -6,7 +6,7 @@ import { QueryContainer } from '../queryContainer/QueryContainer'
 
 export const HomeContainer = () => {
     return (
-        <div className="box">
+        <div className="home-container">
             <QueryHeader />
             <QueryContainer />
         </div>

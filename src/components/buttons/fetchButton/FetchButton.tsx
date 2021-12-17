@@ -30,10 +30,8 @@ export const FetchButton = () => {
 
     return (
         <Button
+            className="button-style"
             node="button"
-            style={{
-                marginRight: '5px',
-            }}
             waves="light"
             onClick={getQueryData}
         >

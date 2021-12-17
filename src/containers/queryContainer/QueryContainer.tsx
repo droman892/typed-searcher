@@ -7,8 +7,10 @@ import { ButtonContainer } from '../buttonContainer/ButtonContainer'
 export const QueryContainer = () => {
     return (
         <div className="query-box">
-            <Searcher />
-            <ButtonContainer />
+            <form className="form-container">
+                <Searcher />
+                <ButtonContainer />
+            </form>
         </div>
     )
 }

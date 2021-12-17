@@ -1,0 +1,32 @@
+.button-style {
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    color: #3c4043;
+    font-size: 14px;
+    margin: 11px 4px;
+    padding: 0 16px;
+    font-size: 14px;
+    line-height: 27px;
+    height: 36px;
+    min-width: 54px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    box-shadow: none;
+    font-variant: initial;
+}
+
+button.btn-waves-effect.waves-light.button-style {
+    font-variant: normal;
+}
+
+.btn {
+    font-variant: initial;
+}
+
+.btn:hover {
+    background-color: #f8f9fa;
+    box-shadow: none;
+    border: 1px solid #f8f9fa;
+}

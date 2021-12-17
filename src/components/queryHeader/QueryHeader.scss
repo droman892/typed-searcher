@@ -1,4 +1,18 @@
+.container-positioned {
+    margin: 60px 40px 0px 40px;
+}
+
+.form-container {
+    padding-top: 6px;
+}
+
 .logo {
     margin: auto;
     display: block;
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: center bottom;
+    width: auto;
+    vertical-align: bottom;
 }

@@ -1,14 +1,13 @@
 @use '../../../styles/colors.scss' as *;
 
 .page-footer {
-    padding: 0px 20px;
-    margin-top: 0px;
-    background-color: $umm;
+    padding: 0px;
+    // background-color: $footer-container-color;
+    background-color: $footer-container-color;
 }
 
 .footer-copyright {
     padding: 30px 20px;
-    background-color: $umm;
 }
 
 .footer-text {
