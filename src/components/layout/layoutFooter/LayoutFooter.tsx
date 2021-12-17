@@ -7,10 +7,10 @@ export const LayoutFooter = () => {
     return (
         <footer>
             <Footer
+                className="footer-container"
                 link={<p>wow</p>}
-                copyrights="Carbon neutral since 2007"
                 moreLinks={
-                    <a className="grey-text text-lighten-4 right" href="#!">
+                    <a className="footer-text right" href="#!">
                         Carbon neutral since 2007
                     </a>
                 }

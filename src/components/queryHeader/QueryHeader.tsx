@@ -1,11 +1,12 @@
 import './QueryHeader.scss'
 import '../../styles/_index.scss'
 import 'materialize-css'
+import GoogleLogo from '../../assets/images/GoogleLogo.svg'
 
 export const QueryHeader = () => {
     return (
         <div>
-            <h1> Google </h1>
+            <img src={GoogleLogo} className="logo" alt="Google Logo" />
         </div>
     )
 }

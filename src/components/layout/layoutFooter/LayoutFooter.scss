@@ -1,11 +1,20 @@
+@use '../../../styles/colors.scss' as *;
+
 .page-footer {
     padding: 0px 20px;
     margin-top: 0px;
+    background-color: $umm;
 }
 
 .footer-copyright {
     padding: 30px 20px;
+    background-color: $umm;
 }
+
+.footer-text {
+    color: $footer-text-color;
+}
+
 .row {
     margin: 0px;
 }

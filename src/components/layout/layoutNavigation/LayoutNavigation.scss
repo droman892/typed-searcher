@@ -1,0 +1,18 @@
+@use '../../../styles/colors.scss' as *;
+
+div.nav-wrapper {
+    padding: 6px;
+    background-color: $white;
+}
+
+nav {
+    box-shadow: none;
+}
+
+NavBar {
+    opacity: 0;
+}
+
+.nav-item {
+    color: $black;
+}

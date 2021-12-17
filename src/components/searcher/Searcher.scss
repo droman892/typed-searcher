@@ -21,3 +21,12 @@
 .search-input:focus-visible {
     outline: 0px;
 }
+
+div.input-field.col {
+    margin: 0px;
+}
+
+input#query.search-input {
+    border: 0px;
+    margin: 0px;
+}

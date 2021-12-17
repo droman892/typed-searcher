@@ -29,17 +29,15 @@ export const FetchButton = () => {
     }
 
     return (
-        <div>
-            <Button
-                node="button"
-                style={{
-                    marginRight: '5px',
-                }}
-                waves="light"
-                onClick={getQueryData}
-            >
-                button
-            </Button>
-        </div>
+        <Button
+            node="button"
+            style={{
+                marginRight: '5px',
+            }}
+            waves="light"
+            onClick={getQueryData}
+        >
+            Google Search
+        </Button>
     )
 }

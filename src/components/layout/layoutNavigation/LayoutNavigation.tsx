@@ -8,11 +8,6 @@ export const LayoutNavigation = () => {
         <header>
             <Navbar
                 alignLinks="right"
-                brand={
-                    <a className="brand-logo" href="#somewhere">
-                        Logo
-                    </a>
-                }
                 id="mobile-nav"
                 menuIcon={<Icon>menu</Icon>}
                 options={{
@@ -23,8 +18,18 @@ export const LayoutNavigation = () => {
                     preventScrolling: true,
                 }}
             >
-                <NavItem href="">Getting started</NavItem>
-                <NavItem href="components.html">Components</NavItem>
+                <NavItem href="#" className="nav-item">
+                    About
+                </NavItem>
+                <NavItem href="#" className="nav-item">
+                    Store
+                </NavItem>
+                <NavItem href="#" className="nav-item">
+                    Gmail
+                </NavItem>
+                <NavItem href="#" className="nav-item">
+                    Images
+                </NavItem>
             </Navbar>
         </header>
     )
