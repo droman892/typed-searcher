@@ -1,16 +1,67 @@
 @use '../../../styles/colors.scss' as *;
 
+.center-footer-container {
+    order: 2;
+    // display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.container {
+    max-width: 100% !important;
+}
+
+div.container {
+    width: 100% !important;
+}
+
+.left-footer-container {
+    justify-content: flex-start;
+    min-width: 30%;
+    order: 1;
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .page-footer {
     padding: 0px;
     background-color: $footer-container-color;
+    flex-shrink: 0;
+    box-sizing: border-box;
 }
 
 .footer-copyright {
-    padding: 30px 20px;
+    padding: 0px 20px !important;
+    display: flex;
+    justify-content: space-between;
 }
 
+.footer-leaf {
+    height: auto;
+    width: 12px;
+    margin-right: 6px;
+}
+
+.footer-link {
+    color: $footer-text-color;
+    padding: 15px;
+    // display: block;
+    white-space: nowrap;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
 .footer-text {
     color: $footer-text-color;
+}
+
+.right-footer-container {
+    justify-content: flex-end;
+    min-width: 30%;
+    order: 3;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .row {
