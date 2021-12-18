@@ -1,3 +1,7 @@
 .query-box {
-    padding: 20px;
+    padding: 20px 10px;
+    box-sizing: border-box;
+    display: block;
+    flex-shrink: 0;
+    width: 100%;
 }

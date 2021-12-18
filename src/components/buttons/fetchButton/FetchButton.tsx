@@ -35,7 +35,7 @@ export const FetchButton = () => {
             waves="light"
             onClick={getQueryData}
         >
-            Google Search
+            <span>Google Search</span>
         </Button>
     )
 }

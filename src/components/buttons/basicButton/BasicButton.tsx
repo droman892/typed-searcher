@@ -5,14 +5,8 @@ import { Button } from 'react-materialize'
 
 export const BasicButton = () => {
     return (
-        <Button
-            node="button"
-            style={{
-                marginRight: '5px',
-            }}
-            waves="light"
-        >
-            I am Feeling Lucky
+        <Button className="button-style" node="button" waves="light">
+            <span>I&#39;m Feeling Lucky</span>
         </Button>
     )
 }

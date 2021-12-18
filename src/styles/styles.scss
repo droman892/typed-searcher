@@ -32,18 +32,19 @@
 
 * {
     font-family: 'Roboto', arial, sans-serif;
-    font-variant: initial;
+    text-transform: none;
 }
 
 body {
     padding: 0px;
     margin: 0;
     font-size: 14px;
+    overflow-x: hidden;
 }
 
 main {
     flex: 1 0 auto;
-    padding: 30px;
+    padding: 20px 0px 0px 0px;
 }
 
 .page-flexbox-wrapper {

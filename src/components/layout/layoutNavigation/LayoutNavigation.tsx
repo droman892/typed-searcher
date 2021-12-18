@@ -7,7 +7,7 @@ export const LayoutNavigation = () => {
     return (
         <header>
             <Navbar
-                alignLinks="right"
+                alignLinks="left"
                 id="mobile-nav"
                 menuIcon={<Icon>menu</Icon>}
                 options={{
@@ -29,6 +29,9 @@ export const LayoutNavigation = () => {
                 </NavItem>
                 <NavItem href="#" className="nav-item">
                     Images
+                </NavItem>
+                <NavItem href="#" className="nav-item">
+                    <i className="fa fa-check"></i>
                 </NavItem>
             </Navbar>
         </header>
