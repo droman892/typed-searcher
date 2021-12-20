@@ -27,8 +27,19 @@ nav {
     max-height: 48px;
 }
 
+.nav-item-apps {
+    color: $black;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    max-height: 48px;
+    transition: none;
+}
+
 i.material-icons {
     height: 48px !important;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
 }
 
 .sign-in {
@@ -55,8 +66,11 @@ i.material-icons {
 }
 
 .nav-button:hover {
-    background-color: #5094ed !important;
+    background-color: #2b7de9 !important;
     text-decoration: none !important;
+    box-shadow: 0 1px 2px 0 rgb(66 133 244 / 30%),
+        0 1px 3px 1px rgb(66 133 244 / 15%);
+    border: 1px solid transparent !important;
 }
 
 i.material-icons {
@@ -114,15 +128,23 @@ nav {
     max-height: 48px;
 }
 
-nav ul a:hover {
+.nav-item:hover {
     background-color: #fff;
     text-decoration: underline;
 }
 
-.nav-apps-container {
-    padding: 4px;
-    width: 48px;
-    height: 48px;
+.nav-item-apps:hover {
+    background-color: rgba(60, 64, 67, 0.08);
+    text-decoration: none;
+    border-radius: 50%;
+}
+
+.nav-item-apps:focus-visible {
+    border-radius: 50%;
+}
+
+.nav-apps-container:focus-visible {
+    border-radius: 50%;
 }
 
 .nav-icon:hover {

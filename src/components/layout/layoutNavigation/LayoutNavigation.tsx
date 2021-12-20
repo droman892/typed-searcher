@@ -44,8 +44,8 @@ export const LayoutNavigation = () => {
                                 </NavItem>
                             </div>
 
-                            <div className="nav-item-container">
-                                <NavItem href="#" className="nav-item">
+                            <div className="nav-item-container nav-apps-container">
+                                <NavItem href="#" className="nav-item-apps">
                                     <Icon>apps</Icon>
                                 </NavItem>
                             </div>
