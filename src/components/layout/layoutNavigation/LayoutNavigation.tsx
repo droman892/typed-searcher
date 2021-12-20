@@ -17,25 +17,46 @@ export const LayoutNavigation = () => {
                         outDuration: 200,
                         preventScrolling: true,
                     }}
+                    sidenav={<li>SIDE NAVIGATION!</li>}
                 >
-                    <NavItem href="#" className="nav-item">
-                        About
-                    </NavItem>
-                    <NavItem href="#" className="nav-item">
-                        Store
-                    </NavItem>
-                    <NavItem href="#" className="nav-item">
-                        Gmail
-                    </NavItem>
-                    <NavItem href="#" className="nav-item">
-                        Images
-                    </NavItem>
-                    <NavItem href="#" className="nav-item">
-                        <Icon className="nav-icon">apps</Icon>
-                    </NavItem>
-                    <Button node="a" className="nav-button">
-                        <span>Sign in</span>
-                    </Button>
+                    <div className="nav-container">
+                        <div className="nav-container-left">
+                            <div className="nav-item-container">
+                                <NavItem href="#" className="nav-item">
+                                    About
+                                </NavItem>
+                            </div>
+                            <div className="nav-item-container">
+                                <NavItem href="#" className="nav-item">
+                                    Store
+                                </NavItem>
+                            </div>
+                        </div>
+                        <div className="nav-container-right">
+                            <div className="nav-item-container">
+                                <NavItem href="#" className="nav-item">
+                                    Gmail
+                                </NavItem>
+                            </div>
+                            <div className="nav-item-container">
+                                <NavItem href="#" className="nav-item">
+                                    Images
+                                </NavItem>
+                            </div>
+
+                            <div className="nav-item-container">
+                                <NavItem href="#" className="nav-item">
+                                    <Icon>apps</Icon>
+                                </NavItem>
+                            </div>
+
+                            <div className="nav-item-container">
+                                <Button node="a" className="nav-button">
+                                    <span className="sign-in">Sign in</span>
+                                </Button>
+                            </div>
+                        </div>
+                    </div>
                 </Navbar>
             </div>
         </header>

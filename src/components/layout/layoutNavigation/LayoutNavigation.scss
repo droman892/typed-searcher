@@ -1,20 +1,38 @@
 @use '../../../styles/colors.scss' as *;
 
 div.nav-wrapper {
-    padding: 6px;
     background-color: $white;
 }
 
 header {
     padding: 6px;
+    height: 60px !important;
+    z-index: 999;
 }
 
 nav {
     box-shadow: none;
+    line-height: 48px !important;
+}
+
+.nav-item-container {
+    text-align: center;
+    height: 48px;
 }
 
 .nav-item {
     color: $black;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    max-height: 48px;
+}
+
+i.material-icons {
+    height: 48px !important;
+}
+
+.sign-in {
+    padding: 9px 23px;
 }
 
 i.material-icons {
@@ -27,8 +45,90 @@ i.material-icons {
     padding: 1px 23px;
     box-shadow: none;
     border-radius: 4px;
+    margin-left: 8px !important;
+    margin-right: 8px !important;
+    margin-top: auto !important;
+    margin-bottom: auto !important;
+    vertical-align: middle;
+    text-align: center;
+    align-items: center;
+}
+
+.nav-button:hover {
+    background-color: #5094ed !important;
+    text-decoration: none !important;
 }
 
 i.material-icons {
     color: #5f6368;
+}
+
+.nav-container {
+    display: flex;
+    float: right;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.nav-container-left {
+    display: flex;
+    padding-left: 5px;
+}
+
+.nav-container-right {
+    display: flex;
+    margin-left: auto;
+    order: 2;
+    padding-left: 32px;
+    padding-right: 4px;
+}
+
+nav ul li {
+    float: none;
+}
+
+a {
+    padding: 0px !important;
+}
+
+.margin-right {
+    margin-right: 5px;
+}
+
+.margin-left-edge {
+    margin-left: 15px;
+}
+
+.nav-link {
+    padding: 5px;
+}
+
+.section {
+    padding-top: 0;
+    padding-bottom: 0;
+    max-height: 48px;
+}
+
+nav {
+    max-height: 48px;
+}
+
+nav ul a:hover {
+    background-color: #fff;
+    text-decoration: underline;
+}
+
+.nav-apps-container {
+    padding: 4px;
+    width: 48px;
+    height: 48px;
+}
+
+.nav-icon:hover {
+    border: 1px red solid;
+    text-decoration: none !important;
+    background-color: rgba(60, 64, 67, 0.08);
+    padding: 8px;
+    border-radius: 50%;
 }
