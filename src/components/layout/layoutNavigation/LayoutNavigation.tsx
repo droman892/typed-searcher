@@ -2,6 +2,7 @@ import './LayoutNavigation.scss'
 import '../../../styles/_index.scss'
 import 'materialize-css'
 import { Navbar, Icon, NavItem, Button } from 'react-materialize'
+import { LayoutSideNavigation } from '../layoutSideNavigation/LayoutSideNavigation'
 
 export const LayoutNavigation = () => {
     return (
@@ -17,7 +18,7 @@ export const LayoutNavigation = () => {
                         outDuration: 200,
                         preventScrolling: true,
                     }}
-                    sidenav={<li>SIDE NAVIGATION!</li>}
+                    sidenav={<LayoutSideNavigation />}
                 >
                     <div className="nav-container">
                         <div className="nav-container-left">

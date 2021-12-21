@@ -154,3 +154,43 @@ nav {
     padding: 8px;
     border-radius: 50%;
 }
+
+// .side-nav-container {
+//     background-color: $white;
+//     overflow-y: scroll;
+//     padding-top: 15px;
+//     transition: 0.5s;
+//     font-size: 16px;
+// }
+
+ul.sidenav {
+    width: 250px !important;
+    background-color: $white;
+    overflow-y: scroll;
+    padding-top: 15px;
+    transition: 0.5s;
+    font-size: 16px;
+}
+
+.side-nav-item {
+    display: flex;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.54);
+    height: 48px;
+    line-height: 20px;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.side-nav-item-image {
+    padding: 0 15px;
+    margin-bottom: 3px;
+    vertical-align: middle;
+    height: 24px;
+}
+
+.line {
+    background: #dadce0;
+    height: 1px;
+    margin: 5px 0;
+}
