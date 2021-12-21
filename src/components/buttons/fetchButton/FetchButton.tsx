@@ -21,7 +21,7 @@ export const FetchButton = () => {
         axios
             .request(options)
             .then(function (response) {
-                console.log(response.data)
+                console.log(response.data.results[0])
             })
             .catch(function (error) {
                 console.error(error)

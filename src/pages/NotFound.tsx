@@ -1,13 +1,12 @@
 import { LayoutNavigation } from '../components/layout/layoutNavigation/LayoutNavigation'
 import { LayoutFooter } from '../components/layout/layoutFooter/LayoutFooter'
-import { HomeContainer } from '../containers/homeContainer/HomeContainer'
 
-export const Home = () => {
+export const NotFound = () => {
     return (
         <div className="page-flexbox-wrapper">
             <LayoutNavigation />
             <main>
-                <HomeContainer />
+                <h1>This is the NotFound page.</h1>
             </main>
             <LayoutFooter />
         </div>
