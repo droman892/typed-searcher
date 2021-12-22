@@ -1,3 +1,1 @@
-export const Store = () => {
-    console.log('This file returns the Store.')
-}
+export * as actionCreators from './actions/searchQueryAction'

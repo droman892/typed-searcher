@@ -4,8 +4,16 @@ import 'materialize-css'
 import { TextInput } from 'react-materialize'
 import magnifyingGlass from '../../assets/images/magnifyingGlass.png'
 import microphone from '../../assets/images/microphone.png'
+import { useSelector, useDispatch } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import { actionCreators } from '../../store/index'
 
 export const Searcher = () => {
+    const searchQuery = useSelector((state) => state.searchQuery)
+    const dispatch = useDispatch()
+    const { searchQueryAction } = bindActionCreators(actionCreators, dispatch)
+    console.log('Search Input: ' + searchQuery)
+
     return (
         <div className="search-engine">
             <div className="search-engine-inner">
@@ -21,7 +29,12 @@ export const Searcher = () => {
                     </div>
                 </div>
                 <div className="input-container">
-                    <TextInput id="query" inputClassName="search-input" />
+                    <TextInput
+                        id="query"
+                        inputClassName="search-input"
+                        value=""
+                        onChange={(e) => searchQueryAction(e.target.value)}
+                    />
                 </div>
                 <div className="microphone-container">
                     <div className="microphone-container-2">
