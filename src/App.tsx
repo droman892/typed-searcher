@@ -1,16 +1,14 @@
 import { Home } from './pages/Home'
 import { Results } from './pages/Results'
 import { NotFound } from './pages/NotFound'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 
 export const App = () => {
     return (
-        <Router>
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/results" element={<Results />} />
-                <Route path="/*" element={<NotFound />} />
-            </Routes>
-        </Router>
+        <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/results" element={<Results />} />
+            <Route path="/*" element={<NotFound />} />
+        </Routes>
     )
 }
