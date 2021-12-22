@@ -18,7 +18,7 @@ export const LayoutNavigation = () => {
                         outDuration: 200,
                         preventScrolling: true,
                     }}
-                    sidenav={<LayoutSideNavigation />}
+                    sidenav={<LayoutSideNavigation className="wow" />}
                 >
                     <div className="nav-container">
                         <div className="nav-container-left">

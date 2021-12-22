@@ -29,12 +29,7 @@ export const FetchButton = () => {
     }
 
     return (
-        <Button
-            className="button-style"
-            node="button"
-            waves="light"
-            onClick={getQueryData}
-        >
+        <Button className="button-style" node="button" onClick={getQueryData}>
             <span>Google Search</span>
         </Button>
     )

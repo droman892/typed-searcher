@@ -31,3 +31,62 @@ ul.sidenav {
     height: 1px;
     margin: 5px 0;
 }
+
+.side-nav-logo {
+    background-position: 0 -374px;
+    height: 44px !important;
+    width: 92px;
+    background-size: 167px;
+    display: block;
+    margin-left: 15px;
+    padding-bottom: 8px !important;
+    outline: none;
+}
+
+.get-the-app {
+    display: flex;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.54);
+    height: 48px;
+    line-height: 20px;
+    width: 100%;
+    vertical-align: middl;
+}
+
+.get-the-app-container {
+    background: #1a73e8;
+    border-radius: 24px;
+    margin: 10px 16px 8px;
+    height: 40px;
+    width: 218px;
+    color: #fff;
+    font-family: Google Sans, Roboto, Helvetica Neue, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 40px;
+    text-align: center;
+    position: relative;
+}
+
+.the-g {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border-radius: 78px;
+    height: 31px;
+    width: 31px;
+    vertical-align: middle;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+
+    flex: none;
+
+    color: rgba(0, 0, 0, 0.54);
+}
+
+.side-nav-g {
+    height: 19px;
+    aspect-ratio: auto 19 / 19;
+    width: 19px;
+}

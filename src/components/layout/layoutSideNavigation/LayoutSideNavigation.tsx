@@ -11,10 +11,31 @@ import darkTheme from '../../../assets/images/darkTheme.png'
 import howSearchWorks from '../../../assets/images/howSearchWorks.png'
 import help from '../../../assets/images/help.png'
 import feedback from '../../../assets/images/feedback.png'
+import GoogleLogo from '../../../assets/images/GoogleLogo.svg'
+import logo from '../../../assets/images/logo.png'
 
 export const LayoutSideNavigation = () => {
     return (
         <>
+            <a href="#!">
+                <img
+                    src={GoogleLogo}
+                    alt="Side Navigation Logo"
+                    className="side-nav-logo"
+                />
+            </a>
+            <a className="get-the-app" href="#!">
+                <div className="get-the-app-container">
+                    <span className="the-g">
+                        <img
+                            src={logo}
+                            alt="The Side Navigation G"
+                            className="side-nav-g"
+                        />
+                    </span>
+                    Get the app
+                </div>
+            </a>
             <div className="side-nav-container">
                 <a className="side-nav-item" href="#!">
                     <img
