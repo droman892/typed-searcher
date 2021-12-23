@@ -1,13 +1,13 @@
-import './LayoutNavigation.scss'
+import './ResultsNavigation.scss'
 import '../../../styles/_index.scss'
 import 'materialize-css'
 import { Navbar, Icon, NavItem, Button } from 'react-materialize'
 import { LayoutSideNavigation } from '../layoutSideNavigation/LayoutSideNavigation'
 
-export const LayoutNavigation = () => {
+export const ResultsNavigation = () => {
     return (
-        <header className="header-home">
-            <div className="section">
+        <header className="header-results">
+            <div className="section-results">
                 <Navbar
                     id="mobile-nav"
                     menuIcon={<Icon>menu</Icon>}
@@ -20,7 +20,7 @@ export const LayoutNavigation = () => {
                     }}
                     sidenav={<LayoutSideNavigation className="wow" />}
                 >
-                    <div className="nav-container">
+                    <div className="nav-container-results">
                         <div className="nav-container-left">
                             <div className="nav-item-container">
                                 <NavItem href="#" className="nav-item">
@@ -33,21 +33,28 @@ export const LayoutNavigation = () => {
                                 </NavItem>
                             </div>
                         </div>
-                        <div className="nav-container-right">
-                            <div className="nav-item-container">
-                                <NavItem href="#" className="nav-item">
-                                    Gmail
-                                </NavItem>
+                        <div className="nav-container-right-results">
+                            <div className="gear-container">
+                                <div className="gear-container-2">
+                                    <div className="gear-container-3">
+                                        <div className="gear-container-4">
+                                            <NavItem
+                                                href="#"
+                                                className="nav-gear"
+                                            >
+                                                <span className="nav-gear-2">
+                                                    <Icon className="settings-icon">
+                                                        settings
+                                                    </Icon>
+                                                </span>
+                                            </NavItem>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div className="nav-item-container">
-                                <NavItem href="#" className="nav-item">
-                                    Images
-                                </NavItem>
-                            </div>
-
                             <div className="nav-item-container nav-apps-container">
                                 <NavItem href="#" className="nav-item-apps">
-                                    <Icon className="apps-icon">apps</Icon>
+                                    <Icon>apps</Icon>
                                 </NavItem>
                             </div>
 

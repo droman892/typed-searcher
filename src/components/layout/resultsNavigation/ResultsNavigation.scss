@@ -4,24 +4,22 @@
 
 div.nav-wrapper {
     background-color: $white;
-    line-height: 48px !important;
-    max-height: 48px;
+    line-height: 69px;
+    max-height: 69px;
 }
 
-.apps-icon {
-    height: 48px !important;
+i.material-icons {
+    height: 100%;
     display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
+    justify-content: center;
+    align-items: center;
     color: #5f6368;
 }
 
-.nav-container {
-    display: flex;
-    float: right;
-    width: 100%;
-    flex-wrap: wrap;
-    justify-content: flex-end;
+nav {
+    line-height: 69px;
+    height: 69px;
+    max-height: 69px;
 }
 
 .nav-container-left {
@@ -29,24 +27,83 @@ div.nav-wrapper {
     padding-left: 5px;
 }
 
-.nav-container-right {
-    display: flex;
-    margin-left: auto;
-    order: 2;
-    padding-left: 32px;
-    padding-right: 4px;
-}
-
 // Code below is specific to the ResultsNavigation.tsx componenet
 
-nav {
-    box-shadow: none;
-    background-color: $white;
+.gear-container {
+    display: flex;
+    margin-right: -14px;
+    position: relative;
+    z-index: 99;
 }
 
-.header-home {
-    padding: 6px;
-    height: 60px !important;
+.gear-container-2 {
+    position: relative;
+    display: inline-block;
+    margin-top: 4px;
+    margin-left: 8px;
+}
+
+.gear-container-3 {
+    display: inline-block;
+}
+
+.gear-container-4 {
+    display: block;
+}
+
+.nav-gear {
+    border-radius: 50%;
+    color: #5f6368;
+    padding: 8px;
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+.nav-gear-2 {
+    display: inline-block;
+    fill: currentColor;
+    height: 24px;
+    line-height: 24px;
+    position: relative;
+    width: 24px;
+    color: #5f6368;
+}
+
+.settings-icon {
+    display: block !important;
+    height: 100% !important;
+    width: 100%;
+}
+
+.nav-container-results {
+    display: flex;
+    // float: right;
+    // width: 100%;
+    // flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.nav-container-right-results {
+    display: flex;
+}
+
+.header-results {
+    position: absolute;
+    top: 20px;
+    margin-top: 6px;
+    width: 100%;
+    min-width: 1121px;
+    z-index: 128;
+}
+
+// nav {
+//     box-shadow: none;
+//     line-height: 48px !important;
+// }
+
+nav.omg {
+    height: 69px !important;
 }
 
 .nav-item-container {
@@ -116,11 +173,17 @@ a {
     padding: 5px;
 }
 
-.section {
-    padding-top: 0;
-    padding-bottom: 0;
-    max-height: 48px;
+.section-results {
+    height: 69px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    margin-top: -20px;
 }
+
+// nav {
+//     max-height: 48px;
+// }
 
 .nav-item:hover {
     background-color: #fff;
