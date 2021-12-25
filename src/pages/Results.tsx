@@ -1,5 +1,6 @@
 import { ResultsNavigation } from '../components/layout/resultsNavigation/ResultsNavigation'
 import { ResultsFooter } from '../components/layout/resultsFooter/ResultsFooter'
+import { ResultsContainer } from '../containers/resultsContainer/ResultsContainer'
 
 export const Results = () => {
     return (
@@ -11,6 +12,7 @@ export const Results = () => {
                     Use the UseEffect Hook to display the fetched info on screen
                     load
                 </p>
+                <ResultsContainer />
             </main>
             <ResultsFooter />
         </div>
