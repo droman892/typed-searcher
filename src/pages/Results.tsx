@@ -8,10 +8,6 @@ export const Results = () => {
             <ResultsNavigation />
             <main>
                 <h1>This is the Results page.</h1>
-                <p>
-                    Use the UseEffect Hook to display the fetched info on screen
-                    load
-                </p>
                 <ResultsContainer />
             </main>
             <ResultsFooter />
