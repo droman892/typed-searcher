@@ -29,7 +29,39 @@ export const ResultsContainer = () => {
             axios
                 .request(queryData)
                 .then(function (response) {
+                    console.log(response)
+                    console.log(response.data)
                     console.log(response.data.results)
+                    console.log(response.data.total)
+                    console.log(response.data.ts)
+
+                    const resultsCount = (x) => {
+                        return x
+                            .toString()
+                            .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ',')
+                    }
+
+                    const resultsTotal =
+                        document.getElementById('results-total')
+
+                    const apiCount = response.data.total
+
+                    const finalNum = resultsCount(apiCount)
+
+                    const resultsAPITotal = `${finalNum}`
+
+                    resultsTotal.innerHTML = resultsAPITotal
+
+                    const resultsTS = document.getElementById('results-ts')
+
+                    const apiTime = response.data.ts
+
+                    const finalTime = apiTime.toFixed(2)
+
+                    const resultsAPITS = `${finalTime}`
+
+                    resultsTS.innerHTML = resultsAPITS
+
                     const dataResults = document.getElementById('queriedData')
 
                     let dataResultsList = ''
@@ -74,6 +106,24 @@ export const ResultsContainer = () => {
 
     return (
         <>
+            <div className="stats-bar">
+                <div>
+                    <div className="stats-relative-0">
+                        <div className="stats-relative-1">
+                            <div className="stats-relative-2">
+                                <div className="stats-relative-3">
+                                    About <span id="results-total" />{' '}
+                                    results&nbsp;
+                                    <span>
+                                        (<span id="results-ts"></span> seconds)
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div className="data-container">
                 <div className="data-container-2">
                     <div className="data-container-3">

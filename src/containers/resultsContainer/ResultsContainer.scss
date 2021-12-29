@@ -27,6 +27,7 @@
 .data-container-2 {
     max-width: 1539px;
     float: left;
+    padding-top: 5px;
 }
 
 .data-container-3 {
@@ -63,4 +64,44 @@
 #description {
     margin-top: 0;
     margin-bottom: 0;
+}
+
+@media (min-width: 1121px) and (max-width: 1300px) {
+    .stats-bar {
+        margin-left: calc((100vw - 1065px) / 2 - 180px);
+    }
+}
+
+.stats-bar {
+    background: #fff;
+    -webkit-box-sizing: border-box;
+}
+
+.stats-relative-0 {
+    position: relative;
+}
+
+.stats-relative-1 {
+    height: 43px;
+    margin-left: 90px;
+}
+
+.stats-relative-2 {
+    display: flex;
+    position: absolute;
+    top: 0;
+    -webkit-transition: all 220ms ease-in-out;
+    color: #70757a;
+    justify-content: space-between;
+    min-width: 652px;
+    line-height: 43px;
+}
+
+.stats-relative-3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 8px;
 }

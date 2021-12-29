@@ -11,7 +11,7 @@ export const Results = () => {
             <main className="results-page-container-1">
                 <div className="results-page-container-2">
                     <div className="results-page-container-3">
-                        <h1>This is the Results page 1.</h1>
+                        {/* <h1>This is the Results page 1.</h1>
                         <h1>This is the Results page 2.</h1>
                         <h1>This is the Results page 3.</h1>
                         <h1>This is the Results page 4.</h1>
@@ -20,7 +20,7 @@ export const Results = () => {
                         <h1>This is the Results page.</h1>
                         <h1>This is the Results page.</h1>
                         <h1>This is the Results page.</h1>
-                        <h1>This is the Results page.</h1>
+                        <h1>This is the Results page.</h1> */}
 
                         {/* <ResultsContainer /> */}
                     </div>

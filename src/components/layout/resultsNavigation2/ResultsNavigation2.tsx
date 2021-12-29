@@ -1,7 +1,11 @@
 import './ResultsNavigation2.scss'
 import '../../../styles/_index.scss'
+import rainbowGlass from '../../../assets/images/rainbowGlass.png'
 import imagesLogo from '../../../assets/images/imagesLogo.png'
+import priceTag from '../../../assets/images/priceTag.png'
 import play from '../../../assets/images/play.png'
+import news from '../../../assets/images/news.png'
+import dots from '../../../assets/images/dots.png'
 
 export const ResultsNavigation2 = () => {
     return (
@@ -11,20 +15,27 @@ export const ResultsNavigation2 = () => {
                     <div>
                         <div className="results-nav2-container-4">
                             <div className="results-nav2-section">
-                                <a href="#!" className="section-results-0">
+                                <a
+                                    href="#!"
+                                    className="section-results-0 blue-link"
+                                >
                                     <span className="section-results-1">
                                         <img
-                                            src={imagesLogo}
-                                            alt="Images Logo"
+                                            src={rainbowGlass}
+                                            alt="Rainbow Magnifying Glass Logo"
                                             className="results-nav2-images"
                                         />
                                     </span>
                                     All
+                                    <div className="blue-line"></div>
                                 </a>
                             </div>
 
                             <div className="results-nav2-section">
-                                <a href="#!" className="section-results-0">
+                                <a
+                                    href="#!"
+                                    className="section-results-0 grey-link"
+                                >
                                     <span className="section-results-1">
                                         <img
                                             src={imagesLogo}
@@ -37,11 +48,14 @@ export const ResultsNavigation2 = () => {
                             </div>
 
                             <div className="results-nav2-section">
-                                <a href="#!" className="section-results-0">
+                                <a
+                                    href="#!"
+                                    className="section-results-0 grey-link"
+                                >
                                     <span className="section-results-1">
                                         <img
-                                            src={imagesLogo}
-                                            alt="Images Logo"
+                                            src={priceTag}
+                                            alt="Price Tag Logo"
                                             className="results-nav2-images"
                                         />
                                     </span>
@@ -50,11 +64,14 @@ export const ResultsNavigation2 = () => {
                             </div>
 
                             <div className="results-nav2-section">
-                                <a href="#!" className="section-results-0">
+                                <a
+                                    href="#!"
+                                    className="section-results-0 grey-link"
+                                >
                                     <span className="section-results-1">
                                         <img
                                             src={play}
-                                            alt="Images Logo"
+                                            alt="Video Logo"
                                             className="results-nav2-images"
                                         />
                                     </span>
@@ -63,11 +80,14 @@ export const ResultsNavigation2 = () => {
                             </div>
 
                             <div className="results-nav2-section">
-                                <a href="#!" className="section-results-0">
+                                <a
+                                    href="#!"
+                                    className="section-results-0 grey-link"
+                                >
                                     <span className="section-results-1">
                                         <img
-                                            src={imagesLogo}
-                                            alt="Images Logo"
+                                            src={news}
+                                            alt="News Logo"
                                             className="results-nav2-images"
                                         />
                                     </span>
@@ -76,11 +96,14 @@ export const ResultsNavigation2 = () => {
                             </div>
 
                             <div className="results-nav2-section">
-                                <a href="#!" className="section-results-0">
+                                <a
+                                    href="#!"
+                                    className="section-results-0 grey-link"
+                                >
                                     <span className="section-results-1">
                                         <img
-                                            src={imagesLogo}
-                                            alt="Images Logo"
+                                            src={dots}
+                                            alt="Dots Logo"
                                             className="results-nav2-images"
                                         />
                                     </span>
@@ -88,6 +111,9 @@ export const ResultsNavigation2 = () => {
                                 </a>
                             </div>
                         </div>
+                    </div>
+                    <div>
+                        <div className="results-nav2-container-5">Tools</div>
                     </div>
                 </div>
             </div>
