@@ -44,7 +44,6 @@ body {
 
 main {
     flex: 1 0 auto;
-    padding: 20px 0px 0px 0px;
 }
 
 .page-flexbox-wrapper {
@@ -53,6 +52,30 @@ main {
     flex-direction: column;
 }
 
-.page-pad {
-    padding-top: 20px;
+@media (min-width: 1121px) and (max-width: 1300px) {
+    .results-page-container-1 {
+        margin-left: calc((100vw - 1065px) / 2 - 180px);
+    }
 }
+
+.results-page-container-1 {
+    // margin-top: 95px;
+    position: relative;
+    clear: both;
+}
+
+.results-page-container-2 {
+    max-width: 1539px;
+    float: left;
+}
+
+.results-page-container-3 {
+    clear: both;
+    position: relative;
+    margin-left: 180px;
+    width: 652px;
+}
+
+// .page-pad {
+//     padding-top: 20px;
+// }

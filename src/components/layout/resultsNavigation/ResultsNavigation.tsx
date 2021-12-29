@@ -106,16 +106,33 @@ export const ResultsNavigation = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="nav-item-container nav-apps-container">
-                                <NavItem href="#" className="nav-item-apps">
-                                    <Icon>apps</Icon>
-                                </NavItem>
-                            </div>
 
-                            <div className="nav-item-container">
-                                <Button node="a" className="nav-button">
-                                    <span className="sign-in">Sign in</span>
-                                </Button>
+                            <div className="container-0">
+                                <div className="button-apps-container">
+                                    <div className="results-nav-item-container">
+                                        <div className="results-nav-item-container-2">
+                                            <NavItem
+                                                href="#"
+                                                className="results-nav-item-apps"
+                                            >
+                                                <Icon className="results-apps-icon">
+                                                    apps
+                                                </Icon>
+                                            </NavItem>
+                                        </div>
+                                    </div>
+
+                                    <div className="results-nav-item-container">
+                                        <Button
+                                            node="a"
+                                            className="results-nav-button"
+                                        >
+                                            <span className="results-sign-in">
+                                                Sign in
+                                            </span>
+                                        </Button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

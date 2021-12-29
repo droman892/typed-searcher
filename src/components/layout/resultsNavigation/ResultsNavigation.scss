@@ -29,6 +29,39 @@ nav {
 
 // Code below is specific to the ResultsNavigation.tsx componenet
 
+@media (max-width: 1300px) {
+    .results-form-container-2 {
+        width: 540px !important;
+    }
+
+    .results-query-container-1 {
+        width: 538px !important;
+    }
+}
+
+@media (min-width: 1121px) and (max-width: 1300px) {
+    .results-form-container-2 {
+        margin-left: calc((100vw - 1065px) / 2 + 105px) !important;
+    }
+}
+
+.button-apps-container {
+    padding-right: 20px;
+    padding-left: 15px;
+    flex: 0 0 auto;
+    justify-content: flex-end;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    height: 46px;
+    // min-width: 180px;
+}
+
+.container-0 {
+    max-width: 180px;
+}
+
 .gear-container {
     display: flex;
     margin-right: -14px;
@@ -49,19 +82,20 @@ nav {
 
 .gear-container-4 {
     display: block;
+    // width: 40px !important;
+    // height: 40px !important;
 }
 
 .nav-gear {
     border-radius: 50%;
     color: #5f6368;
-    padding: 8px;
-    width: 24px;
-    height: 24px;
+    padding: 8px !important;
+    width: 40px;
+    height: 40px;
     display: block;
 }
 
 .nav-gear-2 {
-    display: inline-block;
     fill: currentColor;
     height: 24px;
     line-height: 24px;
@@ -79,6 +113,7 @@ nav {
 .nav-container-results {
     display: flex;
     justify-content: space-between;
+    max-height: 46px;
 }
 
 .nav-container-right-results {
@@ -301,9 +336,15 @@ nav.omg {
     height: 69px !important;
 }
 
-.nav-item-container {
-    text-align: center;
-    height: 48px;
+.results-nav-item-container {
+    display: inline;
+    white-space: nowrap;
+}
+
+.results-nav-item-container-2 {
+    padding: 4px;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .nav-item {
@@ -313,19 +354,22 @@ nav.omg {
     max-height: 48px;
 }
 
-.nav-item-apps {
-    color: $black;
-    padding-left: 10px !important;
-    padding-right: 10px !important;
-    max-height: 48px;
-    transition: none;
+.results-nav-item-apps {
+    padding: 8px !important;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 2px;
+    box-sizing: border-box;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
 }
 
-.sign-in {
-    padding: 9px 23px;
+.results-sign-in {
+    padding: 9px 15px;
 }
 
-.nav-button {
+.results-nav-button {
     background-color: #1a73e8;
     border: 1px solid transparent;
     padding: 1px 23px;
@@ -338,9 +382,10 @@ nav.omg {
     vertical-align: middle;
     text-align: center;
     align-items: center;
+    min-width: 80px;
 }
 
-.nav-button:hover {
+.results-nav-button:hover {
     background-color: #2b7de9 !important;
     text-decoration: none !important;
     box-shadow: 0 1px 2px 0 rgb(66 133 244 / 30%),
@@ -396,9 +441,9 @@ a {
     border-radius: 50%;
 }
 
-.nav-apps-container:focus-visible {
-    border-radius: 50%;
-}
+// .results-nav-apps-container:focus-visible {
+//     border-radius: 50%;
+// }
 
 .nav-icon:hover {
     border: 1px red solid;
@@ -453,4 +498,13 @@ ul.sidenav {
     height: 100%;
     width: 100%;
     padding: 15px 5px;
+}
+
+.results-apps-icon {
+    height: 24p !important;
+    width: 24px;
+}
+
+i.material-icons.results-apps-icon {
+    height: 24px;
 }
