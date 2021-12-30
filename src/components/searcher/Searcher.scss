@@ -1,7 +1,12 @@
+// The style classes below is native to Materialize
+
 div.input-field.col {
     flex: 1;
     display: flex;
+    margin: 0px;
 }
+
+// The style classes below is custom
 
 .search-engine {
     display: flex;
@@ -35,9 +40,7 @@ input#query.search-input:focus {
     outline: 0px;
 }
 
-div.input-field.col {
-    margin: 0px;
-}
+
 
 input#query.search-input {
     border: 0px;

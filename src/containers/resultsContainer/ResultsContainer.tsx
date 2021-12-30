@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useSelector } from 'react-redux'
 import { ResultsPreloader } from '../../components/preloader/ResultsPreloader'
+import { ResultsDataContainer } from '../resultsDataContainer/ResultsDataContainer'
 
 export const ResultsContainer = () => {
     let searchQuery: string = useSelector((state) => state.searchQuery)
@@ -68,29 +69,29 @@ export const ResultsContainer = () => {
 
                     for (let i = 0; i < response.data.results.length; i++) {
                         dataResultsList += `<div id="axios-data-1">
-                            <div id="axios-data-2">
-                                <div id="axios-data-3">
-                                    <div className="axios-data-4">
-                                        <a 
-                                            href="${response.data.results[i].link}" 
-                                            target="_blank"
-                                        >
-                                            <p id="data-link">
-                                                ${response.data.results[i].link}
+                                <div id="axios-data-2">
+                                    <div id="axios-data-3">
+                                        <div className="axios-data-4">
+                                            <a 
+                                                href="${response.data.results[i].link}" 
+                                                target="_blank"
+                                            >
+                                                <p id="data-link">
+                                                    ${response.data.results[i].link}
+                                                </p>
+                                                <h3 id="data-title">
+                                                    ${response.data.results[i].title}
+                                                </h3>
+                                            </a>
+                                        </div>
+                                        <div id="axios-data-5">
+                                            <p id="description">
+                                                ${response.data.results[i].description}
                                             </p>
-                                            <h3 id="data-title">
-                                                ${response.data.results[i].title}
-                                            </h3>
-                                        </a>
-                                    </div>
-                                    <div id="axios-data-5">
-                                        <p id="description">
-                                            ${response.data.results[i].description}
-                                        </p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>`
+                            </div>`
 
                         dataResults.innerHTML = dataResultsList
                     }
@@ -106,7 +107,7 @@ export const ResultsContainer = () => {
 
     return (
         <>
-            <div className="stats-bar">
+            {/* <div className="stats-bar">
                 <div>
                     <div className="stats-relative-0">
                         <div className="stats-relative-1">
@@ -130,9 +131,15 @@ export const ResultsContainer = () => {
                         <div id="queriedData"></div>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
-            {loading ? <div id="queriedData"></div> : <ResultsPreloader />}
+            {/* {loading ? <div id="queriedData"></div> : <ResultsPreloader />} */}
+
+            {/* <ResultsDataContainer /> perhaps you can make this particular component invisible */}
+
+            {loading ? <ResultsDataContainer /> : <ResultsPreloader />}
+
+            {/* <ResultsPreloader /> */}
         </>
     )
 }

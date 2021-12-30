@@ -57,6 +57,15 @@
     display: inline-block;
 }
 
+.results-nav2-container-5:hover {
+    box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
+    -webkit-transition: all 0.0s;
+    background-color: #f8f9fa;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#f8f9fa),to(#f8f9fa));
+    border: 1px solid #dadce0;
+    color: #202124;
+}
+
 .results-nav2-section {
     // height: 16px;
     line-height: 16px;

@@ -72,6 +72,12 @@
     }
 }
 
+@media (min-width: 1300px) {
+    .stats-relative-1 {
+        margin-left: 0 !important;
+    }
+}
+
 .stats-bar {
     background: #fff;
     -webkit-box-sizing: border-box;

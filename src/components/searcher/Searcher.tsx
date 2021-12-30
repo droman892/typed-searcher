@@ -33,6 +33,7 @@ export const Searcher = () => {
                     <TextInput
                         id="query"
                         inputClassName="search-input"
+                        autoFocus
                         onChange={(e) => searchQueryAction(e.target.value)}
                     />
                 </div>

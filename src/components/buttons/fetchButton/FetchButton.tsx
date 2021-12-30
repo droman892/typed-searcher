@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 
 export const FetchButton = () => {
     return (
-        <Link to="/Results">
+        <Link to="/results">
             <Button className="button-style" node="button" type="submit">
                 <span>Google Search</span>
             </Button>

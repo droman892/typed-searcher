@@ -1,9 +1,17 @@
 import { ResultsNavigation } from '../components/layout/resultsNavigation/ResultsNavigation'
 import { ResultsNavigation2 } from '../components/layout/resultsNavigation2/ResultsNavigation2'
 import { ResultsFooter } from '../components/layout/resultsFooter/ResultsFooter'
-// import { ResultsContainer } from '../containers/resultsContainer/ResultsContainer'
+import { ResultsContainer } from '../containers/resultsContainer/ResultsContainer'
+// import { useSelector, useDispatch } from 'react-redux'
+// import { useState, useEffect } from 'react'
 
 export const Results = () => {
+    // const searchQuery = useSelector((state) => state.searchQuery)
+
+    // useEffect(() => {
+    //     document.title = `${searchQuery} - Google`
+    // }, [])
+
     return (
         <div className="page-flexbox-wrapper">
             <ResultsNavigation />
@@ -11,18 +19,7 @@ export const Results = () => {
             <main className="results-page-container-1">
                 <div className="results-page-container-2">
                     <div className="results-page-container-3">
-                        {/* <h1>This is the Results page 1.</h1>
-                        <h1>This is the Results page 2.</h1>
-                        <h1>This is the Results page 3.</h1>
-                        <h1>This is the Results page 4.</h1>
-                        <h1>This is the Results page 5.</h1>
-                        <h1>This is the Results page.</h1>
-                        <h1>This is the Results page.</h1>
-                        <h1>This is the Results page.</h1>
-                        <h1>This is the Results page.</h1>
-                        <h1>This is the Results page.</h1> */}
-
-                        {/* <ResultsContainer /> */}
+                        <ResultsContainer />
                     </div>
                 </div>
             </main>
