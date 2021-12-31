@@ -24,8 +24,15 @@ export const ResultsSearcher = () => {
 
     // }, [])
 
+    const resultsFormSubmission = () => {
+        document.title = `${searchQuery} - Google`
+    }
+
     return (
-        <form className="results-form-container-1">
+        <form
+            className="results-form-container-1"
+            onSubmit={resultsFormSubmission}
+        >
             <div id="container">
                 <div className="results-form-container-2">
                     <div className="results-logo-container">

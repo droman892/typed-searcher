@@ -3,6 +3,7 @@ import '../../styles/_index.scss'
 import 'materialize-css'
 import { Searcher } from '../../components/searcher/Searcher'
 import { ButtonContainer } from '../buttonContainer/ButtonContainer'
+// import { useSelector } from 'react-redux'
 
 export const QueryContainer = () => {
     const handleSubmit = (e) => {

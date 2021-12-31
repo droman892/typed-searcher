@@ -9,7 +9,7 @@ export const HomeContainer = () => {
         <div className="home-container">
             <QueryHeader />
             <QueryContainer />
-            <div id="dataSet"></div>
+            {/* <div id="dataSet"></div> */}
         </div>
     )
 }

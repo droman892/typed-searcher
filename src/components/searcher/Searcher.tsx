@@ -33,8 +33,9 @@ export const Searcher = () => {
                     <TextInput
                         id="query"
                         inputClassName="search-input"
-                        autoFocus
+                        // autoFocus
                         onChange={(e) => searchQueryAction(e.target.value)}
+                        maxLength="2048"
                     />
                 </div>
                 <div className="microphone-container">
