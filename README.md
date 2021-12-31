@@ -15,8 +15,14 @@
 <p> Font squirrel, Google Search API (https://rapidapi.com/apigeek/api/google-search3/)</p>
 <p> React-Materialize: http://react-materialize.github.io/react-materialize/?path=/story/components-textinput--default </p>
 
-<p>****may need to have onClick function execute axios from within button; context api for passing down props for different kinds of buttons****</p>
+<p>
+Google Images: https://rapidapi.com/Glavier/api/google-image-search1/
+Google Translate: https://rapidapi.com/googlecloud/api/google-translate1/
+Keywords for searching: https://rapidapi.com/fatimabirmingham@gmail.com/api/keywords4/ .... https://rapidapi.com/contextualwebsearch/api/keyword-analysis/pricing
+Random Words API for the basic button: https://rapidapi.com/sheharyar566/api/random-words5/pricing
+Google Trending (home page): https://rapidapi.com/truelife-truelife-default/api/google-trends-us/
 
+</p>
 ## Preview
 
 ![Typed Searcher - GIF]()

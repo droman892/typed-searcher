@@ -2,10 +2,11 @@ import './ResultsContainer.scss'
 import '../../styles/_index.scss'
 // import { Query } from '../../api/Query'
 // import { useState, useEffect } from 'react'
+// import { useState } from 'react'
 // import axios from 'axios'
 // import { useSelector } from 'react-redux'
 // import { ResultsPreloader } from '../../components/preloader/ResultsPreloader'
-import { ResultsDataContainer } from '../resultsDataContainer/ResultsDataContainer'
+// import { ResultsDataContainer } from '../resultsDataContainer/ResultsDataContainer'
 
 export const ResultsContainer = () => {
     // let searchQuery: string = useSelector((state) => state.searchQuery)
@@ -138,8 +139,25 @@ export const ResultsContainer = () => {
 
             {/* {loading ? <ResultsDataContainer /> : <ResultsPreloader />} */}
 
-            <ResultsDataContainer />
+            {/* {loading ? <ResultsDataContainer /> : 
+            <>
+            <h1>This is just a placeholder</h1>
+            <h1>This is just a placeholder</h1>
+            <h1>This is just a placeholder</h1>
+            <h1>This is just a placeholder</h1>
+            <h1>This is just a placeholder</h1>
+            <h1>This is just a placeholder</h1>
+            <h1>This is just a placeholder</h1>
+            <h1>This is just a placeholder</h1>
+            <h1>This is just a placeholder</h1>
+            <h1>This is just a placeholder</h1>
+            <h1>This is just a placeholder</h1>
+            <h1>This is just a placeholder</h1>
+            </>
+            
+            } */}
 
+            {/* <ResultsDataContainer /> */}
             {/* <ResultsPreloader /> */}
         </>
     )

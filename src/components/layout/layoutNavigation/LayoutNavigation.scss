@@ -1,11 +1,9 @@
 @use '../../../styles/colors.scss' as *;
 
-// Code below is native to Materialize; classes are shared with LayoutNavigation.scss
+// Code below is native to Materialize; classes are shared with ResultsNavigation.scss
 
-div.nav-wrapper {
-    background-color: $white;
-    line-height: 48px !important;
-    max-height: 48px;
+a {
+    padding: 0px !important;
 }
 
 .apps-icon {
@@ -14,6 +12,26 @@ div.nav-wrapper {
     justify-content: center !important;
     align-items: center !important;
     color: #5f6368;
+}
+
+div.nav-wrapper {
+    background-color: $white;
+    line-height: 48px !important;
+    max-height: 48px;
+}
+
+.line {
+    background: #dadce0;
+    height: 1px;
+    margin: 5px 0;
+}
+
+.margin-left-edge {
+    margin-left: 15px;
+}
+
+.margin-right {
+    margin-right: 5px;
 }
 
 .nav-container {
@@ -37,28 +55,16 @@ div.nav-wrapper {
     padding-right: 4px;
 }
 
-// Code below is specific to the ResultsNavigation.tsx componenet
-
-nav {
-    box-shadow: none;
-    background-color: $white;
-}
-
-.header-home {
-    padding: 6px;
-    height: 60px !important;
-}
-
-.nav-item-container {
-    text-align: center;
-    height: 48px;
-}
-
 .nav-item {
     color: $black;
     padding-left: 10px !important;
     padding-right: 10px !important;
     max-height: 48px;
+}
+
+.nav-item:hover {
+    background-color: #fff;
+    text-decoration: underline;
 }
 
 .nav-item-apps {
@@ -69,8 +75,60 @@ nav {
     transition: none;
 }
 
-.sign-in {
-    padding: 9px 23px;
+.nav-item-apps:hover {
+    background-color: rgba(60, 64, 67, 0.08);
+    text-decoration: none;
+    border-radius: 50%;
+}
+
+.nav-item-apps:focus-visible {
+    border-radius: 50%;
+}
+
+.nav-link {
+    padding: 5px;
+}
+
+.side-nav-item {
+    display: flex;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.54);
+    height: 48px;
+    line-height: 20px;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.side-nav-item-image {
+    padding: 0 15px;
+    margin-bottom: 3px;
+    vertical-align: middle;
+    height: 24px;
+}
+
+ul.sidenav {
+    width: 250px !important;
+    background-color: $white;
+    overflow-y: scroll;
+    padding-top: 15px;
+    transition: 0.5s;
+    font-size: 16px;
+}
+
+// Code below is specific to the ResultsNavigation.tsx componenet
+
+.header-home {
+    padding: 6px;
+    height: 60px !important;
+}
+
+nav {
+    box-shadow: none;
+    background-color: $white;
+}
+
+nav ul li {
+    float: none;
 }
 
 .nav-button {
@@ -96,45 +154,9 @@ nav {
     border: 1px solid transparent !important;
 }
 
-nav ul li {
-    float: none;
-}
-
-a {
-    padding: 0px !important;
-}
-
-.margin-right {
-    margin-right: 5px;
-}
-
-.margin-left-edge {
-    margin-left: 15px;
-}
-
-.nav-link {
-    padding: 5px;
-}
-
-.section {
-    padding-top: 0;
-    padding-bottom: 0;
-    max-height: 48px;
-}
-
-.nav-item:hover {
-    background-color: #fff;
-    text-decoration: underline;
-}
-
-.nav-item-apps:hover {
-    background-color: rgba(60, 64, 67, 0.08);
-    text-decoration: none;
-    border-radius: 50%;
-}
-
-.nav-item-apps:focus-visible {
-    border-radius: 50%;
+.nav-item-container {
+    text-align: center;
+    height: 48px;
 }
 
 .nav-apps-container:focus-visible {
@@ -149,42 +171,12 @@ a {
     border-radius: 50%;
 }
 
-// .side-nav-container {
-//     background-color: $white;
-//     overflow-y: scroll;
-//     padding-top: 15px;
-//     transition: 0.5s;
-//     font-size: 16px;
-// }
-
-ul.sidenav {
-    width: 250px !important;
-    background-color: $white;
-    overflow-y: scroll;
-    padding-top: 15px;
-    transition: 0.5s;
-    font-size: 16px;
+.section {
+    padding-top: 0;
+    padding-bottom: 0;
+    max-height: 48px;
 }
 
-.side-nav-item {
-    display: flex;
-    align-items: center;
-    color: rgba(0, 0, 0, 0.54);
-    height: 48px;
-    line-height: 20px;
-    width: 100%;
-    vertical-align: middle;
-}
-
-.side-nav-item-image {
-    padding: 0 15px;
-    margin-bottom: 3px;
-    vertical-align: middle;
-    height: 24px;
-}
-
-.line {
-    background: #dadce0;
-    height: 1px;
-    margin: 5px 0;
+.sign-in {
+    padding: 9px 23px;
 }

@@ -1,12 +1,7 @@
 import './ResultsDataContainer.scss'
 import '../../styles/_index.scss'
-// import { useSelector } from 'react-redux'
 
 export const ResultsDataContainer = () => {
-    // const searchQuery = useSelector((state) => state.searchQuery)
-
-    // document.title = `${searchQuery} - Google`
-
     return (
         <>
             <div className="stats-bar">
@@ -34,8 +29,6 @@ export const ResultsDataContainer = () => {
                     </div>
                 </div>
             </div>
-
-            {/* <span> Current State: {searchQuery}</span> */}
         </>
     )
 }

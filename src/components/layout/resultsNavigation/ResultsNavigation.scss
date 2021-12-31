@@ -2,6 +2,10 @@
 
 // Code below is native to Materialize; classes are shared with LayoutNavigation.scss
 
+a {
+    padding: 0px !important;
+}
+
 div.nav-wrapper {
     background-color: $white;
     line-height: 69px;
@@ -16,6 +20,19 @@ i.material-icons {
     color: #5f6368;
 }
 
+.line {
+    background: #dadce0;
+    height: 1px;
+    margin: 5px 0;
+}
+
+.margin-left-edge {
+    margin-left: 15px;
+}
+
+.margin-right {
+    margin-right: 5px;
+}
 nav {
     line-height: 69px;
     height: 69px;
@@ -25,6 +42,66 @@ nav {
 .nav-container-left {
     display: flex;
     padding-left: 5px;
+}
+
+.nav-item {
+    color: $black;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    max-height: 48px;
+}
+
+.nav-item:hover {
+    background-color: #fff;
+    text-decoration: underline;
+}
+
+.nav-item-apps {
+    color: $black;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    max-height: 48px;
+    transition: none;
+}
+
+.nav-item-apps:hover {
+    background-color: rgba(60, 64, 67, 0.08);
+    text-decoration: none;
+    border-radius: 50%;
+}
+
+.nav-item-apps:focus-visible {
+    border-radius: 50%;
+}
+
+.nav-link {
+    padding: 5px;
+}
+
+.side-nav-item {
+    display: flex;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.54);
+    height: 48px;
+    line-height: 20px;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.side-nav-item-image {
+    padding: 0 15px;
+    margin-bottom: 3px;
+    vertical-align: middle;
+    height: 24px;
+}
+
+ul.sidenav {
+    width: 250px !important;
+    background-color: $white;
+    overflow-y: scroll;
+    padding-top: 15px;
+    transition: 0.5s;
+    font-size: 16px;
 }
 
 // Code below is specific to the ResultsNavigation.tsx componenet
@@ -67,6 +144,28 @@ nav {
     display: block;
 }
 
+.header-results {
+    position: absolute;
+    top: 20px;
+    margin-top: 6px;
+    width: 100%;
+    min-width: 1121px;
+}
+
+i.material-icons.results-apps-icon {
+    height: 24px;
+}
+
+.nav-container-results {
+    display: flex;
+    justify-content: space-between;
+    max-height: 46px;
+}
+
+.nav-container-right-results {
+    display: flex;
+}
+
 .nav-gear {
     border-radius: 50%;
     color: #5f6368;
@@ -85,71 +184,30 @@ nav {
     color: #5f6368;
 }
 
-.settings-icon {
-    display: block !important;
-    height: 100% !important;
-    width: 100%;
-}
-
-.nav-container-results {
-    display: flex;
-    justify-content: space-between;
-    max-height: 46px;
-}
-
-.nav-container-right-results {
-    display: flex;
-}
-
-.results-input:focus {
-    border-bottom: 0 !important;
-    box-shadow: 0 0 0 0 !important;
-}
-
-.header-results {
-    position: absolute;
-    top: 20px;
-    margin-top: 6px;
-    width: 100%;
-    min-width: 1121px;
-    z-index: 128;
+.nav-icon:hover {
+    border: 1px red solid;
+    text-decoration: none !important;
+    background-color: rgba(60, 64, 67, 0.08);
+    padding: 8px;
+    border-radius: 50%;
 }
 
 nav.omg {
     height: 69px !important;
 }
 
-.results-nav-item-container {
-    display: inline;
-    white-space: nowrap;
+nav ul li {
+    float: none;
 }
 
-.results-nav-item-container-2 {
-    padding: 4px;
-    display: inline-block;
-    vertical-align: middle;
+.results-apps-icon {
+    height: 24p !important;
+    width: 24px;
 }
 
-.nav-item {
-    color: $black;
-    padding-left: 10px !important;
-    padding-right: 10px !important;
-    max-height: 48px;
-}
-
-.results-nav-item-apps {
-    padding: 8px !important;
-    display: inline-block;
-    vertical-align: middle;
-    border-radius: 2px;
-    box-sizing: border-box;
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-}
-
-.results-sign-in {
-    padding: 9px 15px;
+.results-input:focus {
+    border-bottom: 0 !important;
+    box-shadow: 0 0 0 0 !important;
 }
 
 .results-nav-button {
@@ -176,24 +234,30 @@ nav.omg {
     border: 1px solid transparent !important;
 }
 
-nav ul li {
-    float: none;
+.results-nav-item-apps {
+    padding: 8px !important;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 2px;
+    box-sizing: border-box;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
 }
 
-a {
-    padding: 0px !important;
+.results-nav-item-container {
+    display: inline;
+    white-space: nowrap;
 }
 
-.margin-right {
-    margin-right: 5px;
+.results-nav-item-container-2 {
+    padding: 4px;
+    display: inline-block;
+    vertical-align: middle;
 }
 
-.margin-left-edge {
-    margin-left: 15px;
-}
-
-.nav-link {
-    padding: 5px;
+.results-sign-in {
+    padding: 9px 15px;
 }
 
 .section-results {
@@ -205,66 +269,8 @@ a {
     padding-top: 20px;
 }
 
-.nav-item:hover {
-    background-color: #fff;
-    text-decoration: underline;
-}
-
-.nav-item-apps:hover {
-    background-color: rgba(60, 64, 67, 0.08);
-    text-decoration: none;
-    border-radius: 50%;
-}
-
-.nav-item-apps:focus-visible {
-    border-radius: 50%;
-}
-
-.nav-icon:hover {
-    border: 1px red solid;
-    text-decoration: none !important;
-    background-color: rgba(60, 64, 67, 0.08);
-    padding: 8px;
-    border-radius: 50%;
-}
-
-ul.sidenav {
-    width: 250px !important;
-    background-color: $white;
-    overflow-y: scroll;
-    padding-top: 15px;
-    transition: 0.5s;
-    font-size: 16px;
-}
-
-.side-nav-item {
-    display: flex;
-    align-items: center;
-    color: rgba(0, 0, 0, 0.54);
-    height: 48px;
-    line-height: 20px;
+.settings-icon {
+    display: block !important;
+    height: 100% !important;
     width: 100%;
-    vertical-align: middle;
-}
-
-.side-nav-item-image {
-    padding: 0 15px;
-    margin-bottom: 3px;
-    vertical-align: middle;
-    height: 24px;
-}
-
-.line {
-    background: #dadce0;
-    height: 1px;
-    margin: 5px 0;
-}
-
-.results-apps-icon {
-    height: 24p !important;
-    width: 24px;
-}
-
-i.material-icons.results-apps-icon {
-    height: 24px;
 }

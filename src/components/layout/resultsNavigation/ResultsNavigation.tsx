@@ -4,6 +4,7 @@ import 'materialize-css'
 import { Navbar, Icon, NavItem, Button } from 'react-materialize'
 import { LayoutSideNavigation } from '../layoutSideNavigation/LayoutSideNavigation'
 import { ResultsSearcher } from '../../resultsSearcher/ResultsSearcher'
+import { ResultsNavigation2 } from '..//resultsNavigation2/ResultsNavigation2'
 
 export const ResultsNavigation = () => {
     return (
@@ -19,7 +20,7 @@ export const ResultsNavigation = () => {
                         outDuration: 200,
                         preventScrolling: true,
                     }}
-                    sidenav={<LayoutSideNavigation className="wow" />}
+                    sidenav={<LayoutSideNavigation />}
                 >
                     <div className="nav-container-results">
                         <ResultsSearcher />
@@ -74,6 +75,7 @@ export const ResultsNavigation = () => {
                     </div>
                 </Navbar>
             </div>
+            <ResultsNavigation2 />
         </header>
     )
 }
