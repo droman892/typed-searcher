@@ -4,13 +4,14 @@ import { ResultsFooter } from '../components/layout/resultsFooter/ResultsFooter'
 import { ResultsContainer } from '../containers/resultsContainer/ResultsContainer'
 import { useSelector } from 'react-redux'
 import { useEffect } from 'react'
+import { State } from '../state/index'
 
 export const Results = () => {
-    const searchQuery = useSelector((state) => state.searchQuery)
+    const queryValue = useSelector((state: State) => state.searchQuery)
 
     useEffect(() => {
         const changeTitle = () => {
-            document.title = `${searchQuery} - Google`
+            document.title = `${queryValue} - Google`
         }
         changeTitle()
     }, []) // eslint-disable-line react-hooks/exhaustive-deps

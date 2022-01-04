@@ -36,7 +36,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, '..', './build'),
         filename: 'bundle.js',
-        publicPath: '/'
+        publicPath: '/',
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -52,7 +52,7 @@ module.exports = {
             ],
         }),
         new FaviconsWebpackPlugin({
-            logo: '../typed-searcher/src/assets/images/logo.png'
-        })
+            logo: '../typed-searcher/src/assets/images/logo.png',
+        }),
     ],
 }

@@ -1,7 +1,9 @@
 import { LayoutNavigation } from '../components/layout/layoutNavigation/LayoutNavigation'
 import { LayoutFooter } from '../components/layout/layoutFooter/LayoutFooter'
-import { HomeContainer } from '../containers/homeContainer/HomeContainer'
+// import { HomeContainer } from '../containers/homeContainer/HomeContainer'
 import { useEffect } from 'react'
+import { QueryHeader } from '../components/queryHeader/QueryHeader'
+import { QueryContainer } from '../containers/queryContainer/QueryContainer'
 
 export const Home = () => {
     useEffect(() => {
@@ -9,12 +11,17 @@ export const Home = () => {
     }, [])
 
     return (
-        <div className="page-flexbox-wrapper">
+        // <div className="page-flexbox-wrapper">
+        <>
             <LayoutNavigation />
-            <main>
-                <HomeContainer />
-            </main>
+            {/* <main> */}
+            <QueryHeader />
+            <QueryContainer />
+            <div className="emptyDivStyle"></div>
+            {/* <HomeContainer /> */}
+            {/* </main> */}
             <LayoutFooter />
-        </div>
+        </>
+        // </div>
     )
 }

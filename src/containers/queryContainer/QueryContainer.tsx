@@ -5,15 +5,17 @@ import { Searcher } from '../../components/searcher/Searcher'
 import { ButtonContainer } from '../buttonContainer/ButtonContainer'
 
 export const QueryContainer = () => {
-    const handleSubmit = (e) => {
+    const handleSubmit = (e: { preventDefault: () => void }) => {
         e.preventDefault()
     }
 
     return (
         <div className="query-box">
             <form className="form-container" onSubmit={handleSubmit}>
-                <Searcher />
-                <ButtonContainer />
+                <div className="form-container-2">
+                    <Searcher />
+                    <ButtonContainer />
+                </div>
             </form>
         </div>
     )

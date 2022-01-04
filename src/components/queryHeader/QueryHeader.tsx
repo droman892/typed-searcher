@@ -5,8 +5,14 @@ import GoogleLogo from '../../assets/images/GoogleLogo.svg'
 
 export const QueryHeader = () => {
     return (
-        <div className="container-positioned">
-            <img src={GoogleLogo} className="logo" alt="Google Logo" />
+        <div className="container-positioned query-header-1">
+            <div className="query-header-2">
+                <img
+                    src={GoogleLogo}
+                    className="logo google"
+                    alt="Google Logo"
+                />
+            </div>
         </div>
     )
 }

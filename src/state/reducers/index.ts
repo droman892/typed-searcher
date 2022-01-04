@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux'
 import searchQueryReducer from './searchQueryReducer'
 
-const reducers = combineReducers({
+const rootReducer = combineReducers({
     searchQuery: searchQueryReducer,
 })
 
-export default reducers
+export default rootReducer
+
+export type State = ReturnType<typeof rootReducer>

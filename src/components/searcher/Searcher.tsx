@@ -5,15 +5,12 @@ import { TextInput } from 'react-materialize'
 import magnifyingGlass from '../../assets/images/magnifyingGlass.png'
 import microphone from '../../assets/images/microphone.png'
 import { useDispatch } from 'react-redux'
-// import { useSelector } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { actionCreators } from '../../store/index'
+import { actionCreators } from '../../state/index'
 
 export const Searcher = () => {
-    // const searchQuery = useSelector((state) => state.searchQuery)
-    // console.log('Search Input: ' + searchQuery)
     const dispatch = useDispatch()
-    const { searchQueryAction } = bindActionCreators(actionCreators, dispatch)
+    const { createQuery } = bindActionCreators(actionCreators, dispatch)
 
     return (
         <div className="search-engine">
@@ -34,8 +31,8 @@ export const Searcher = () => {
                         id="query"
                         inputClassName="search-input"
                         // autoFocus
-                        onChange={(e) => searchQueryAction(e.target.value)}
-                        maxLength="2048"
+                        onChange={(e) => createQuery(e.target.value)}
+                        // maxLength="2048"
                     />
                 </div>
                 <div className="microphone-container">

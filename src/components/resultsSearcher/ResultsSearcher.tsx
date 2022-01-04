@@ -8,30 +8,22 @@ import theX from '../../assets/images/theX.png'
 import microphone from '../../assets/images/microphone.png'
 import { useSelector, useDispatch } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { actionCreators } from '../../store/index'
+import { actionCreators, State } from '../../state/index'
 import { Link } from 'react-router-dom'
-// import { useState, useEffect } from 'react'
 
 export const ResultsSearcher = () => {
-    const searchQuery = useSelector((state) => state.searchQuery)
+    const queryValue = useSelector((state: State) => state.searchQuery)
     const dispatch = useDispatch()
-    const { searchQueryAction } = bindActionCreators(actionCreators, dispatch)
-
-    // useEffect(() => {
-    //     const inputValue = searchQuery
-
-    //     fix why redux state is lost on refresh...use redux persist
-
-    // }, [])
-
+    const { createQuery } = bindActionCreators(actionCreators, dispatch)
     const resultsFormSubmission = () => {
-        document.title = `${searchQuery} - Google`
+        document.title = `${queryValue} - Google`
     }
 
     return (
         <form
             className="results-form-container-1"
             onSubmit={resultsFormSubmission}
+            // onKeyDown={resultsFormSubmission}
         >
             <div id="container">
                 <div className="results-form-container-2">
@@ -52,11 +44,9 @@ export const ResultsSearcher = () => {
                                         <TextInput
                                             id="query"
                                             inputClassName="results-input"
-                                            value={searchQuery}
+                                            value={queryValue}
                                             onChange={(e) =>
-                                                searchQueryAction(
-                                                    e.target.value
-                                                )
+                                                createQuery(e.target.value)
                                             }
                                         />
                                     </div>

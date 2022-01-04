@@ -2,7 +2,7 @@ import { Home } from './pages/Home'
 import { Results } from './pages/Results'
 import { NotFound } from './pages/NotFound'
 import { Route, Routes } from 'react-router-dom'
-import { StoreDisplay } from './store/StoreDisplay'
+import { StoreDisplay } from './state/StoreDisplay'
 
 export const App = () => {
     return (

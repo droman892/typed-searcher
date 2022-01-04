@@ -1,7 +1,16 @@
+.form-container-2 {
+    margin: 0 auto;
+    // width: 640px;
+    padding-top: 6px;
+    width: auto;
+    max-width: 584px;
+    position: relative;
+}
+
 .query-box {
-    padding: 20px 10px;
-    box-sizing: border-box;
-    display: block;
+    padding: 20px;
+    max-height: 160px;
     flex-shrink: 0;
-    width: 100%;
+    box-sizing: border-box;
+    // width: 100%;
 }
