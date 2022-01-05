@@ -7,7 +7,7 @@ import footerLeaf from '../../../assets/images/footerLeaf.png'
 export const LayoutFooter = () => {
     return (
         <Footer
-            className="page-footer"
+            // className="page-footer"
             moreLinks={
                 <>
                     <span className="left left-footer-container">

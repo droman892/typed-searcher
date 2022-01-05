@@ -63,9 +63,14 @@ body {
 //     flex: 1 0 auto;
 // }
 
+html {
+    line-height: normal;
+}
+
 nav ul a {
     -webkit-transition: background-color 0s !important;
     transition: background-color 0s !important;
+    font-size: 14px;
 }
 
 // .page-flexbox-wrapper {
@@ -77,9 +82,8 @@ nav ul a {
 
 #root {
     display: flex;
-    // min-height: 100vh;
-    height: 100%;
     flex-direction: column;
+    height: 100vh;
 }
 
 @media (min-width: 1121px) and (max-width: 1300px) {
