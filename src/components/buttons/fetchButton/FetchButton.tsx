@@ -4,23 +4,22 @@ import 'materialize-css'
 import { Button } from 'react-materialize'
 import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
+import { State } from '../../../state'
 
 export const FetchButton = () => {
-    const searchQuery: string = useSelector((state) => state.searchQuery)
+    const queryValue: string = useSelector((state: State) => state.searchQuery)
 
-    const searchQueryLength: number = searchQuery.length
-
-    // console.log(searchQueryLength)
+    const queryValueLength: number = queryValue.length
 
     return (
         <>
-            {searchQueryLength === 0 ? (
-                <Button id="button-style" node="button" type="submit">
+            {queryValueLength === 0 ? (
+                <Button className="button-style" node="button">
                     <span>Google Search</span>
                 </Button>
             ) : (
                 <Link to="/results">
-                    <Button id="button-style" node="button" type="submit">
+                    <Button className="fetch-button-style" node="button">
                         <span>Google Search</span>
                     </Button>
                 </Link>

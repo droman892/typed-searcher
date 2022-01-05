@@ -1,3 +1,3 @@
 export enum ActionType {
-    SEARCH_QUERY = 'searchQuery',
+    SEARCH_QUERY = 'searchQueryActionType',
 }

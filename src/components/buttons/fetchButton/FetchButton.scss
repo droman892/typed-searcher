@@ -1,4 +1,4 @@
-#button-style {
+.fetch-button-style {
     background-color: #f8f9fa;
     border: 1px solid #f8f9fa;
     border-radius: 4px;
@@ -16,7 +16,7 @@
     box-shadow: none;
 }
 
-#button-style:hover {
+.fetch-button-style:hover {
     box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
     background-color: #f8f9fa;
     border: 1px solid #dadce0;
