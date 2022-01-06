@@ -4,6 +4,11 @@
     .container {
         justify-content: space-evenly !important;
     }
+    .center-footer-container {
+        order: 0 !important;
+        width: 100%;
+        justify-content: center !important;
+    }
 }
 
 .center-footer-container {
@@ -27,6 +32,8 @@
     width: 100%;
     flex-shrink: 0;
     box-sizing: border-box;
+    background-color: #f2f2f2 !important;
+    min-height: 47px !important;
 }
 
 .footer-leaf {

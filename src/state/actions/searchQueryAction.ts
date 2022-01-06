@@ -5,6 +5,4 @@ export interface QueryAction {
     payload: string
 }
 
-// export type Action = QueryAction
-
 export type Action = QueryAction

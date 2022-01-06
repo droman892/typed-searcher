@@ -22,14 +22,16 @@ div.input-field.col {
 
 .search-input {
     min-width: 263px;
-    width: 487px;
+    // width: 487px;
     height: 34px !important;
-    padding: 0px;
-    border: 0px;
-    margin: 0 auto;
+    padding: 0px !important;
+    border: none !important;
+    // margin: 0 auto;
+    margin: 0 !important;
     color: rgba(0, 0, 0, 0.87);
     display: flex;
     flex: 100%;
+    margin-top: 5px !important;
 }
 
 input#query.search-input:focus {
@@ -49,13 +51,15 @@ input#query.search-input {
     display: flex;
     flex: 1;
     flex-wrap: wrap;
+
+    margin-top: -5px;
 }
 
 .magnifying-glass-container {
-    width: 50px;
     padding-right: 13px;
     display: flex;
     align-items: center;
+    margin-top: -5px;
 }
 
 .magnifying-glass-container-2 {
@@ -81,6 +85,7 @@ input#query.search-input {
     flex: 0 0 auto;
     align-items: stretch;
     flex-direction: row;
+    margin-top: -5px;
 }
 
 .search-engine:hover {
