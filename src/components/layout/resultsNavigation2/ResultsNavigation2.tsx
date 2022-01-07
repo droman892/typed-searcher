@@ -12,7 +12,7 @@ export const ResultsNavigation2 = () => {
         <div className="results-nav2-container-1">
             <div className="results-nav2-container-2">
                 <div className="results-nav2-container-3">
-                    <div>
+                    <div id="results-box-separator">
                         <div className="results-nav2-container-4">
                             <div className="results-nav2-section">
                                 <a
@@ -28,6 +28,38 @@ export const ResultsNavigation2 = () => {
                                     </span>
                                     All
                                     <div className="blue-line"></div>
+                                </a>
+                            </div>
+
+                            <div className="results-nav2-section">
+                                <a
+                                    href="#!"
+                                    className="section-results-0 grey-link"
+                                >
+                                    <span className="section-results-1">
+                                        <img
+                                            src={news}
+                                            alt="News Logo"
+                                            className="results-nav2-images"
+                                        />
+                                    </span>
+                                    News
+                                </a>
+                            </div>
+
+                            <div className="results-nav2-section">
+                                <a
+                                    href="#!"
+                                    className="section-results-0 grey-link"
+                                >
+                                    <span className="section-results-1">
+                                        <img
+                                            src={play}
+                                            alt="Video Logo"
+                                            className="results-nav2-images"
+                                        />
+                                    </span>
+                                    Videos
                                 </a>
                             </div>
 
@@ -60,38 +92,6 @@ export const ResultsNavigation2 = () => {
                                         />
                                     </span>
                                     Shopping
-                                </a>
-                            </div>
-
-                            <div className="results-nav2-section">
-                                <a
-                                    href="#!"
-                                    className="section-results-0 grey-link"
-                                >
-                                    <span className="section-results-1">
-                                        <img
-                                            src={play}
-                                            alt="Video Logo"
-                                            className="results-nav2-images"
-                                        />
-                                    </span>
-                                    Videos
-                                </a>
-                            </div>
-
-                            <div className="results-nav2-section">
-                                <a
-                                    href="#!"
-                                    className="section-results-0 grey-link"
-                                >
-                                    <span className="section-results-1">
-                                        <img
-                                            src={news}
-                                            alt="News Logo"
-                                            className="results-nav2-images"
-                                        />
-                                    </span>
-                                    News
                                 </a>
                             </div>
 

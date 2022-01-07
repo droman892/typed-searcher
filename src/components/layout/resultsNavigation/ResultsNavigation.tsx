@@ -8,7 +8,7 @@ import { ResultsNavigation2 } from '..//resultsNavigation2/ResultsNavigation2'
 
 export const ResultsNavigation = () => {
     return (
-        <header className="header-results">
+        <header>
             <div className="section-results">
                 <Navbar
                     id="mobile-nav"

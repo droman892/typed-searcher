@@ -144,13 +144,13 @@ ul.sidenav {
     display: block;
 }
 
-.header-results {
-    position: absolute;
-    top: 20px;
-    margin-top: 6px;
-    width: 100%;
-    min-width: 1121px;
-}
+// .header-results {
+//     position: absolute;
+//     top: 20px;
+//     // margin-top: 6px;
+//     width: 100%;
+//     min-width: 1121px;
+// }
 
 i.material-icons.results-apps-icon {
     height: 24px;
@@ -261,12 +261,15 @@ nav ul li {
 }
 
 .section-results {
-    height: 69px;
-    left: 0;
-    position: absolute;
-    width: 100%;
-    margin-top: -20px;
-    padding-top: 20px;
+    // height: 69px;
+    // left: 0;
+    // position: absolute;
+    // width: 100%;
+    // margin-top: -20px;
+    // padding-top: 20px;
+    margin: 6px 0 4px;
+    height: 65px;
+    z-index: 999;
 }
 
 .settings-icon {
