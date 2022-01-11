@@ -17,7 +17,11 @@ div.input-field.col {
     max-width: 584px;
     margin: 0 auto;
     box-shadow: none;
-    // padding: 5px 8px 0px 14px;
+}
+
+.search-engine-2 {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
 }
 
 .search-input {
@@ -106,6 +110,18 @@ input#query.search-input {
     height: 24px;
     width: 24px;
     vertical-align: middle;
+}
+
+// .reveal {
+//     display: block;
+// }
+
+.helper-container {
+    display: none;
+}
+
+.helper-container-2 {
+    display: block !important;
 }
 
 .search-engine-inner {

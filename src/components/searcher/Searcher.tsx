@@ -4,47 +4,91 @@ import 'materialize-css'
 import { TextInput } from 'react-materialize'
 import magnifyingGlass from '../../assets/images/magnifyingGlass.png'
 import microphone from '../../assets/images/microphone.png'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { actionCreators } from '../../state/index'
+import { actionCreators, State } from '../../state/index'
+// import { useEffect } from 'react'
+import axios from 'axios'
+import { SearchHelper } from '../searchHelper/SearchHelper'
+import '../searchHelper/SearchHelper.scss'
 
 export const Searcher = () => {
     const dispatch = useDispatch()
     const { createQuery } = bindActionCreators(actionCreators, dispatch)
 
+    const displayTrends = () => {
+        console.log('Excellent')
+        document
+            .getElementById('search-engine')
+            ?.classList.toggle('search-engine-2')
+        document
+            .getElementById('helper-container')
+            ?.classList.toggle('helper-container-2')
+    }
+
+    // const queryValue = useSelector((state: State) => state.searchQuery)
+
+    // const options = {
+    //     method: 'GET',
+    //     url: 'https://keywords4.p.rapidapi.com/google-topLevel-10-keywords',
+    //     params: { search: queryValue, country: 'us' },
+    //     headers: {
+    //         'content-type': 'application/json',
+    //         'x-rapidapi-host': 'keywords4.p.rapidapi.com',
+    //         'x-rapidapi-key':
+    //             '9cdabbc96amsh83dd832ad95c9e2p1f9988jsn41ca0b264b55',
+    //     },
+    // }
+
+    // axios
+    //     .request(options)
+    //     .then(function (response) {
+    //         console.log(response.data)
+    //     })
+    //     .catch(function (error) {
+    //         console.error(error)
+    //     })
+
     return (
-        <div className="search-engine">
-            <div className="search-engine-inner">
-                <div className="magnifying-glass-container">
-                    <div className="magnifying-glass-container-2">
-                        <span className="glass-icon-container">
-                            <img
-                                src={magnifyingGlass}
-                                alt="Magnifying Glass"
-                                className="glass-image"
-                            />
-                        </span>
+        <>
+            <div className="search-engine" id="search-engine">
+                <div className="search-engine-inner">
+                    <div className="magnifying-glass-container">
+                        <div className="magnifying-glass-container-2">
+                            <span className="glass-icon-container">
+                                <img
+                                    src={magnifyingGlass}
+                                    alt="Magnifying Glass"
+                                    className="glass-image"
+                                />
+                            </span>
+                        </div>
                     </div>
-                </div>
-                <div className="input-container">
-                    <TextInput
-                        id="query"
-                        inputClassName="search-input"
-                        // autoFocus
-                        onChange={(e) => createQuery(e.target.value)}
-                        // maxLength="2048"
-                    />
-                </div>
-                <div className="microphone-container">
-                    <div className="microphone-container-2">
-                        <img
-                            src={microphone}
-                            alt="Microphone"
-                            className="microphone"
+                    <div className="input-container">
+                        <TextInput
+                            id="query"
+                            inputClassName="search-input"
+                            autoFocus
+                            onChange={(e) => createQuery(e.target.value)}
+                            onClick={displayTrends}
+                            maxLength="2048"
+                            autoComplete="off"
                         />
+                    </div>
+                    <div className="microphone-container">
+                        <div className="microphone-container-2">
+                            <img
+                                src={microphone}
+                                alt="Microphone"
+                                className="microphone"
+                            />
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+            <div className="helper-container" id="helper-container">
+                <SearchHelper />
+            </div>
+        </>
     )
 }
