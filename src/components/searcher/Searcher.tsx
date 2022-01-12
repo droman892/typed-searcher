@@ -19,8 +19,8 @@ export const Searcher = () => {
     const queryValueLength: number = queryValue.length
     const searchResults = document.getElementById('search-results')
     const displayTrends = () => {
-        if (queryValueLength === 0) {
-            console.log('The input box has been clicked')
+        if (queryValueLength === 0 || queryValueLength == undefined) {
+            console.log('The input box is empty')
         } else {
             // console.log('Excellent')
             document
@@ -31,6 +31,7 @@ export const Searcher = () => {
                 ?.classList.toggle('helper-container-2')
         }
     }
+    displayTrends()
 
     useEffect(() => {
         const options = {
@@ -48,7 +49,7 @@ export const Searcher = () => {
         axios
             .request(options)
             .then(function (response) {
-                // console.log(response.data.googleGuggestedKeywords.length)
+                console.log(response.data.googleGuggestedKeywords)
                 let keyword_list = ''
 
                 if (queryValueLength === 0) {
@@ -118,7 +119,7 @@ export const Searcher = () => {
                             inputClassName="search-input"
                             autoFocus
                             onChange={(e) => createQuery(e.target.value)}
-                            onClick={displayTrends}
+                            // onClick={displayTrends}
                             maxLength="2048"
                             autoComplete="off"
                         />

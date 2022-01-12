@@ -1,4 +1,5 @@
 import { useSelector } from 'react-redux'
+import { State } from '../../state'
 import { BasicButton } from '../buttons/basicButton/BasicButton'
 import { FetchButton } from '../buttons/fetchButton/FetchButton'
 import './SearchHelper.scss'
