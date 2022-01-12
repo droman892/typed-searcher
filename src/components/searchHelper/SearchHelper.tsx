@@ -15,7 +15,8 @@ export const SearchHelper = () => {
                 <div className="helper-space"></div>
                 <div className="search-helper-3">
                     <ul className="helper-list-container">
-                        <li className="helper-list-item">
+                        <div id="search-results"></div>
+                        {/* <li className="helper-list-item">
                             <div className="item-container">
                                 <div className="item-icon"></div>
                                 <div className="item-name">
@@ -50,79 +51,7 @@ export const SearchHelper = () => {
                                     </div>
                                 </div>
                             </div>
-                        </li>
-                        <li className="helper-list-item">
-                            <div className="item-container">
-                                <div className="item-icon"></div>
-                                <div className="item-name">
-                                    <div className="item-name-2">
-                                        <span className="item-span">
-                                            PLACEHOLDER TEXT
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li className="helper-list-item">
-                            <div className="item-container">
-                                <div className="item-icon"></div>
-                                <div className="item-name">
-                                    <div className="item-name-2">
-                                        <span className="item-span">
-                                            PLACEHOLDER TEXT
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li className="helper-list-item">
-                            <div className="item-container">
-                                <div className="item-icon"></div>
-                                <div className="item-name">
-                                    <div className="item-name-2">
-                                        <span className="item-span">
-                                            PLACEHOLDER TEXT
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li className="helper-list-item">
-                            <div className="item-container">
-                                <div className="item-icon"></div>
-                                <div className="item-name">
-                                    <div className="item-name-2">
-                                        <span className="item-span">
-                                            PLACEHOLDER TEXT
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li className="helper-list-item">
-                            <div className="item-container">
-                                <div className="item-icon"></div>
-                                <div className="item-name">
-                                    <div className="item-name-2">
-                                        <span className="item-span">
-                                            PLACEHOLDER TEXT
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li className="helper-list-item">
-                            <div className="item-container">
-                                <div className="item-icon"></div>
-                                <div className="item-name">
-                                    <div className="item-name-2">
-                                        <span className="item-span">
-                                            PLACEHOLDER TEXT
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
+                        </li> */}
                     </ul>
                 </div>
                 <div className="helper-space-bottom"></div>
