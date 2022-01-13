@@ -18,17 +18,22 @@ export const Searcher = () => {
     const queryValue = useSelector((state: State) => state.searchQuery)
     const queryValueLength: number = queryValue.length
     const searchResults = document.getElementById('search-results')
+
     const displayTrends = () => {
-        if (queryValueLength === 0 || queryValueLength == undefined) {
-            console.log('The input box is empty')
-        } else {
-            // console.log('Excellent')
+        if (queryValueLength > 0) {
             document
                 .getElementById('search-engine')
-                ?.classList.toggle('search-engine-2')
+                ?.classList.add('search-engine-2')
             document
                 .getElementById('helper-container')
-                ?.classList.toggle('helper-container-2')
+                ?.classList.add('helper-container-2')
+        } else {
+            document
+                .getElementById('search-engine')
+                ?.classList.remove('search-engine-2')
+            document
+                .getElementById('helper-container')
+                ?.classList.remove('helper-container-2')
         }
     }
     displayTrends()
@@ -82,7 +87,7 @@ export const Searcher = () => {
             .catch(function (error) {
                 console.error(error)
             })
-    })
+    }, [queryValue, queryValueLength, searchResults])
 
     // window.onclick = function (event) {
     //     if (!event.target.matches('.helper-container-2')) {
@@ -119,7 +124,6 @@ export const Searcher = () => {
                             inputClassName="search-input"
                             autoFocus
                             onChange={(e) => createQuery(e.target.value)}
-                            // onClick={displayTrends}
                             maxLength="2048"
                             autoComplete="off"
                         />

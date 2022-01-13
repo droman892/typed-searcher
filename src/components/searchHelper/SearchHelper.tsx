@@ -5,11 +5,11 @@ import { FetchButton } from '../buttons/fetchButton/FetchButton'
 import './SearchHelper.scss'
 
 export const SearchHelper = () => {
-    const queryValue: string = useSelector((state: State) => state.searchQuery)
+    // const queryValue: string = useSelector((state: State) => state.searchQuery)
 
-    const queryValueLength: number = queryValue.length
+    // const queryValueLength: number = queryValue.length
 
-    console.log('Query Length: ' + queryValueLength)
+    // console.log('Query Length: ' + queryValueLength)
     return (
         <div className="search-helper" id="search-helper">
             <div className="search-helper-2">
