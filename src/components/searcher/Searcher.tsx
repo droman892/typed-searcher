@@ -7,25 +7,56 @@ import microphone from '../../assets/images/microphone.png'
 import { useDispatch, useSelector } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { actionCreators, State } from '../../state/index'
-import { useEffect } from 'react'
-import axios from 'axios'
 import { SearchHelper } from '../searchHelper/SearchHelper'
 import '../searchHelper/SearchHelper.scss'
+import { DisplayTrends } from '../../functions/DisplayTrends'
+import { HelperListItems } from '../../api/HelperListItems'
 
 export const Searcher = () => {
     const dispatch = useDispatch()
     const { createQuery } = bindActionCreators(actionCreators, dispatch)
-    const queryValue = useSelector((state: State) => state.searchQuery)
-    const queryValueLength: number = queryValue.length
-    const searchResults = document.getElementById('search-results')
+    // const queryValue = useSelector((state: State) => state.searchQuery)
+    // const queryValueLength: number = queryValue.length
+    // const searchResults = document.getElementById('search-results')
 
-    const displayTrends = () => {
-        if (queryValueLength > 0) {
+    DisplayTrends()
+
+    HelperListItems()
+
+    console.log(HelperListItems)
+
+    // window.onclick = function (event) {
+    //     if (!event.target.matches('.search-helper')) {
+    //         document
+    //             .getElementById('search-engine')
+    //             ?.classList.remove('search-engine-2')
+    //         document
+    //             .getElementById('helper-container')
+    //             ?.classList.remove('helper-container-2')
+    //     } else {
+    //         document
+    //             .getElementById('search-engine-2')
+    //             ?.classList.add('search-engine-2')
+    //         document
+    //             .getElementById('helper-container-2')
+    //             ?.classList.add('helper-container-2')
+    //     }
+    // }
+
+    window.onclick = function (event) {
+        console.log('DAVID ROMAN IS GREAT')
+        // const element = event.currentTarget as HTMLInputElement
+        // console.log(element)
+        // const value = element.value
+        // console.log(value)
+        const target = document.getElementById('search-engine')
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        if (event == target) {
             document
-                .getElementById('search-engine')
+                .getElementById('search-engine-2')
                 ?.classList.add('search-engine-2')
             document
-                .getElementById('helper-container')
+                .getElementById('helper-container-2')
                 ?.classList.add('helper-container-2')
         } else {
             document
@@ -36,72 +67,6 @@ export const Searcher = () => {
                 ?.classList.remove('helper-container-2')
         }
     }
-    displayTrends()
-
-    useEffect(() => {
-        const options = {
-            method: 'GET',
-            url: 'https://keywords4.p.rapidapi.com/google-topLevel-10-keywords',
-            params: { search: queryValue, country: 'us' },
-            headers: {
-                'content-type': 'application/json',
-                'x-rapidapi-host': 'keywords4.p.rapidapi.com',
-                'x-rapidapi-key':
-                    '9cdabbc96amsh83dd832ad95c9e2p1f9988jsn41ca0b264b55',
-            },
-        }
-
-        axios
-            .request(options)
-            .then(function (response) {
-                console.log(response.data.googleGuggestedKeywords)
-                let keyword_list = ''
-
-                if (queryValueLength === 0) {
-                    console.log('NO query has been made')
-                } else {
-                    console.log('A query HAS been made')
-                    for (
-                        let i = 0;
-                        i < response.data.googleGuggestedKeywords.length;
-                        i++
-                    ) {
-                        // eslint-disable-next-line prettier/prettier
-                    keyword_list += 
-                    `<li id="helper-list-item">
-                        <div id="item-container">
-                            <div id="item-icon"></div>
-                            <div id="item-name">
-                                <div id="item-name-2">
-                                    <span id="item-span">
-                                        ${response.data.googleGuggestedKeywords[i]}
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </li>`
-                        searchResults.innerHTML = keyword_list
-                    }
-                }
-            })
-            .catch(function (error) {
-                console.error(error)
-            })
-    }, [queryValue, queryValueLength, searchResults])
-
-    // window.onclick = function (event) {
-    //     if (!event.target.matches('.helper-container-2')) {
-    //         const dropdowns =
-    //             document.getElementsByClassName('.helper-container')
-    //         let i
-    //         for (i = 0; i < dropdowns.length; i++) {
-    //             const openDropdown = dropdowns[i]
-    //             if (openDropdown.classList.contains('helper-container-2')) {
-    //                 openDropdown.classList.remove('helper-container-2')
-    //             }
-    //         }
-    //     }
-    // }
 
     return (
         <>

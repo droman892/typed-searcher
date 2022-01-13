@@ -143,6 +143,10 @@ input#query.search-input {
     margin: 0;
 }
 
+#helper-list-item:hover{
+    background-color: rgba(51,51,51,0.08);
+}
+
 #item-container {
     flex: auto;
     display: flex;
