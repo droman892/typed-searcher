@@ -11,6 +11,7 @@ import { SearchHelper } from '../searchHelper/SearchHelper'
 import '../searchHelper/SearchHelper.scss'
 import { DisplayTrends } from '../../functions/DisplayTrends'
 import { HelperListItems } from '../../api/HelperListItems'
+import { useEffect } from 'react'
 
 export const Searcher = () => {
     const dispatch = useDispatch()
@@ -23,7 +24,34 @@ export const Searcher = () => {
 
     HelperListItems()
 
-    console.log(HelperListItems)
+    // async function SetItemState() {
+    //     console.log('interestingggggggggggggggggggggggggggg')
+    //     const itemSpan = document.getElementById('item-span')
+    //     const spanText = itemSpan?.innerText
+    //     // console.log(itemSpan)
+    //     // const results = HelperListItems()
+    //     // console.log(results)
+    //     console.log('SPAN TEXT: ' + spanText)
+
+    //     // const setItemState = createQuery(spanText) || 1
+    //     // console.log(setItemState)
+
+    //     // const listItem = document.getElementById('helper-list-item')
+    //     // console.log('LIST ITEM: ' + listItem)
+    // }
+    // SetItemState()
+
+    // document
+    //     .getElementById('search-engine')
+    //     .addEventListener('click', revealHelpers)
+
+    // function revealHelpers() {
+    //     document.getElementById('search-engine').innerHTML = 'Hello World'
+    // }
+
+    // revealHelpers()
+
+    // console.log(HelperListItems)
 
     // window.onclick = function (event) {
     //     if (!event.target.matches('.search-helper')) {
@@ -43,30 +71,30 @@ export const Searcher = () => {
     //     }
     // }
 
-    window.onclick = function (event) {
-        console.log('DAVID ROMAN IS GREAT')
-        // const element = event.currentTarget as HTMLInputElement
-        // console.log(element)
-        // const value = element.value
-        // console.log(value)
-        const target = document.getElementById('search-engine')
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        if (event == target) {
-            document
-                .getElementById('search-engine-2')
-                ?.classList.add('search-engine-2')
-            document
-                .getElementById('helper-container-2')
-                ?.classList.add('helper-container-2')
-        } else {
-            document
-                .getElementById('search-engine')
-                ?.classList.remove('search-engine-2')
-            document
-                .getElementById('helper-container')
-                ?.classList.remove('helper-container-2')
-        }
-    }
+    // window.onclick = function (event) {
+    //     console.log('DAVID ROMAN IS GREAT')
+    //     // const element = event.currentTarget as HTMLInputElement
+    //     // console.log(element)
+    //     // const value = element.value
+    //     // console.log(value)
+    //     const target = document.getElementById('search-helper')
+    //     // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    //     if (event == target) {
+    //         document
+    //             .getElementById('search-engine-2')
+    //             ?.classList.add('search-engine-2')
+    //         document
+    //             .getElementById('helper-container-2')
+    //             ?.classList.add('helper-container-2')
+    //     } else {
+    //         document
+    //             .getElementById('search-engine')
+    //             ?.classList.remove('search-engine-2')
+    //         document
+    //             .getElementById('helper-container')
+    //             ?.classList.remove('helper-container-2')
+    //     }
+    // }
 
     return (
         <>

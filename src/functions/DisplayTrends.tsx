@@ -4,7 +4,7 @@ import { State } from '../state'
 export const DisplayTrends = () => {
     const queryValue = useSelector((state: State) => state.searchQuery)
     const queryValueLength: number = queryValue.length
-
+    console.log('DISPLAY-TRENDS')
     if (queryValueLength > 0) {
         document
             .getElementById('search-engine')

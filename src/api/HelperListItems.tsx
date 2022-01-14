@@ -28,8 +28,8 @@ export const HelperListItems = () => {
             .request(options)
             .then(function (response) {
                 console.log(response.data.googleGuggestedKeywords)
-                let keyword_list = ''
 
+                let keyword_list = ''
                 if (queryValueLength === 0) {
                     console.log('NO query has been made')
                 } else {
@@ -54,8 +54,21 @@ export const HelperListItems = () => {
                             </div>
                         </li>`
 
-                        searchResults.innerHTML = keyword_list
+                        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+                        searchResults!.innerHTML = keyword_list
                     }
+                }
+                for (
+                    let i = 0;
+                    i < response.data.googleGuggestedKeywords.length;
+                    i++
+                ) {
+                    const mainSpan = document.getElementById('item-span')
+                    const textSpan = mainSpan?.innerText
+                    console.log(textSpan)
+                    mainSpan?.addEventListener('click', function () {
+                        console.log('this item was clicked!!!!')
+                    })
                 }
             })
             .catch(function (error) {
