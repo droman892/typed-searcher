@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 
 export const BasicButton = () => {
     return (
-        <Link to="/results">
+        <Link to="/search/*">
             <Button className="button-style" node="button">
                 <span>I&#39;m Feeling Lucky</span>
             </Button>

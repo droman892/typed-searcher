@@ -13,10 +13,23 @@ import { Link } from 'react-router-dom'
 
 export const ResultsSearcher = () => {
     const queryValue = useSelector((state: State) => state.searchQuery)
+    const queryValueLength: number = queryValue.length || 0
+    console.log(queryValueLength)
+    let queryPath = queryValue
+    queryPath = queryPath.replace(/\s+/g, '+')
     const dispatch = useDispatch()
     const { createQuery } = bindActionCreators(actionCreators, dispatch)
     const resultsFormSubmission = () => {
         document.title = `${queryValue} - Google`
+    }
+
+    const deleteQuery = () => {
+        createQuery('')
+        document.getElementById('query')?.focus()
+    }
+
+    const doNothing = (e: { preventDefault: () => void }) => {
+        e.preventDefault()
     }
 
     return (
@@ -52,7 +65,10 @@ export const ResultsSearcher = () => {
                                     </div>
                                 </div>
                                 <div className="results-x-microphone">
-                                    <div className="results-x">
+                                    <div
+                                        className="results-x"
+                                        onClick={deleteQuery}
+                                    >
                                         <span className="results-x-2">
                                             <img
                                                 src={theX}
@@ -62,7 +78,6 @@ export const ResultsSearcher = () => {
                                         </span>
                                         <div className="results-line" />
                                     </div>
-
                                     <div className="results-microphone">
                                         <img
                                             src={microphone}
@@ -72,17 +87,60 @@ export const ResultsSearcher = () => {
                                     </div>
                                 </div>
                             </div>
-                            <button className="results-query-button-container-1">
-                                <div className="results-query-button-container-2">
-                                    <span className="results-query-button-container-3">
-                                        <img
-                                            src={magnifyingGlass}
-                                            alt="Magnifying Glass"
-                                            className="results-glass-image"
-                                        />
-                                    </span>
-                                </div>
-                            </button>
+                            {/* <Link
+                                to={{
+                                    pathname: '/search',
+                                    search: '?q=' + queryPath,
+                                }}
+                                className="results-glass-link"
+                            >
+                                <button className="results-query-button-container-1 results-glass-button">
+                                    <div className="results-query-button-container-2">
+                                        <span className="results-query-button-container-3">
+                                            <img
+                                                src={magnifyingGlass}
+                                                alt="Magnifying Glass"
+                                                className="results-glass-image"
+                                            />
+                                        </span>
+                                    </div>
+                                </button>
+                            </Link> */}
+                            <>
+                                {queryValueLength === 0 ? (
+                                    <button className="results-query-button-container-1 results-glass-button" onClick={doNothing}>
+                                        <div className="results-query-button-container-2">
+                                            <span className="results-query-button-container-3">
+                                                <img
+                                                    src={magnifyingGlass}
+                                                    alt="Magnifying Glass"
+                                                    className="results-glass-image"
+                                                />
+                                            </span>
+                                        </div>
+                                    </button>
+                                ) : (
+                                    <Link
+                                        to={{
+                                            pathname: '/search',
+                                            search: '?q=' + queryPath,
+                                        }}
+                                        className="results-glass-link"
+                                    >
+                                        <button className="results-query-button-container-1 results-glass-button">
+                                            <div className="results-query-button-container-2">
+                                                <span className="results-query-button-container-3">
+                                                    <img
+                                                        src={magnifyingGlass}
+                                                        alt="Magnifying Glass"
+                                                        className="results-glass-image"
+                                                    />
+                                                </span>
+                                            </div>
+                                        </button>
+                                    </Link>
+                                )}
+                            </>
                         </div>
                     </div>
                 </div>

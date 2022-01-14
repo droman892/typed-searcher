@@ -226,3 +226,11 @@
     width: 14px;
     padding: 15px 5px;
 }
+
+.results-glass-link:hover {
+    background-color: rgba(0,0,0,0) !important;
+}
+
+.results-glass-button:focus {
+    background-color: rgba(0,0,0,0) !important;
+}
