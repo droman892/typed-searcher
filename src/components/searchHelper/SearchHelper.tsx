@@ -2,8 +2,10 @@ import { Link } from 'react-router-dom'
 import { BasicButton } from '../buttons/basicButton/BasicButton'
 import { FetchButton } from '../buttons/fetchButton/FetchButton'
 import './SearchHelper.scss'
+import { v4 as uuidv4 } from 'uuid'
 
 export const SearchHelper = () => {
+    const unique_id = uuidv4()
     // const queryValue: string = useSelector((state: State) => state.searchQuery)
 
     // const queryValueLength: number = queryValue.length
@@ -15,11 +17,11 @@ export const SearchHelper = () => {
             <div className="search-helper-2">
                 <div className="helper-space"></div>
                 <div className="search-helper-3">
-                    <Link to="/results">
+                    {/* <Link to="/results"> */}
                         <ul className="helper-list-container">
                             <div id="search-results"></div>
                         </ul>
-                    </Link>
+                    {/* </Link> */}
                 </div>
                 <div className="helper-space-bottom"></div>
                 <div className="search-helper-button-container">
