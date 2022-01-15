@@ -3,6 +3,7 @@ import { BasicButton } from '../buttons/basicButton/BasicButton'
 import { FetchButton } from '../buttons/fetchButton/FetchButton'
 import './SearchHelper.scss'
 import { v4 as uuidv4 } from 'uuid'
+import { HelperListItems } from '../../api/HelperListItems'
 
 export const SearchHelper = () => {
     const unique_id = uuidv4()
@@ -17,11 +18,10 @@ export const SearchHelper = () => {
             <div className="search-helper-2">
                 <div className="helper-space"></div>
                 <div className="search-helper-3">
-                    {/* <Link to="/results"> */}
-                        <ul className="helper-list-container">
-                            <div id="search-results"></div>
-                        </ul>
-                    {/* </Link> */}
+                    <ul className="helper-list-container">
+                        {/* <div id="search-results"></div> */}
+                        <HelperListItems />
+                    </ul>
                 </div>
                 <div className="helper-space-bottom"></div>
                 <div className="search-helper-button-container">
