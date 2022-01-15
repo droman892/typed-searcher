@@ -23,6 +23,10 @@ export const ResultsSearcher = () => {
         document.title = `${queryValue} - Google`
     }
 
+    // const changeURL = () => {
+    //     window.history.pushState('object or string', 'Title', '/search/*')
+    // }
+
     const deleteQuery = () => {
         createQuery('')
         document.getElementById('query')?.focus()

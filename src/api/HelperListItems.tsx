@@ -1,34 +1,19 @@
 import axios from 'axios'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { actionCreators, State } from '../state'
-import { v4 as uuidv4 } from 'uuid'
 import { Link } from 'react-router-dom'
-
-export const HelperLinks = () => {
-    return (
-        <>
-            <Link
-                to={{
-                    pathname: '/search',
-                    search: '?q=' + 'HOKAGE',
-                }}
-            ></Link>
-        </>
-    )
-}
 
 export const HelperListItems = () => {
     // const unique_id = uuidv4()
     // console.log(unique_id)
     const queryValue = useSelector((state: State) => state.searchQuery)
-    const queryValueLength: number = queryValue.length
-    const searchResults = document.getElementById('search-results')
-    // const searchLink = document.getElementById('search-results')
-    // console.log(searchLink)
+    // const queryValueLength: number = queryValue.length
+    // const searchResults = document.getElementById('search-results')
     const dispatch = useDispatch()
-    const { createQuery } = bindActionCreators(actionCreators, dispatch)
+    // const { createQuery } = bindActionCreators(actionCreators, dispatch)
+    const [responseData, setResponseData] = useState('')
 
     useEffect(() => {
         const options = {
@@ -46,121 +31,60 @@ export const HelperListItems = () => {
         axios
             .request(options)
             .then(function (response) {
-                console.log(response.data.googleGuggestedKeywords)
-                // const keywords = response.data.googleGuggestedKeywords
-                // let arrayList = ''
-                // const arrayItems = keywords.map(
-                //     (keyword) =>
-                //         (arrayList += `<Link to="/search/*" key={keyword.toString()}>
-                //             <div id="sweet">
-                //                 <li id="helper-list-item">
-                //                     <div id="item-container">
-                //                         <div id="item-icon"></div>
-                //                         <div id="item-name">
-                //                             <div id="item-name-2">
-                //                                 <span id="item-span">
-                //                                     ${keyword}
-                //                                 </span>
-                //                             </div>
-                //                         </div>
-                //                     </div>
-                //                 </li>
-                //             </div>
-                //         </Link>`)
-                // )
-                // console.log(arrayItems)
-                // searchResults!.innerHTML(arrayList)
-
-// ---------------------------------------------------------------------------------
-
-                let keyword_list = ''
-                if (queryValueLength === 0) {
-                    console.log('NO query has been made')
+                if (response.data.googleGuggestedKeywords == undefined) {
+                    console.log(`MESSAGE: The ${response.data}.`)
                 } else {
-                    // console.log('A query HAS been made')
-                    for (
-                        let i = 0;
-                        i < response.data.googleGuggestedKeywords.length;
-                        i++
-                    ) {
-                        const unique_id = uuidv4()
-                        let linkParameter: string =
-                            response.data.googleGuggestedKeywords[i]
-                        linkParameter = linkParameter.replace(/\s+/g, '+')
-                        // console.log(linkParameter)
+                    console.log('MESSAGE: Something has been typed.')
+                    const keywordArray = response.data.googleGuggestedKeywords
 
-                        // eslint-disable-next-line prettier/prettier
-                        keyword_list +=
-                            // `<a href='/search?q=${linkParameter}'>
-                            //     <div id=${unique_id}>
-                            //         <li id="helper-list-item">
-                            //             <div id="item-container">
-                            //                 <div id="item-icon"></div>
-                            //                 <div id="item-name">
-                            //                     <div id="item-name-2">
-                            //                         <span id="item-span">
-                            //                             ${response.data.googleGuggestedKeywords[i]}
-                            //                         </span>
-                            //                     </div>
-                            //                 </div>
-                            //             </div>
-                            //         </li>
-                            //     </div>
-                            // </a>`
-                            `<div id=${unique_id}>
-                                <li id="helper-list-item">
-                                    <div id="item-container">
-                                        <div id="item-icon"></div>
-                                        <div id="item-name">
-                                            <div id="item-name-2">
-                                                <span id="item-span">
-                                                    ${response.data.googleGuggestedKeywords[i]}
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                            </div>`
-                        // console.log(keyword_list)
-                        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-                        searchResults!.innerHTML = keyword_list
-                        // console.log(searchResults)
-
-                        console.log(searchResults)
-                        const listContainer = document.getElementById(
-                            `${unique_id}`
-                        )
-                        // console.log(listContainer)
-                        let routerLink = ''
-                        routerLink += `
-                        <Link
-                            to={{
-                                pathname: '/search',
-                                search: '?q=' + tom,
-                            }}
-                        >
-                            <div id="link-id"></div>
-                        </Link>`
-                        // console.log(routerLink)
-                        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-                        listContainer!.innerHTML = routerLink
-                    }
+                    setResponseData(keywordArray)
                 }
+
+                // console.log(response.data.googleGuggestedKeywords)
+
+                // setResponseData(response.data.googleGuggestedKeywords || '')
             })
             .catch(function (error) {
                 console.error(error)
             })
-    }, [queryValue, queryValueLength, searchResults])
+    }, [queryValue])
+
     return (
         <>
-            {/* <Link
+            <Link
                 to={{
                     pathname: '/search',
-                    search: '?q=' + 'linkParameter',
+                    search: '?q=' + responseData[0],
                 }}
-            > */}
-            <div id="search-results"></div>
-            {/* </Link> */}
+            >
+                <li id="helper-list-item">
+                    <div id="item-container">
+                        <div id="item-icon"></div>
+                        <div id="item-name">
+                            <div id="item-name-2">
+                                <span id="item-span">{responseData[0]}</span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </Link>
+            <Link
+                to={{
+                    pathname: '/search',
+                    search: '?q=' + responseData[2],
+                }}
+            >
+                <li id="helper-list-item">
+                    <div id="item-container">
+                        <div id="item-icon"></div>
+                        <div id="item-name">
+                            <div id="item-name-2">
+                                <span id="item-span">{responseData[2]}</span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </Link>
         </>
     )
 }
