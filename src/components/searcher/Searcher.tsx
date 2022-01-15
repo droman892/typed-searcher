@@ -4,14 +4,12 @@ import 'materialize-css'
 import { TextInput } from 'react-materialize'
 import magnifyingGlass from '../../assets/images/magnifyingGlass.png'
 import microphone from '../../assets/images/microphone.png'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { actionCreators, State } from '../../state/index'
+import { actionCreators } from '../../state/index'
 import { SearchHelper } from '../searchHelper/SearchHelper'
 import '../searchHelper/SearchHelper.scss'
 import { DisplayTrends } from '../../functions/DisplayTrends'
-import { HelperListItems } from '../../api/HelperListItems'
-import { useEffect } from 'react'
 
 export const Searcher = () => {
     const dispatch = useDispatch()
@@ -21,33 +19,6 @@ export const Searcher = () => {
     // const searchResults = document.getElementById('search-results')
 
     DisplayTrends()
-
-    // HelperListItems()
-
-    // window.onclick = function (event) {
-    //     console.log('DAVID ROMAN IS GREAT')
-    //     // const element = event.currentTarget as HTMLInputElement
-    //     // console.log(element)
-    //     // const value = element.value
-    //     // console.log(value)
-    //     const target = document.getElementById('search-helper')
-    //     // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    //     if (event == target) {
-    //         document
-    //             .getElementById('search-engine-2')
-    //             ?.classList.add('search-engine-2')
-    //         document
-    //             .getElementById('helper-container-2')
-    //             ?.classList.add('helper-container-2')
-    //     } else {
-    //         document
-    //             .getElementById('search-engine')
-    //             ?.classList.remove('search-engine-2')
-    //         document
-    //             .getElementById('helper-container')
-    //             ?.classList.remove('helper-container-2')
-    //     }
-    // }
 
     return (
         <>

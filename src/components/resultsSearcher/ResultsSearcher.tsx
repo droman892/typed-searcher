@@ -112,7 +112,10 @@ export const ResultsSearcher = () => {
                             </Link> */}
                             <>
                                 {queryValueLength === 0 ? (
-                                    <button className="results-query-button-container-1 results-glass-button" onClick={doNothing}>
+                                    <button
+                                        className="results-query-button-container-1 results-glass-button"
+                                        onClick={doNothing}
+                                    >
                                         <div className="results-query-button-container-2">
                                             <span className="results-query-button-container-3">
                                                 <img
