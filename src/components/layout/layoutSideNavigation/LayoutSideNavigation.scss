@@ -9,6 +9,10 @@ ul.sidenav {
     font-size: 16px;
 }
 
+.side-nav-container:active {
+    background-color: rgba(0, 204, 255, 0.274);
+}
+
 .side-nav-item {
     display: flex;
     align-items: center;
