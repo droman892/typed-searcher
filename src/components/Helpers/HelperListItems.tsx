@@ -24,6 +24,7 @@ export const HelperListItems = () => {
         axios
             .request(options)
             .then(function (response) {
+                console.log(response.data.googleGuggestedKeywords)
                 if (response.data.googleGuggestedKeywords !== undefined) {
                     const keywordArray = response.data.googleGuggestedKeywords
                     setResponseData(keywordArray)

@@ -27,20 +27,11 @@ export const ResultsNavigation = () => {
                         <div className="nav-container-right-results">
                             <div className="gear-container">
                                 <div className="gear-container-2">
-                                    <div className="gear-container-3">
-                                        <div className="gear-container-4">
-                                            <NavItem
-                                                href="#"
-                                                className="nav-gear"
-                                            >
-                                                <span className="nav-gear-2">
-                                                    <Icon className="settings-icon">
-                                                        settings
-                                                    </Icon>
-                                                </span>
-                                            </NavItem>
-                                        </div>
-                                    </div>
+                                    <NavItem href="#" className="nav-gear">
+                                        <Icon className="settings-icon">
+                                            settings
+                                        </Icon>
+                                    </NavItem>
                                 </div>
                             </div>
 

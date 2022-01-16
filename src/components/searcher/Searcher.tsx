@@ -14,9 +14,6 @@ import { DisplayTrends } from '../../functions/DisplayTrends'
 export const Searcher = () => {
     const dispatch = useDispatch()
     const { createQuery } = bindActionCreators(actionCreators, dispatch)
-    // const queryValue = useSelector((state: State) => state.searchQuery)
-    // const queryValueLength: number = queryValue.length
-    // const searchResults = document.getElementById('search-results')
 
     DisplayTrends()
 

@@ -4,7 +4,6 @@ import { State } from '../state'
 export const DisplayTrends = () => {
     const queryValue = useSelector((state: State) => state.searchQuery)
     const queryValueLength: number = queryValue.length
-    console.log('DISPLAY-TRENDS')
     if (queryValueLength > 0) {
         document
             .getElementById('search-engine')
@@ -12,6 +11,9 @@ export const DisplayTrends = () => {
         document
             .getElementById('helper-container')
             ?.classList.add('helper-container-2')
+        // document
+        //     .getElementById('results-form-container-1')
+        //     ?.classList.add('results-form-container-2')
     } else {
         document
             .getElementById('search-engine')
