@@ -11,15 +11,8 @@ export const DisplayTrends = () => {
         document
             .getElementById('helper-container')
             ?.classList.add('helper-container-2')
-        // document
-        //     .getElementById('results-form-container-1')
-        //     ?.classList.add('results-form-container-2')
-    } else {
         document
-            .getElementById('search-engine')
-            ?.classList.remove('search-engine-2')
-        document
-            .getElementById('helper-container')
-            ?.classList.remove('helper-container-2')
+            .getElementById('results-query-container-1')
+            ?.classList.add('results-query-container-9')
     }
 }

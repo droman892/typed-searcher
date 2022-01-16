@@ -19,7 +19,7 @@ export const Searcher = () => {
 
     return (
         <>
-            <div className="search-engine" id="search-engine">
+            <form className="search-engine" id="search-engine">
                 <div className="search-engine-inner">
                     <div className="magnifying-glass-container">
                         <div className="magnifying-glass-container-2">
@@ -52,7 +52,7 @@ export const Searcher = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </form>
             <div className="helper-container" id="helper-container">
                 <SearchHelper />
             </div>

@@ -10,8 +10,8 @@ import { useSelector, useDispatch } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { actionCreators, State } from '../../state/index'
 import { Link } from 'react-router-dom'
-import { SearchHelper } from '../searchHelper/SearchHelper'
 import { DisplayTrends } from '../../functions/DisplayTrends'
+import { ResultsSearchHelper } from '../resultsSearchHelper/ResultsSearchHelper'
 
 export const ResultsSearcher = () => {
     const queryValue = useSelector((state: State) => state.searchQuery)
@@ -134,12 +134,12 @@ export const ResultsSearcher = () => {
                                 </>
                             </div>
                         </div>
+                        <div className="helper-container" id="helper-container">
+                            <ResultsSearchHelper />
+                        </div>
                     </div>
                 </div>
             </form>
-            <div className="helper-container" id="helper-container">
-                <SearchHelper />
-            </div>
         </>
     )
 }
