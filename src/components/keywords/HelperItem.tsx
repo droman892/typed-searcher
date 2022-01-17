@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { bindActionCreators } from 'redux'
 import { actionCreators } from '../../state'
 import { useDispatch } from 'react-redux'
+import '../searcher/Searcher.scss'
 
 export const HelperItem = (props: { name: string }) => {
     const dispatch = useDispatch()

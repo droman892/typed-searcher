@@ -146,8 +146,8 @@
     border: 1px solid transparent;
     box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
     border-radius: 24px;
-    margin: 0 auto;
-    width: 692px;
+    // margin: 0 auto;
+    width: 690px;
 }
 
 .results-query-container-1:hover {
@@ -240,4 +240,12 @@
 
 .results-glass-button:focus {
     background-color: rgba(0,0,0,0) !important;
+}
+
+.results-helper-container-1 {
+    display: none;
+}
+
+.results-helper-container-2 {
+    display: block !important;
 }

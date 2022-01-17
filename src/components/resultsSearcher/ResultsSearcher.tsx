@@ -54,7 +54,10 @@ export const ResultsSearcher = () => {
                                 />
                             </Link>
                         </div>
-                        <div className="results-query-container-1">
+                        <div
+                            className="results-query-container-1"
+                            id="results-query-container-1"
+                        >
                             <div className="results-query-container-2">
                                 <div className="results-query-container-3">
                                     <div className="results-query-input">
@@ -122,7 +125,9 @@ export const ResultsSearcher = () => {
                                                 <div className="results-query-button-container-2">
                                                     <span className="results-query-button-container-3">
                                                         <img
-                                                            src={magnifyingGlass}
+                                                            src={
+                                                                magnifyingGlass
+                                                            }
                                                             alt="Magnifying Glass"
                                                             className="results-glass-image"
                                                         />
@@ -134,7 +139,10 @@ export const ResultsSearcher = () => {
                                 </>
                             </div>
                         </div>
-                        <div className="helper-container" id="helper-container">
+                        <div
+                            className="results-helper-container-1"
+                            id="results-helper-container-1"
+                        >
                             <ResultsSearchHelper />
                         </div>
                     </div>

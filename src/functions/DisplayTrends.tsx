@@ -14,5 +14,21 @@ export const DisplayTrends = () => {
         document
             .getElementById('results-query-container-1')
             ?.classList.add('results-query-container-9')
+        document
+            .getElementById('results-helper-container-1')
+            ?.classList.add('results-helper-container-2')
+    } else {
+        document
+            .getElementById('search-engine')
+            ?.classList.remove('search-engine-2')
+        document
+            .getElementById('helper-container')
+            ?.classList.remove('helper-container-2')
+        document
+            .getElementById('results-query-container-1')
+            ?.classList.remove('results-query-container-9')
+        document
+            .getElementById('results-helper-container-1')
+            ?.classList.remove('results-helper-container-2')
     }
 }

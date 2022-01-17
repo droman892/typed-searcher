@@ -111,22 +111,20 @@ nav ul a {
     box-sizing: border-box;
 }
 
-.results-page-box {
+.results-page-box-2 {
+    clear: both;
+    // min-width: 833px;
+    margin-left: 0;
+    padding-top: 20px;
+    box-sizing: border-box;
+    // position: relative;
+    min-height: 100vh;
+
+    position: absolute;
     min-width: 1121px;
     width: 100%;
     display: block;
     background-color: yellow;
-    // height: 100%;
-}
-
-.results-page-box-2 {
-    clear: both;
-    min-width: 833px;
-    margin-left: 0;
-    padding-top: 20px;
-    box-sizing: border-box;
-    position: relative;
-    min-height: 100vh;
 }
 
 .test-container {
