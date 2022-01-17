@@ -11,12 +11,12 @@ export const QueryContainer = () => {
 
     return (
         <div className="query-box">
-            <form className="form-container" onSubmit={handleSubmit}>
+            <div className="form-container" onSubmit={handleSubmit}>
                 <div className="form-container-2">
                     <Searcher />
                     <ButtonContainer />
                 </div>
-            </form>
+            </div>
         </div>
     )
 }

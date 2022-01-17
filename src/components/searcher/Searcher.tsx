@@ -4,9 +4,9 @@ import 'materialize-css'
 import { TextInput } from 'react-materialize'
 import magnifyingGlass from '../../assets/images/magnifyingGlass.png'
 import microphone from '../../assets/images/microphone.png'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { actionCreators } from '../../state/index'
+import { actionCreators, State } from '../../state/index'
 import { SearchHelper } from '../searchHelper/SearchHelper'
 import '../searchHelper/SearchHelper.scss'
 import { DisplayTrends } from '../../functions/DisplayTrends'
@@ -14,8 +14,15 @@ import { DisplayTrends } from '../../functions/DisplayTrends'
 export const Searcher = () => {
     const dispatch = useDispatch()
     const { createQuery } = bindActionCreators(actionCreators, dispatch)
+    const queryValue: string = useSelector((state: State) => state.searchQuery)
+    const queryValueLength: number = queryValue.length
+    console.log('QUERY LENGTH: ' + queryValueLength)
 
     DisplayTrends()
+
+    const setInputChange = (e: { target: { value: string } }) => {
+        createQuery(e.target.value)
+    }
 
     return (
         <>
@@ -37,8 +44,8 @@ export const Searcher = () => {
                             id="query"
                             inputClassName="search-input"
                             autoFocus
-                            onChange={(e) => createQuery(e.target.value)}
-                            maxLength="2048"
+                            onChange={setInputChange}
+                            // maxLength="2048"
                             autoComplete="off"
                         />
                     </div>
