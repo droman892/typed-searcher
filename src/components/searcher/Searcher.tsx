@@ -20,7 +20,7 @@ export const Searcher = () => {
 
     DisplayTrends()
 
-    const changeHelperContainer = () => {
+    const ChangeHelperContainer = () => {
         document.addEventListener('click', (e) => {
             const buttonContainer = document.getElementById('search-engine')
             const searchHelper = document.getElementById('search-helper')
@@ -49,7 +49,37 @@ export const Searcher = () => {
         })
     }
 
-    changeHelperContainer()
+    ChangeHelperContainer()
+
+    const clickTrends = () => {
+        if (queryValueLength > 0) {
+            document
+                .getElementById('search-engine')
+                ?.classList.add('search-engine-2')
+            document
+                .getElementById('helper-container')
+                ?.classList.add('helper-container-2')
+            document
+                .getElementById('results-query-container-1')
+                ?.classList.add('results-query-container-9')
+            document
+                .getElementById('results-helper-container-1')
+                ?.classList.add('results-helper-container-2')
+        } else {
+            document
+                .getElementById('search-engine')
+                ?.classList.remove('search-engine-2')
+            document
+                .getElementById('helper-container')
+                ?.classList.remove('helper-container-2')
+            document
+                .getElementById('results-query-container-1')
+                ?.classList.remove('results-query-container-9')
+            document
+                .getElementById('results-helper-container-1')
+                ?.classList.remove('results-helper-container-2')
+        }
+    }
 
     const setInputChange = (e: { target: { value: string } }) => {
         createQuery(e.target.value)
@@ -74,9 +104,10 @@ export const Searcher = () => {
                         <TextInput
                             id="query"
                             inputClassName="search-input"
-                            // autoFocus
+                            autoFocus
                             onChange={setInputChange}
-                            // maxLength="2048"
+                            onClick={clickTrends}
+                            maxLength="2048"
                             autoComplete="off"
                         />
                     </div>

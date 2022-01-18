@@ -13,9 +13,9 @@ export const SearchHelper = () => {
                         <HelperListItems />
                     </ul>
                 </div>
-                <div className="helper-space-bottom" id="helper-space-bottom"></div>
+                <div className="helper-space-bottom"></div>
                 <div className="search-helper-button-container">
-                    <div className="search-helper-button-container-2" id="double-button">
+                    <div className="search-helper-button-container-2">
                         <FetchButton />
                         <BasicButton />
                     </div>
