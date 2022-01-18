@@ -20,12 +20,39 @@ export const Searcher = () => {
 
     DisplayTrends()
 
-    const setInputChange = (e: { target: { value: string } }) => {
-        createQuery(e.target.value)
+    const changeHelperContainer = () => {
+        document.addEventListener('click', (e) => {
+            const buttonContainer = document.getElementById('search-engine')
+            const searchHelper = document.getElementById('search-helper')
+            let targetElement = e.target
+            do {
+                if (
+                    targetElement == buttonContainer ||
+                    targetElement == searchHelper
+                ) {
+                    return
+                }
+                targetElement = targetElement.parentNode
+            } while (targetElement)
+            document
+                .getElementById('search-engine')
+                ?.classList.remove('search-engine-2')
+            document
+                .getElementById('helper-container')
+                ?.classList.remove('helper-container-2')
+            document
+                .getElementById('results-query-container-1')
+                ?.classList.remove('results-query-container-9')
+            document
+                .getElementById('results-helper-container-1')
+                ?.classList.remove('results-helper-container-2')
+        })
     }
 
-    const setInputBlur = (e: { target: { value: string } }) => {
-        console.log(e.target)
+    changeHelperContainer()
+
+    const setInputChange = (e: { target: { value: string } }) => {
+        createQuery(e.target.value)
     }
 
     return (
@@ -47,9 +74,8 @@ export const Searcher = () => {
                         <TextInput
                             id="query"
                             inputClassName="search-input"
-                            autoFocus
+                            // autoFocus
                             onChange={setInputChange}
-                            onBlur={setInputBlur}
                             // maxLength="2048"
                             autoComplete="off"
                         />
