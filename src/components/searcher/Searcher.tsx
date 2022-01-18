@@ -24,8 +24,12 @@ export const Searcher = () => {
         createQuery(e.target.value)
     }
 
+    const setInputBlur = (e: { target: { value: string } }) => {
+        console.log(e.target)
+    }
+
     return (
-        <>
+        <div id="searcher-container">
             <form className="search-engine" id="search-engine">
                 <div className="search-engine-inner">
                     <div className="magnifying-glass-container">
@@ -45,6 +49,7 @@ export const Searcher = () => {
                             inputClassName="search-input"
                             autoFocus
                             onChange={setInputChange}
+                            onBlur={setInputBlur}
                             // maxLength="2048"
                             autoComplete="off"
                         />
@@ -63,6 +68,6 @@ export const Searcher = () => {
             <div className="helper-container" id="helper-container">
                 <SearchHelper />
             </div>
-        </>
+        </div>
     )
 }
