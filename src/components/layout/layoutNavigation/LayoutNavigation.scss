@@ -34,7 +34,7 @@
     }
 
     .mobile-header {
-        display: block;
+        display: flex;
     }
 }
 
@@ -154,6 +154,12 @@ ul.sidenav {
 
 // Code below is specific to the ResultsNavigation.tsx component
 
+@media only screen and (max-width: 300px) {
+    .all-images {
+        display: none !important;
+    }
+}
+
 @media only screen and (max-width: 519px) {
     .header-home {
         height: 48px !important;
@@ -248,9 +254,9 @@ nav ul li {
 }
 
 .mobile-header {
-    width: 100%;
+    // width: 100%;
     height: 48px;
-    background-color: rgb(255, 203, 203);
+    // background-color: rgb(255, 203, 203);
 }
 
 .all-images {
@@ -291,4 +297,137 @@ nav ul li {
     text-align: center;
     text-transform: uppercase;
     text-decoration: none;
+}
+
+.mobile-spacer {
+    -webkit-box-flex: 1;
+    flex: 1 0 auto;
+    min-width: 1px;
+    // margin-right: -15px;
+
+    // width: 5px;
+    // height: 48px;
+    // background-color: green;
+}
+
+.bell {
+    color: #70757a;
+    display: block;
+    -webkit-box-flex: 0;
+    flex: 0 0 auto;
+    padding: 12px 12px 8px 12px !important;
+}
+
+.bell-span {
+    display: inline-block;
+    fill: currentColor;
+    height: 24px;
+    line-height: 24px;
+    position: relative;
+    width: 24px;
+}
+
+.bell-image {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.mobile-right-container {
+    -webkit-box-flex: 0;
+    flex: 0 0 auto;
+    position: relative;
+    z-index: 1;
+    // margin-left: 15px;
+}
+
+.auto {
+    min-width: auto;
+}
+
+.mobile-right-container-2 {
+    padding-left: 0 !important;
+    float: right;
+    box-sizing: border-box;
+    height: 48px;
+    line-height: normal;
+    padding: 0 4px;
+    flex: 0 0 auto;
+    justify-content: flex-end;
+    vertical-align: middle;
+    white-space: nowrap;
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+    -webkit-user-select: none;
+}
+
+.mobile-right-container-3 {
+    float: right;
+    position: relative;
+    display: block;
+}
+
+.inline-div {
+    display: inline;
+}
+
+.mobile-apps-container {
+    padding-left: 4px !important;
+    padding: 4px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.mobile-apps-container-2 {
+    position: relative;
+    display: block;
+}
+
+.mobile-apps {
+    color: #000;
+    cursor: pointer;
+    text-decoration: none;
+    opacity: 1;
+    background-position: -64px -29px;
+    padding: 8px !important;
+    display: inline-block;
+    outline: none;
+    vertical-align: middle;
+    border-radius: 2px;
+    box-sizing: border-box;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.mobile-apps:focus:hover {
+    background-color: rgba(60,64,67,0.1);
+}
+
+.mobile-sign-in {
+    cursor: pointer;
+    color: #fff;
+    text-decoration: none;
+    padding: 9px 15px !important;
+    min-width: 80px;
+    margin-left: 8px;
+    background: #1a73e8;
+    border: 1px solid transparent;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.25px;
+    line-height: 16px;
+    margin-right: 8px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 4px;
+    box-sizing: border-box;
+    outline: none;
+    display: inline-block;
+}
+
+.mobile-sign-in:focus:hover {
+    background: #5094ed;
+    box-shadow: 0 1px 2px 0 rgb(66 133 244 / 30%), 0 1px 3px 1px rgb(66 133 244 / 15%);
 }

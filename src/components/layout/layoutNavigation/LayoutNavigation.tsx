@@ -3,7 +3,6 @@ import '../../../styles/_index.scss'
 import 'materialize-css'
 import { Navbar, Icon, NavItem, Button } from 'react-materialize'
 import { LayoutSideNavigation } from '../layoutSideNavigation/LayoutSideNavigation'
-// import { MobileNav } from '../MobileNav'
 
 export const LayoutNavigation = () => {
     return (
@@ -63,8 +62,36 @@ export const LayoutNavigation = () => {
                     <div id="mobile-header" className="mobile-header">
                         {/* <div className="icon-space"></div> */}
                         <div className="all-images">
-                            <a className='all'>All</a>
-                            <a className='images'>Images</a>
+                            <a href="#!" className="all">
+                                All
+                            </a>
+                            <a href="#!" className="images">
+                                Images
+                            </a>
+                        </div>
+                        <div className="mobile-spacer"></div>
+                        <div className="mobile-right-container">
+                            <div className="auto">
+                                <div className="mobile-right-container-2">
+                                    <div className="mobile-right-container-3">
+                                        <div className="inline-div">
+                                            <div className="mobile-apps-container">
+                                                <div className="mobile-apps-container-2">
+                                                    <a
+                                                        href="#!"
+                                                        className="mobile-apps"
+                                                    >
+                                                        <Icon>apps</Icon>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a href="#!" className="mobile-sign-in">
+                                            Sign in
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </Navbar>
