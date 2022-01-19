@@ -21,7 +21,7 @@ Google Translate: https://rapidapi.com/googlecloud/api/google-translate1/
 Keywords for searching: https://rapidapi.com/fatimabirmingham@gmail.com/api/keywords4/ .... https://rapidapi.com/contextualwebsearch/api/keyword-analysis/pricing
 Random Words API for the basic button: https://rapidapi.com/sheharyar566/api/random-words5/pricing
 Google Trending (home page): https://rapidapi.com/truelife-truelife-default/api/google-trends-us/
-
+ADD CSS MINI EXTRACT PLUGIN
 Dropdown on click: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown
 </p>
 ## Preview

@@ -3,6 +3,7 @@ import '../../../styles/_index.scss'
 import 'materialize-css'
 import { Navbar, Icon, NavItem, Button } from 'react-materialize'
 import { LayoutSideNavigation } from '../layoutSideNavigation/LayoutSideNavigation'
+// import { MobileNav } from '../MobileNav'
 
 export const LayoutNavigation = () => {
     return (
@@ -10,6 +11,7 @@ export const LayoutNavigation = () => {
             <div className="section">
                 <Navbar
                     id="mobile-nav"
+                    // extendWith={<MobileNav />}
                     menuIcon={<Icon>menu</Icon>}
                     options={{
                         draggable: true,
@@ -56,6 +58,13 @@ export const LayoutNavigation = () => {
                                     <span className="sign-in">Sign in</span>
                                 </Button>
                             </div>
+                        </div>
+                    </div>
+                    <div id="mobile-header" className="mobile-header">
+                        {/* <div className="icon-space"></div> */}
+                        <div className="all-images">
+                            <a className='all'>All</a>
+                            <a className='images'>Images</a>
                         </div>
                     </div>
                 </Navbar>
