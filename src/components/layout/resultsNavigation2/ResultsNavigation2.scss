@@ -10,6 +10,12 @@
     }
 }
 
+@media only screen and (max-width: 519px) {
+    .results-nav2-container-1 {
+        display: none !important;
+    }
+}
+
 .blue-line {
     background: #1a73e8;
     height: 3px;

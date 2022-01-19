@@ -104,7 +104,7 @@ ul.sidenav {
     font-size: 16px;
 }
 
-// Code below is specific to the ResultsNavigation.tsx componenet
+// ---------------------------- Code below is specific to the ResultsNavigation.tsx component
 
 // @media (min-width: 1121px) and (max-width: 1300px) {
 //     .section-results {
@@ -112,6 +112,30 @@ ul.sidenav {
 //     }
 // }
 
+@media only screen and (max-width: 519px) {
+    .nav-container-results {
+        display: none !important;
+    }
+
+    .section-results {
+        margin: 6px 2px 4px !important;
+    }
+
+    .results-container-image {
+        max-height: 50px !important;
+        margin-top: 10px !important;
+    }
+}
+
+@media only screen and (min-width: 520px) {
+    .mobile-results-2 {
+        display: none !important;
+    }
+
+    .mobile-results-searcher {
+        display: none !important;
+    }
+}
 
 .button-apps-container {
     padding-right: 20px;
@@ -324,4 +348,78 @@ nav ul li {
     display: block !important;
     height: 100% !important;
     width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.mobile-results-2 {
+    background-color: red;
+    display: block;
+    height: 58px;
+    position: relative;
+    width: 100%;
+    // margin-left: -2px;
+    // margin-right: -2px;
+    // padding-left: 2px;
+    // padding-right: 2px;
+}
+
+.mobile-results-container {
+    background-image: none;
+    background-color: #e5f7ff;
+    line-height: 34px;
+    outline: none;
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-size: 75px 26px;
+    color: transparent;
+    position: absolute;
+    text-align: center;
+}
+
+.results-container-image {
+    border: none;
+    max-width: 100%;
+    margin: 0px 0;
+    max-height: 64px;
+    vertical-align: middle;
+}
+
+.results-mobile-profile {
+    height: 64px;
+    position: absolute;
+    display: block;
+    right: 0;
+    top: 0;
+    padding: 0;
+    float: right;
+}
+
+.results-profile-icon {
+    padding: 12px !important;
+    display: block;
+}
+
+.user-profile {
+    fill: #1a73e8;
+    height: 32px;
+    width: 32px;
+}
+
+.mobile-results-searcher {
+    width: 100%;
+    height: 100px;
+    background-color: green;
 }

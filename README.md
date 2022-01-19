@@ -12,6 +12,12 @@
 
 <p align="center"> Fonts are locally hosted with font-face </p>
 
+<p>
+HOME PAGE:
+- error handling in case no keyword is returned (doesn't exist or service temporarily unavailable)
+</p>
+
+
 <p> Font squirrel, Google Search API (https://rapidapi.com/apigeek/api/google-search3/)</p>
 <p> React-Materialize: http://react-materialize.github.io/react-materialize/?path=/story/components-textinput--default </p>
 

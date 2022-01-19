@@ -152,7 +152,7 @@ ul.sidenav {
     font-size: 16px;
 }
 
-// Code below is specific to the ResultsNavigation.tsx component
+// -------------------------- Code below is specific to the ResultsNavigation.tsx component
 
 @media only screen and (max-width: 300px) {
     .all-images {
@@ -427,7 +427,7 @@ nav ul li {
     display: inline-block;
 }
 
-.mobile-sign-in:focus:hover {
+.mobile-sign-in:hover {
     background: #5094ed;
     box-shadow: 0 1px 2px 0 rgb(66 133 244 / 30%), 0 1px 3px 1px rgb(66 133 244 / 15%);
 }

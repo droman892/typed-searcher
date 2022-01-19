@@ -5,6 +5,8 @@ import { Navbar, Icon, NavItem, Button } from 'react-materialize'
 import { LayoutSideNavigation } from '../layoutSideNavigation/LayoutSideNavigation'
 import { ResultsSearcher } from '../../resultsSearcher/ResultsSearcher'
 import { ResultsNavigation2 } from '..//resultsNavigation2/ResultsNavigation2'
+import GoogleLogo from '../../../assets/images/GoogleLogo.svg'
+import userProfile from '../../../assets/images/userProfile.png'
 
 export const ResultsNavigation = () => {
     return (
@@ -64,6 +66,25 @@ export const ResultsNavigation = () => {
                             </div>
                         </div>
                     </div>
+                    <div className="mobile-results-2">
+                        <a href="#!" className="mobile-results-container">
+                            <img
+                                src={GoogleLogo}
+                                alt="Google Logo"
+                                className="results-container-image"
+                            ></img>
+                        </a>
+                        <div className="results-mobile-profile">
+                            <a href="#!" className="results-profile-icon">
+                                <img
+                                    src={userProfile}
+                                    alt="User Profile"
+                                    className="user-profile"
+                                ></img>
+                            </a>
+                        </div>
+                    </div>
+                    <div className="mobile-results-searcher"></div>
                 </Navbar>
             </div>
             <ResultsNavigation2 />
