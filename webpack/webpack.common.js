@@ -37,6 +37,8 @@ module.exports = {
         path: path.resolve(__dirname, '..', './build'),
         filename: 'bundle.js',
         publicPath: '/',
+        // Use the path below for when deploying to GitHub Pages; have Bundle Analyzer commented out
+        // publicPath: '/typed-searcher/',
     },
     plugins: [
         new HtmlWebpackPlugin({
