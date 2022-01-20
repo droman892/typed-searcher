@@ -14,7 +14,7 @@ import { DisplayTrends } from '../../functions/DisplayTrends'
 import { ResultsSearchHelper } from '../resultsSearchHelper/ResultsSearchHelper'
 import { ResultsFormSubmission } from '../../functions/ResultsFormSubmission'
 import { DoNothing } from '../../functions/DoNothing'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 export const ResultsSearcher = () => {
     const queryValue = useSelector((state: State) => state.searchQuery)
@@ -22,8 +22,13 @@ export const ResultsSearcher = () => {
     console.log(queryValueLength)
     let queryPath = queryValue
     queryPath = queryPath.replace(/\s+/g, '+')
+    console.log('QUERY PATHHHHHHHHH: ' + queryPath)
     const dispatch = useDispatch()
     const { createQuery } = bindActionCreators(actionCreators, dispatch)
+    const [refreshValue, setRefreshValue] = useState('')
+    const queryString = window.location.search
+    const urlParams = new URLSearchParams(queryString)
+    const queryMade = urlParams.get('q') || ''
 
     const DeleteQuery = () => {
         createQuery('')
@@ -32,20 +37,30 @@ export const ResultsSearcher = () => {
 
     DisplayTrends()
 
-    useEffect(() => {
-        const queryString = window.location.search
-        console.log(queryString)
-        const urlParams = new URLSearchParams(queryString)
-        const queryMade = urlParams.get('q')
-        console.log(queryMade)
-        // createQuery(queryMade)
-    })
+    const LoadedState = () => {
+        setRefreshValue(queryMade)
+        document.title = `${refreshValue} - Google`
+    }
+
+    const altValue = () => {
+        if (queryValueLength == 0) {
+            return createQuery('')
+        } else {
+            return refreshValue
+        }
+    }
+
+    const SetURLPath = () => {
+        document.title = `${refreshValue} - Google`
+        console.log('URL is SET')
+    }
 
     return (
         <>
             <form
                 className="results-form-container-1"
                 onSubmit={ResultsFormSubmission}
+                onLoad={LoadedState}
                 // onKeyDown={ResultsFormSubmission}
             >
                 <div id="container">
@@ -70,12 +85,15 @@ export const ResultsSearcher = () => {
                                             <TextInput
                                                 id="query"
                                                 inputClassName="results-input"
-                                                value={queryValue}
+                                                value={
+                                                    queryValue || refreshValue
+                                                }
                                                 onChange={(e) =>
                                                     createQuery(e.target.value)
                                                 }
                                                 maxLength="2048"
                                                 autoComplete="off"
+                                                onSubmit={SetURLPath}
                                             />
                                         </div>
                                     </div>
@@ -125,6 +143,7 @@ export const ResultsSearcher = () => {
                                                 search: '?q=' + queryPath,
                                             }}
                                             className="results-glass-link"
+                                            // onClick={SetURLPath}
                                         >
                                             <button className="results-query-button-container-1 results-glass-button">
                                                 <div className="results-query-button-container-2">
