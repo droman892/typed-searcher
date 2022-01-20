@@ -7,6 +7,9 @@ import { ResultsSearcher } from '../../resultsSearcher/ResultsSearcher'
 import { ResultsNavigation2 } from '..//resultsNavigation2/ResultsNavigation2'
 import GoogleLogo from '../../../assets/images/GoogleLogo.svg'
 import userProfile from '../../../assets/images/userProfile.png'
+import magnifyingGlass from '../../../assets/images/magnifyingGlass.png'
+import theX from '../../../assets/images/theX.png'
+import { ResultsMobileNavigation } from '../resultsMobileNavigation/ResultsMobileNavigation'
 
 export const ResultsNavigation = () => {
     return (
@@ -84,7 +87,42 @@ export const ResultsNavigation = () => {
                             </a>
                         </div>
                     </div>
-                    <div className="mobile-results-searcher"></div>
+                    <div className="mobile-results-searcher">
+                        <div>
+                            <ResultsMobileNavigation />
+                        </div>
+                    </div>
+                    <div className="mobile-results-items-container">
+                        <div>
+                            <div className="mobile-results-items-container-2">
+                                <div className="mobile-results-items-container-3">
+                                    <div className="mobile-results-item-first">All</div>
+                                    <div className="mobile-results-item">
+                                        <a href="#!" className="mobile-results-item-a">Maps</a>
+                                    </div>
+                                    <div className="mobile-results-item">
+                                        <a href="#!" className="mobile-results-item-a">Videos</a>
+                                    </div>
+                                    <div className="mobile-results-item">
+                                        <a href="#!" className="mobile-results-item-a">Shopping</a>
+                                    </div>
+                                    <div className="mobile-results-item">
+                                        <a href="#!" className="mobile-results-item-a">Images</a>
+                                    </div>
+                                    <div className="mobile-results-item">
+                                        <a href="#!" className="mobile-results-item-a">News</a>
+                                    </div>
+                                    <div className="mobile-results-item">
+                                        <a href="#!" className="mobile-results-item-a">Books</a>
+                                    </div>
+                                    <div className="mobile-results-item">
+                                        <a href="#!" className="mobile-results-item-a">Flights</a>
+                                    </div>
+                                    <div className="mobile-results-tools">Search tools</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </Navbar>
             </div>
             <ResultsNavigation2 />

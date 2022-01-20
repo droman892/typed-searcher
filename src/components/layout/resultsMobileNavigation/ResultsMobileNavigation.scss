@@ -1,0 +1,119 @@
+.mobile-results-form {
+    height: 44px;
+    display: block;
+    margin-top: 0em;
+}
+
+.mobile-results-form-2 {
+    background: none;
+    border-radius: 25px;
+    padding-bottom: 4px;
+}
+
+.mobile-results-form-3 {
+    display: flex;
+    height: 44px;
+    margin-top: 0px;
+    z-index: 3;
+    box-shadow: 0px 2px 5px 0px rgb(60 64 67 / 16%);
+    border-radius: 25px;
+    background: #fff;
+}
+
+.mobile-results-glass {
+    display: flex;
+    border-radius: 0 25px 25px 0;
+    padding: 0 12px;
+    background: transparent;
+    border: none;
+    margin-right: -1px !important;
+    padding-right: 0;
+    flex: 0 0 auto;
+    margin: 0;
+}
+
+.mobile-results-glass-2 {
+    background: none;
+    color: #9aa0a6;
+    height: 24px;
+    width: 24px;
+    margin: auto;
+}
+
+.mobile-results-glass-3 {
+    display: inline-block;
+    fill: currentColor;
+    height: 24px;
+    line-height: 24px;
+    position: relative;
+    width: 24px;
+}
+
+.mobile-results-glass-4 {
+    display: block;
+    height: 90%;
+    width: 90%;
+}
+
+.mobile-results-input {
+    flex: 1;
+    display: flex;
+    padding: 7px 0;
+}
+
+.mobile-results-input-2 {
+    display: flex;
+    flex: 1;
+}
+
+.mobile-results-input-3 {
+    height: 2rem !important;
+    line-height: 25px;
+    background-color: transparent !important;
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 0 0 16px !important;
+    font-size: 16px !important;
+    font-family: Roboto,Helvetica Neue,Arial,sans-serif;
+    color: rgba(0,0,0,.87);
+    word-wrap: break-word;
+    display: flex;
+    flex: 1;
+    -webkit-tap-highlight-color: transparent;
+    width: 100% !important;
+}
+
+.mobile-results-x {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: stretch;
+    margin-right: -3px;
+}
+
+.mobile-results-x-2 {
+    display: flex;
+    flex: 1;
+    color: #70757a;
+    cursor: pointer;
+    font: 27px/25px arial,sans-serif;
+    align-items: center;
+    padding: 0 12px;
+    margin: 0 0;
+    border: 0;
+    background: transparent;
+}
+
+.mobile-results-x-3 {
+    display: inline-block;
+    fill: currentColor;
+    height: 14px;
+    line-height: 24px;
+    position: relative;
+    width: 14px;
+}
+
+.mobile-results-x-4 {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
