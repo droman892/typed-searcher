@@ -135,8 +135,6 @@ ul.sidenav {
     .mobile-results-searcher {
         display: none !important;
     }
-
-    
 }
 
 @media only screen and (min-width: 514px) {
@@ -486,6 +484,14 @@ nav ul li {
     padding-right: 8px;
     padding-left: 11px;
     margin-left: -4px;
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.mobile-results-items-container-3::-webkit-scrollbar {
+    display: none !important;
 }
 
 .mobile-results-item-first {

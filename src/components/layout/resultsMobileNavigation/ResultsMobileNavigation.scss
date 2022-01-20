@@ -83,11 +83,15 @@
     width: 100% !important;
 }
 
+.mobile-results-input-3:focus {
+    box-shadow: none !important;
+}
+
 .mobile-results-x {
     display: flex;
     flex: 0 0 auto;
     align-items: stretch;
-    margin-right: -3px;
+    margin-right: 3px;
 }
 
 .mobile-results-x-2 {

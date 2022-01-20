@@ -12,6 +12,9 @@ import { actionCreators, State } from '../../state/index'
 import { Link } from 'react-router-dom'
 import { DisplayTrends } from '../../functions/DisplayTrends'
 import { ResultsSearchHelper } from '../resultsSearchHelper/ResultsSearchHelper'
+import { ResultsFormSubmission } from '../../functions/ResultsFormSubmission'
+import { DoNothing } from '../../functions/DoNothing'
+import { useEffect } from 'react'
 
 export const ResultsSearcher = () => {
     const queryValue = useSelector((state: State) => state.searchQuery)
@@ -21,27 +24,29 @@ export const ResultsSearcher = () => {
     queryPath = queryPath.replace(/\s+/g, '+')
     const dispatch = useDispatch()
     const { createQuery } = bindActionCreators(actionCreators, dispatch)
-    const resultsFormSubmission = () => {
-        document.title = `${queryValue} - Google`
-    }
 
-    const deleteQuery = () => {
+    const DeleteQuery = () => {
         createQuery('')
         document.getElementById('query')?.focus()
     }
 
-    const doNothing = (e: { preventDefault: () => void }) => {
-        e.preventDefault()
-    }
-
     DisplayTrends()
+
+    useEffect(() => {
+        const queryString = window.location.search
+        console.log(queryString)
+        const urlParams = new URLSearchParams(queryString)
+        const queryMade = urlParams.get('q')
+        console.log(queryMade)
+        // createQuery(queryMade)
+    })
 
     return (
         <>
             <form
                 className="results-form-container-1"
-                onSubmit={resultsFormSubmission}
-                // onKeyDown={resultsFormSubmission}
+                onSubmit={ResultsFormSubmission}
+                // onKeyDown={ResultsFormSubmission}
             >
                 <div id="container">
                     <div className="results-form-container-2">
@@ -77,7 +82,7 @@ export const ResultsSearcher = () => {
                                     <div className="results-x-microphone">
                                         <div
                                             className="results-x"
-                                            onClick={deleteQuery}
+                                            onClick={DeleteQuery}
                                         >
                                             <span className="results-x-2">
                                                 <img
@@ -101,7 +106,7 @@ export const ResultsSearcher = () => {
                                     {queryValueLength === 0 ? (
                                         <button
                                             className="results-query-button-container-1 results-glass-button"
-                                            onClick={doNothing}
+                                            onClick={DoNothing}
                                         >
                                             <div className="results-query-button-container-2">
                                                 <span className="results-query-button-container-3">
