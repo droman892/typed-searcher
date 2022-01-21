@@ -12,17 +12,17 @@ import { actionCreators, State } from '../../state/index'
 import { Link } from 'react-router-dom'
 import { DisplayTrends } from '../../functions/DisplayTrends'
 import { ResultsSearchHelper } from '../resultsSearchHelper/ResultsSearchHelper'
-import { ResultsFormSubmission } from '../../functions/ResultsFormSubmission'
+// import { ResultsFormSubmission } from '../../functions/ResultsFormSubmission'
 import { DoNothing } from '../../functions/DoNothing'
 import { useEffect, useState } from 'react'
 
 export const ResultsSearcher = () => {
     const queryValue = useSelector((state: State) => state.searchQuery)
     const queryValueLength: number = queryValue.length || 0
-    console.log(queryValueLength)
+    // console.log(queryValueLength)
     let queryPath = queryValue
     queryPath = queryPath.replace(/\s+/g, '+')
-    console.log('QUERY PATHHHHHHHHH: ' + queryPath)
+    // console.log('QUERY PATH: ' + queryPath)
     const dispatch = useDispatch()
     const { createQuery } = bindActionCreators(actionCreators, dispatch)
     const [refreshValue, setRefreshValue] = useState('')
@@ -30,16 +30,42 @@ export const ResultsSearcher = () => {
     const urlParams = new URLSearchParams(queryString)
     const queryMade = urlParams.get('q') || ''
 
+    useEffect(() => {
+        document.title = `${queryMade} - Google`
+        console.log('UseEffect [constant] wrote this')
+    })
+
+    useEffect(() => {
+        let inputValue = document.getElementById('query').value
+        inputValue = queryMade
+        createQuery(inputValue)
+        console.log('UseEffect [onLoad] wrote tis')
+    }, [])
+
     const DeleteQuery = () => {
         createQuery('')
+        // document.getElementById("query").value = ''
         document.getElementById('query')?.focus()
+        console.log('DeleteQuery wrote this')
     }
 
-    DisplayTrends()
+    const SetURLPath = () => {
+        document.title = `${queryValue} - Google`
+        const inputValue = document.getElementById('query')
+        inputValue?.blur()
+        console.log('SetURLPath wrote this')
+    }
+
+    // DisplayTrends()
+
+
 
     const LoadedState = () => {
-        setRefreshValue(queryMade)
-        document.title = `${refreshValue} - Google`
+        if (queryValueLength === 0) {
+            setRefreshValue(queryMade)
+            document.title = `${refreshValue} - Google`
+            console.log('LoadedState wrote this')
+        }
     }
 
     const altValue = () => {
@@ -50,17 +76,17 @@ export const ResultsSearcher = () => {
         }
     }
 
-    const SetURLPath = () => {
-        document.title = `${refreshValue} - Google`
-        console.log('URL is SET')
+    const ResultsFormSubmission = () => {
+        console.log('ResultsFormSubmission wrote this')
+        document.title = `${queryValue} - Google`
     }
 
     return (
         <>
             <form
                 className="results-form-container-1"
-                onSubmit={ResultsFormSubmission}
-                onLoad={LoadedState}
+                // onSubmit={ResultsFormSubmission}
+                // onLoad={LoadedState}
                 // onKeyDown={ResultsFormSubmission}
             >
                 <div id="container">
@@ -85,40 +111,62 @@ export const ResultsSearcher = () => {
                                             <TextInput
                                                 id="query"
                                                 inputClassName="results-input"
-                                                value={
-                                                    queryValue || refreshValue
-                                                }
+                                                value={queryValue || ''}
                                                 onChange={(e) =>
                                                     createQuery(e.target.value)
                                                 }
                                                 maxLength="2048"
                                                 autoComplete="off"
-                                                onSubmit={SetURLPath}
+                                                // onSubmit={SetURLPath}
                                             />
                                         </div>
                                     </div>
-                                    <div className="results-x-microphone">
-                                        <div
-                                            className="results-x"
-                                            onClick={DeleteQuery}
-                                        >
-                                            <span className="results-x-2">
-                                                <img
-                                                    src={theX}
-                                                    alt="X"
-                                                    className="x"
-                                                />
-                                            </span>
-                                            <div className="results-line" />
-                                        </div>
-                                        <div className="results-microphone">
-                                            <img
-                                                src={microphone}
-                                                alt="Microphone"
-                                                className="results-microphone-image"
-                                            />
-                                        </div>
-                                    </div>
+                                    <>
+                                        {queryValueLength === 0 ? (
+                                            <div className="results-x-microphone">
+                                                <div className="results-x">
+                                                    <span className="results-x-2">
+                                                        <img
+                                                            src={theX}
+                                                            alt="X"
+                                                            className="x"
+                                                        />
+                                                    </span>
+                                                    <div className="results-line" />
+                                                </div>
+                                                <div className="results-microphone">
+                                                    <img
+                                                        src={microphone}
+                                                        alt="Microphone"
+                                                        className="results-microphone-image"
+                                                    />
+                                                </div>
+                                            </div>
+                                        ) : (
+                                            <div className="results-x-microphone">
+                                                <div
+                                                    className="results-x"
+                                                    onClick={DeleteQuery}
+                                                >
+                                                    <span className="results-x-2">
+                                                        <img
+                                                            src={theX}
+                                                            alt="X"
+                                                            className="x"
+                                                        />
+                                                    </span>
+                                                    <div className="results-line" />
+                                                </div>
+                                                <div className="results-microphone">
+                                                    <img
+                                                        src={microphone}
+                                                        alt="Microphone"
+                                                        className="results-microphone-image"
+                                                    />
+                                                </div>
+                                            </div>
+                                        )}
+                                    </>
                                 </div>
                                 <>
                                     {queryValueLength === 0 ? (
@@ -143,7 +191,7 @@ export const ResultsSearcher = () => {
                                                 search: '?q=' + queryPath,
                                             }}
                                             className="results-glass-link"
-                                            // onClick={SetURLPath}
+                                            onClick={SetURLPath}
                                         >
                                             <button className="results-query-button-container-1 results-glass-button">
                                                 <div className="results-query-button-container-2">

@@ -10,7 +10,7 @@ export const ResultsSearchHelper = () => {
                 <div className="results-helper-space"></div>
                 <div className="results-search-helper-3">
                     <ul className="results-helper-list-container">
-                        <HelperListItems />
+                        {/* <HelperListItems /> */}
                     </ul>
                 </div>
             </div>

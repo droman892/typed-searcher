@@ -23,8 +23,9 @@ export const HelperItem = (props: { name: string }) => {
         keyword = keyword.replace(/\s+/g, '+')
     }
 
-    const setState = () => {
+    const SetStateTitle = () => {
         createQuery(props.name)
+        console.log('HelperItem - SetStateTitle wrote this')
         document.title = `${props.name} - Google`
     }
 
@@ -43,7 +44,7 @@ export const HelperItem = (props: { name: string }) => {
                 pathname: '/search',
                 search: '?q=' + keyword,
             }}
-            onClick={setState}
+            onClick={SetStateTitle}
         >
             <li id="helper-list-item">
                 <div id="item-container">

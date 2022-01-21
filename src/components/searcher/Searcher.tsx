@@ -16,7 +16,7 @@ export const Searcher = () => {
     const { createQuery } = bindActionCreators(actionCreators, dispatch)
     const queryValue: string = useSelector((state: State) => state.searchQuery)
     const queryValueLength: number = queryValue.length
-    console.log('QUERY LENGTH: ' + queryValueLength)
+    // console.log('QUERY LENGTH: ' + queryValueLength)
 
     DisplayTrends()
 
