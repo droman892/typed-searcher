@@ -60,15 +60,11 @@ export const ResultsSearcher = () => {
 
     useEffect(() => {
         let inputValue = document.getElementById('query').value
+        document.title = `${queryMade} - Google`
         inputValue = queryMade
         createQuery(inputValue)
 
-        console.log('ResultsSearcher - 1st UseEffect')
-    }, [])
-
-    useEffect(() => {
-        document.title = `${queryMade} - Google`
-        console.log('UseEffect - keep title on reload')
+        // console.log('ResultsSearcher - UseEffect')
     }, [])
 
     const DeleteQuery = () => {
@@ -90,7 +86,9 @@ export const ResultsSearcher = () => {
 
     const ClickResultTrends = () => {
         if (queryValueLength > 0) {
-            console.log('ClickResultTrends - the results searcher has been clicked!')
+            console.log(
+                'ClickResultTrends - the results searcher has been clicked!'
+            )
             console.log(queryValueLength)
             document
                 .getElementById('results-query-container-1')
@@ -108,6 +106,27 @@ export const ResultsSearcher = () => {
                 ?.classList.remove('results-helper-container-2')
         }
     }
+
+    const DisplayResultTrends = () => {
+        const unfocusedInput = document.getElementById('query')
+
+        if (queryValueLength > 0 && unfocusedInput === document.activeElement) {
+            document
+                .getElementById('results-query-container-1')
+                ?.classList.add('results-query-container-9')
+            document
+                .getElementById('results-helper-container-1')
+                ?.classList.add('results-helper-container-2')
+        } else {
+            document
+                .getElementById('results-query-container-1')
+                ?.classList.remove('results-query-container-9')
+            document
+                .getElementById('results-helper-container-1')
+                ?.classList.remove('results-helper-container-2')
+        }
+    }
+    DisplayResultTrends()
 
     return (
         <>
