@@ -30,18 +30,13 @@ export const ResultsSearcher = () => {
 
     const ChangeResultsHelperContainer = () => {
         document.addEventListener('click', (e) => {
-            console.log(
-                'RESULTSSearcher Component - ChangeResultsHelperContainer Function'
-            )
+            console.log('ChangeResultsHelperContainer - something was clicked!')
             const inputResultsContainer = document.getElementById(
                 'results-query-container-1'
             )
             const resultsSearchHelper = document.getElementById(
                 'results-search-helper'
             )
-
-            // const buttonContainer = document.getElementById('search-engine')
-            // const searchHelper = document.getElementById('search-helper')
 
             let targetElement = e.target
             do {
@@ -69,25 +64,12 @@ export const ResultsSearcher = () => {
         createQuery(inputValue)
 
         console.log('ResultsSearcher - 1st UseEffect')
-        // document
-        //     .getElementById('results-query-container-1')
-        //     ?.classList.remove('results-query-container-9')
-        // document
-        //     .getElementById('results-helper-container-1')
-        //     ?.classList.remove('results-helper-container-2')
     }, [])
 
     useEffect(() => {
         document.title = `${queryMade} - Google`
-        console.log('UseEffect [constant] wrote this for TITLE CHANGE')
-
-        // document
-        //     .getElementById('results-query-container-1')
-        //     ?.classList.remove('results-query-container-9')
-        // document
-        //     .getElementById('results-helper-container-1')
-        //     ?.classList.remove('results-helper-container-2')
-    })
+        console.log('UseEffect - keep title on reload')
+    }, [])
 
     const DeleteQuery = () => {
         createQuery('')
@@ -102,17 +84,13 @@ export const ResultsSearcher = () => {
         // console.log('SetURLPath wrote this')
     }
 
-    DisplayTrends()
-
     const InputChange = (e: { target: { value: string } }) => {
         createQuery(e.target.value)
     }
 
-    
-
     const ClickResultTrends = () => {
         if (queryValueLength > 0) {
-            console.log('input has a value!')
+            console.log('ClickResultTrends - the results searcher has been clicked!')
             console.log(queryValueLength)
             document
                 .getElementById('results-query-container-1')
