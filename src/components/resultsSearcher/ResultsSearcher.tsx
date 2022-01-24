@@ -12,83 +12,128 @@ import { actionCreators, State } from '../../state/index'
 import { Link } from 'react-router-dom'
 import { DisplayTrends } from '../../functions/DisplayTrends'
 import { ResultsSearchHelper } from '../resultsSearchHelper/ResultsSearchHelper'
-// import { ResultsFormSubmission } from '../../functions/ResultsFormSubmission'
 import { DoNothing } from '../../functions/DoNothing'
 import { useEffect, useState } from 'react'
 
 export const ResultsSearcher = () => {
     const queryValue = useSelector((state: State) => state.searchQuery)
     const queryValueLength: number = queryValue.length || 0
-    // console.log(queryValueLength)
     let queryPath = queryValue
     queryPath = queryPath.replace(/\s+/g, '+')
-    // console.log('QUERY PATH: ' + queryPath)
     const dispatch = useDispatch()
     const { createQuery } = bindActionCreators(actionCreators, dispatch)
-    const [refreshValue, setRefreshValue] = useState('')
     const queryString = window.location.search
     const urlParams = new URLSearchParams(queryString)
     const queryMade = urlParams.get('q') || ''
 
-    useEffect(() => {
-        document.title = `${queryMade} - Google`
-        console.log('UseEffect [constant] wrote this')
-    })
+    const [displayedKeywords, setDisplayedKeywords] = useState(false)
+
+    const ChangeResultsHelperContainer = () => {
+        document.addEventListener('click', (e) => {
+            console.log(
+                'RESULTSSearcher Component - ChangeResultsHelperContainer Function'
+            )
+            const inputResultsContainer = document.getElementById(
+                'results-query-container-1'
+            )
+            const resultsSearchHelper = document.getElementById(
+                'results-search-helper'
+            )
+
+            // const buttonContainer = document.getElementById('search-engine')
+            // const searchHelper = document.getElementById('search-helper')
+
+            let targetElement = e.target
+            do {
+                if (
+                    targetElement == inputResultsContainer ||
+                    targetElement == resultsSearchHelper
+                ) {
+                    return
+                }
+                targetElement = targetElement.parentNode
+            } while (targetElement)
+            document
+                .getElementById('results-query-container-1')
+                ?.classList.remove('results-query-container-9')
+            document
+                .getElementById('results-helper-container-1')
+                ?.classList.remove('results-helper-container-2')
+        })
+    }
+    ChangeResultsHelperContainer()
 
     useEffect(() => {
         let inputValue = document.getElementById('query').value
         inputValue = queryMade
         createQuery(inputValue)
-        console.log('UseEffect [onLoad] wrote tis')
+
+        console.log('ResultsSearcher - 1st UseEffect')
+        // document
+        //     .getElementById('results-query-container-1')
+        //     ?.classList.remove('results-query-container-9')
+        // document
+        //     .getElementById('results-helper-container-1')
+        //     ?.classList.remove('results-helper-container-2')
     }, [])
+
+    useEffect(() => {
+        document.title = `${queryMade} - Google`
+        console.log('UseEffect [constant] wrote this for TITLE CHANGE')
+
+        // document
+        //     .getElementById('results-query-container-1')
+        //     ?.classList.remove('results-query-container-9')
+        // document
+        //     .getElementById('results-helper-container-1')
+        //     ?.classList.remove('results-helper-container-2')
+    })
 
     const DeleteQuery = () => {
         createQuery('')
-        // document.getElementById("query").value = ''
         document.getElementById('query')?.focus()
-        console.log('DeleteQuery wrote this')
+        // console.log('DeleteQuery wrote this')
     }
 
     const SetURLPath = () => {
-        document.title = `${queryValue} - Google`
         const inputValue = document.getElementById('query')
-        inputValue?.blur()
-        console.log('SetURLPath wrote this')
-    }
-
-    // DisplayTrends()
-
-
-
-    const LoadedState = () => {
-        if (queryValueLength === 0) {
-            setRefreshValue(queryMade)
-            document.title = `${refreshValue} - Google`
-            console.log('LoadedState wrote this')
-        }
-    }
-
-    const altValue = () => {
-        if (queryValueLength == 0) {
-            return createQuery('')
-        } else {
-            return refreshValue
-        }
-    }
-
-    const ResultsFormSubmission = () => {
-        console.log('ResultsFormSubmission wrote this')
         document.title = `${queryValue} - Google`
+        inputValue?.blur()
+        // console.log('SetURLPath wrote this')
+    }
+
+    DisplayTrends()
+
+    const InputChange = (e: { target: { value: string } }) => {
+        createQuery(e.target.value)
+    }
+
+    
+
+    const ClickResultTrends = () => {
+        if (queryValueLength > 0) {
+            console.log('input has a value!')
+            console.log(queryValueLength)
+            document
+                .getElementById('results-query-container-1')
+                ?.classList.add('results-query-container-9')
+            document
+                .getElementById('results-helper-container-1')
+                ?.classList.add('results-helper-container-2')
+        } else {
+            console.log('input has NO value!')
+            document
+                .getElementById('results-query-container-1')
+                ?.classList.remove('results-query-container-9')
+            document
+                .getElementById('results-helper-container-1')
+                ?.classList.remove('results-helper-container-2')
+        }
     }
 
     return (
         <>
-            <form
-                className="results-form-container-1"
-                // onSubmit={ResultsFormSubmission}
-                // onLoad={LoadedState}
-                // onKeyDown={ResultsFormSubmission}
-            >
+            <form className="results-form-container-1">
                 <div id="container">
                     <div className="results-form-container-2">
                         <div className="results-logo-container">
@@ -112,12 +157,10 @@ export const ResultsSearcher = () => {
                                                 id="query"
                                                 inputClassName="results-input"
                                                 value={queryValue || ''}
-                                                onChange={(e) =>
-                                                    createQuery(e.target.value)
-                                                }
+                                                onChange={InputChange}
+                                                onClick={ClickResultTrends}
                                                 maxLength="2048"
                                                 autoComplete="off"
-                                                // onSubmit={SetURLPath}
                                             />
                                         </div>
                                     </div>
@@ -147,6 +190,7 @@ export const ResultsSearcher = () => {
                                                 <div
                                                     className="results-x"
                                                     onClick={DeleteQuery}
+                                                    aria-hidden
                                                 >
                                                     <span className="results-x-2">
                                                         <img

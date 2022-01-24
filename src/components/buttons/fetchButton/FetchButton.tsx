@@ -16,7 +16,7 @@ export const FetchButton = () => {
 
     const SetInitialResultsTitle = () => {
         createQuery(queryPath)
-        console.log('FetchButton - SetStateTitle wrote this')
+        console.log('FETCH BUTTON - SetStateTitle wrote this')
         document.title = `${queryPath} - Google`
     }
 

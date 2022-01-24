@@ -16,12 +16,31 @@ export const Searcher = () => {
     const { createQuery } = bindActionCreators(actionCreators, dispatch)
     const queryValue: string = useSelector((state: State) => state.searchQuery)
     const queryValueLength: number = queryValue.length
-    // console.log('QUERY LENGTH: ' + queryValueLength)
 
     DisplayTrends()
 
-    const ChangeHelperContainer = () => {
+    const clickTrends = () => {
+        console.log('Searcher clickTrends was clicked')
+        if (queryValueLength > 0) {
+            document
+                .getElementById('search-engine')
+                ?.classList.add('search-engine-2')
+            document
+                .getElementById('helper-container')
+                ?.classList.add('helper-container-2')
+        } else {
+            document
+                .getElementById('search-engine')
+                ?.classList.remove('search-engine-2')
+            document
+                .getElementById('helper-container')
+                ?.classList.remove('helper-container-2')
+        }
+    }
+
+    const SetSearcherClick = () => {
         document.addEventListener('click', (e) => {
+            console.log('Searcher Component - SetSearcherClick Function')
             const buttonContainer = document.getElementById('search-engine')
             const searchHelper = document.getElementById('search-helper')
             let targetElement = e.target
@@ -40,46 +59,9 @@ export const Searcher = () => {
             document
                 .getElementById('helper-container')
                 ?.classList.remove('helper-container-2')
-            document
-                .getElementById('results-query-container-1')
-                ?.classList.remove('results-query-container-9')
-            document
-                .getElementById('results-helper-container-1')
-                ?.classList.remove('results-helper-container-2')
         })
     }
-
-    ChangeHelperContainer()
-
-    const clickTrends = () => {
-        if (queryValueLength > 0) {
-            document
-                .getElementById('search-engine')
-                ?.classList.add('search-engine-2')
-            document
-                .getElementById('helper-container')
-                ?.classList.add('helper-container-2')
-            document
-                .getElementById('results-query-container-1')
-                ?.classList.add('results-query-container-9')
-            document
-                .getElementById('results-helper-container-1')
-                ?.classList.add('results-helper-container-2')
-        } else {
-            document
-                .getElementById('search-engine')
-                ?.classList.remove('search-engine-2')
-            document
-                .getElementById('helper-container')
-                ?.classList.remove('helper-container-2')
-            document
-                .getElementById('results-query-container-1')
-                ?.classList.remove('results-query-container-9')
-            document
-                .getElementById('results-helper-container-1')
-                ?.classList.remove('results-helper-container-2')
-        }
-    }
+    SetSearcherClick()
 
     const setInputChange = (e: { target: { value: string } }) => {
         createQuery(e.target.value)

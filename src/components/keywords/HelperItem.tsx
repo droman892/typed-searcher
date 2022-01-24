@@ -27,16 +27,13 @@ export const HelperItem = (props: { name: string }) => {
         createQuery(props.name)
         console.log('HelperItem - SetStateTitle wrote this')
         document.title = `${props.name} - Google`
+        document
+            .getElementById('results-query-container-1')
+            ?.classList.remove('results-query-container-9')
+        document
+            .getElementById('results-helper-container-1')
+            ?.classList.remove('results-helper-container-2')
     }
-
-    // useEffect(() => {
-    //     const queryString = window.location.search
-    //     console.log('QUERY STRING: ' + queryString)
-    //     const urlParams = new URLSearchParams(queryString)
-    //     const queryMade = urlParams.get('q')
-    //     console.log('ACTUAL QUERY MADE: ' + queryMade)
-    //     // createQuery(queryMade)
-    // })
 
     return (
         <Link
