@@ -10,6 +10,7 @@ import { actionCreators, State } from '../../state/index'
 import { SearchHelper } from '../searchHelper/SearchHelper'
 import '../searchHelper/SearchHelper.scss'
 import { DisplayTrends } from '../../functions/DisplayTrends'
+import { useNavigate } from 'react-router-dom'
 
 export const Searcher = () => {
     const dispatch = useDispatch()
@@ -67,9 +68,21 @@ export const Searcher = () => {
         createQuery(e.target.value)
     }
 
+    const navigate = useNavigate()
+    const HomePressEnter = () => {
+        if (queryValueLength > 0) {
+            // console.log('Home form submitted!')
+            navigate('/search?q=' + queryValue)
+        }
+    }
+
     return (
         <div id="searcher-container">
-            <form className="search-engine" id="search-engine">
+            <form
+                className="search-engine"
+                id="search-engine"
+                onSubmit={HomePressEnter}
+            >
                 <div className="search-engine-inner">
                     <div className="magnifying-glass-container">
                         <div className="magnifying-glass-container-2">
@@ -91,6 +104,7 @@ export const Searcher = () => {
                             onClick={clickTrends}
                             maxLength="2048"
                             autoComplete="off"
+                            onSubmit={() => console.log('hello')}
                         />
                     </div>
                     <div className="microphone-container">

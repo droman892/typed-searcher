@@ -20,6 +20,13 @@
     background: #fff;
 }
 
+.mobile-results-form-3-1 {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
+    border-color: rgba(223, 225, 229, 0);
+}
+
 .mobile-results-glass {
     display: flex;
     border-radius: 0 25px 25px 0;
@@ -30,6 +37,10 @@
     padding-right: 0;
     flex: 0 0 auto;
     margin: 0;
+}
+
+.mobile-results-glass:focus {
+    background-color: rgba(0,0,0,0);
 }
 
 .mobile-results-glass-2 {
@@ -107,6 +118,10 @@
     background: transparent;
 }
 
+.mobile-results-x-2:focus {
+    background-color: rgba(0,0,0,0);
+}
+
 .mobile-results-x-3 {
     display: inline-block;
     fill: currentColor;
@@ -121,3 +136,10 @@
     height: 100%;
     width: 100%;
 }
+
+
+
+
+
+
+

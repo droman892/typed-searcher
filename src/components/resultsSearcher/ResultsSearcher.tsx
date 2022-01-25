@@ -28,6 +28,13 @@ export const ResultsSearcher = () => {
 
     const [displayedKeywords, setDisplayedKeywords] = useState(false)
 
+    let intViewportWidth = window.innerWidth
+    
+
+    useEffect(() => {
+        console.log(intViewportWidth)
+    })
+
     const ChangeResultsHelperContainer = () => {
         document.addEventListener('click', (e) => {
             console.log('ChangeResultsHelperContainer - something was clicked!')
@@ -129,92 +136,111 @@ export const ResultsSearcher = () => {
     DisplayResultTrends()
 
     return (
-        <>
-            <form className="results-form-container-1">
-                <div id="container">
-                    <div className="results-form-container-2">
-                        <div className="results-logo-container">
-                            <Link to="/" className="results-logo-0">
-                                <img
-                                    src={GoogleLogo}
-                                    alt="Results Page Logo"
-                                    className="results-logo"
-                                />
-                            </Link>
-                        </div>
-                        <div
-                            className="results-query-container-1"
-                            id="results-query-container-1"
-                        >
-                            <div className="results-query-container-2">
-                                <div className="results-query-container-3">
-                                    <div className="results-query-input">
-                                        <div className="results-query-input-1">
-                                            <TextInput
-                                                id="query"
-                                                inputClassName="results-input"
-                                                value={queryValue || ''}
-                                                onChange={InputChange}
-                                                onClick={ClickResultTrends}
-                                                maxLength="2048"
-                                                autoComplete="off"
-                                            />
-                                        </div>
+        <form className="results-form-container-1">
+            <div id="container">
+                <div className="results-form-container-2">
+                    <div className="results-logo-container">
+                        <Link to="/" className="results-logo-0">
+                            <img
+                                src={GoogleLogo}
+                                alt="Results Page Logo"
+                                className="results-logo"
+                            />
+                        </Link>
+                    </div>
+                    <div
+                        className="results-query-container-1"
+                        id="results-query-container-1"
+                    >
+                        <div className="results-query-container-2">
+                            <div className="results-query-container-3">
+                                <div className="results-query-input">
+                                    <div className="results-query-input-1">
+                                        <TextInput
+                                            id="query"
+                                            inputClassName="results-input"
+                                            value={queryValue || ''}
+                                            onChange={InputChange}
+                                            onClick={ClickResultTrends}
+                                            maxLength="2048"
+                                            autoComplete="off"
+                                        />
                                     </div>
-                                    <>
-                                        {queryValueLength === 0 ? (
-                                            <div className="results-x-microphone">
-                                                <div className="results-x">
-                                                    <span className="results-x-2">
-                                                        <img
-                                                            src={theX}
-                                                            alt="X"
-                                                            className="x"
-                                                        />
-                                                    </span>
-                                                    <div className="results-line" />
-                                                </div>
-                                                <div className="results-microphone">
-                                                    <img
-                                                        src={microphone}
-                                                        alt="Microphone"
-                                                        className="results-microphone-image"
-                                                    />
-                                                </div>
-                                            </div>
-                                        ) : (
-                                            <div className="results-x-microphone">
-                                                <div
-                                                    className="results-x"
-                                                    onClick={DeleteQuery}
-                                                    aria-hidden
-                                                >
-                                                    <span className="results-x-2">
-                                                        <img
-                                                            src={theX}
-                                                            alt="X"
-                                                            className="x"
-                                                        />
-                                                    </span>
-                                                    <div className="results-line" />
-                                                </div>
-                                                <div className="results-microphone">
-                                                    <img
-                                                        src={microphone}
-                                                        alt="Microphone"
-                                                        className="results-microphone-image"
-                                                    />
-                                                </div>
-                                            </div>
-                                        )}
-                                    </>
                                 </div>
                                 <>
                                     {queryValueLength === 0 ? (
-                                        <button
-                                            className="results-query-button-container-1 results-glass-button"
-                                            onClick={DoNothing}
-                                        >
+                                        <div className="results-x-microphone">
+                                            <div className="results-x">
+                                                <span className="results-x-2">
+                                                    <img
+                                                        src={theX}
+                                                        alt="X"
+                                                        className="x"
+                                                    />
+                                                </span>
+                                                <div className="results-line" />
+                                            </div>
+                                            <div className="results-microphone">
+                                                <img
+                                                    src={microphone}
+                                                    alt="Microphone"
+                                                    className="results-microphone-image"
+                                                />
+                                            </div>
+                                        </div>
+                                    ) : (
+                                        <div className="results-x-microphone">
+                                            <div
+                                                className="results-x"
+                                                onClick={DeleteQuery}
+                                                aria-hidden
+                                            >
+                                                <span className="results-x-2">
+                                                    <img
+                                                        src={theX}
+                                                        alt="X"
+                                                        className="x"
+                                                    />
+                                                </span>
+                                                <div className="results-line" />
+                                            </div>
+                                            <div className="results-microphone">
+                                                <img
+                                                    src={microphone}
+                                                    alt="Microphone"
+                                                    className="results-microphone-image"
+                                                />
+                                            </div>
+                                        </div>
+                                    )}
+                                </>
+                            </div>
+                            <>
+                                {queryValueLength === 0 ? (
+                                    <button
+                                        className="results-query-button-container-1 results-glass-button"
+                                        onClick={DoNothing}
+                                    >
+                                        <div className="results-query-button-container-2">
+                                            <span className="results-query-button-container-3">
+                                                <img
+                                                    src={magnifyingGlass}
+                                                    alt="Magnifying Glass"
+                                                    className="results-glass-image"
+                                                />
+                                            </span>
+                                        </div>
+                                    </button>
+                                ) : (
+                                    <Link
+                                        to={{
+                                            pathname: '/search',
+                                            search: '?q=' + queryPath,
+                                        }}
+                                        className="results-glass-link"
+                                        onClick={SetURLPath}
+                                    >
+                                        <button className="results-query-button-container-1 results-glass-button">
                                             <div className="results-query-button-container-2">
                                                 <span className="results-query-button-container-3">
                                                     <img
@@ -225,42 +251,19 @@ export const ResultsSearcher = () => {
                                                 </span>
                                             </div>
                                         </button>
-                                    ) : (
-                                        <Link
-                                            to={{
-                                                pathname: '/search',
-                                                search: '?q=' + queryPath,
-                                            }}
-                                            className="results-glass-link"
-                                            onClick={SetURLPath}
-                                        >
-                                            <button className="results-query-button-container-1 results-glass-button">
-                                                <div className="results-query-button-container-2">
-                                                    <span className="results-query-button-container-3">
-                                                        <img
-                                                            src={
-                                                                magnifyingGlass
-                                                            }
-                                                            alt="Magnifying Glass"
-                                                            className="results-glass-image"
-                                                        />
-                                                    </span>
-                                                </div>
-                                            </button>
-                                        </Link>
-                                    )}
-                                </>
-                            </div>
-                        </div>
-                        <div
-                            className="results-helper-container-1"
-                            id="results-helper-container-1"
-                        >
-                            <ResultsSearchHelper />
+                                    </Link>
+                                )}
+                            </>
                         </div>
                     </div>
+                    <div
+                        className="results-helper-container-1"
+                        id="results-helper-container-1"
+                    >
+                        <ResultsSearchHelper />
+                    </div>
                 </div>
-            </form>
-        </>
+            </div>
+        </form>
     )
 }

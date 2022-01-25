@@ -415,7 +415,7 @@ nav ul li {
 }
 
 .results-mobile-profile {
-    height: 64px;
+    height: 58px;
     position: absolute;
     display: block;
     right: 0;
@@ -427,12 +427,19 @@ nav ul li {
 .results-profile-icon {
     padding: 12px !important;
     display: block;
+
+    height: 29px;
+    width: 29px;
+}
+
+.results-profile-icon:hover {
+    background-color: rgba(0,0,0,0);
 }
 
 .user-profile {
     fill: #1a73e8;
-    height: 32px;
-    width: 32px;
+    height: 27px;
+    width: 27px;
 }
 
 .mobile-results-searcher {
@@ -555,4 +562,8 @@ nav ul li {
     color: rgba(0,0,0,0.54);
     text-decoration: none;
     padding: 8px 12px 8px 12px;
+}
+
+.mobile-results-tools:hover {
+    background-color: rgba(0,0,0,0.1);
 }
