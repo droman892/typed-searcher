@@ -476,6 +476,11 @@ nav ul li {
     padding-bottom: 8px;
 }
 
+.mobile-results-items-container-2::-webkit-scrollbar {
+    display: none;
+  }
+  
+
 .mobile-results-items-container-3 {
     position: relative;
     white-space: nowrap;
@@ -490,9 +495,9 @@ nav ul li {
     scrollbar-width: none;
 }
 
-.mobile-results-items-container-3::-webkit-scrollbar {
-    display: none !important;
-}
+// .mobile-results-items-container-3::-webkit-scrollbar {
+//     display: none !important;
+// }
 
 .mobile-results-item-first {
     color: #202124;

@@ -62,12 +62,20 @@ body {
     margin: 0;
     font-size: 14px;
     min-width: 400px;
-    overflow-x: hidden;
+    // overflow-x: hidden !important;
+    // max-width:100%
 }
 
 html {
     line-height: normal;
+    // overflow-y: scroll !important;
+    // overflow-x: hidden !important;
+    // max-width:100%
 }
+
+::-webkit-scrollbar-thumb {
+    background: red; 
+  }
 
 .layout-wrapper {
     height: 100%;
