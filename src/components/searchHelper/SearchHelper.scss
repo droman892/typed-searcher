@@ -106,6 +106,10 @@
     -webkit-tap-highlight-color: rgba(0,0,0,.00);
 }
 
+.helper-link:hover {
+    text-decoration: underline;
+}
+
 .helper-space {
     border-top: 1px solid #e8eaed;
     margin: 0 20px 0 14px;

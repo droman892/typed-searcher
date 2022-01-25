@@ -21,6 +21,7 @@
 @media only screen and (max-width: 992px) {
     .hide-on-med-and-down {
         display: block !important;
+        min-width: 250px;
     }
 }
 

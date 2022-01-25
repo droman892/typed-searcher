@@ -123,7 +123,9 @@ ul.sidenav {
 
     .results-container-image {
         max-height: 40px !important;
-        margin-top: 12px !important;
+        // margin-top: 12px !important;
+
+        padding: 10px 10px 8px;
     }
 }
 
@@ -386,13 +388,22 @@ nav ul li {
     line-height: 34px;
     outline: none;
     height: 100%;
-    left: 0;
+    
     top: 0;
-    width: 100%;
+    
     background-size: 75px 26px;
     color: transparent;
     position: absolute;
     text-align: center;
+
+    left: 50%;
+    margin-left: -65px;
+    // left: 0;
+    // width: 100%;
+}
+
+.mobile-results-container:hover {
+    background-color: rgba(0,0,0,0);
 }
 
 .results-container-image {

@@ -10,16 +10,20 @@ export const ResultsSearchHelper = () => {
                 <div className="results-helper-space"></div>
                 <div className="results-search-helper-3">
                     <ul className="results-helper-list-container">
-                        <HelperListItems />
+                        <div className="results-helper-list-container-2">
+                            <ul className="results-helper-list-container-3">
+                                <HelperListItems />
+                            </ul>
+                        </div>
                     </ul>
                 </div>
             </div>
 
-            {/* <div className="results-search-helper-text">
+            <div className="results-search-helper-text">
                 <a className="results-helper-link" href="#!">
                     Report inappropriate predictions
                 </a>
-            </div> */}
+            </div>
         </div>
     )
 }
