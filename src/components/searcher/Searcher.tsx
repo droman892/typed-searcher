@@ -106,7 +106,6 @@ export const Searcher = () => {
                             onClick={clickTrends}
                             maxLength="2048"
                             autoComplete="off"
-                            onSubmit={() => console.log('hello')}
                         />
                     </div>
                     <div className="microphone-container">

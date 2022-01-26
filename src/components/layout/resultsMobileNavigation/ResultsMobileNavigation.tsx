@@ -10,6 +10,11 @@ export const ResultsMobileNavigation = () => {
     const queryValue = useSelector((state: State) => state.searchQuery)
     const queryValueLength: number = queryValue.length || 0
 
+    const queryString = window.location.search
+    const urlParams = new URLSearchParams(queryString)
+    const queryMade = urlParams.get('q') || ''
+    // console.log('MOBILE - ' + queryMade)
+
     const InputMobileChange = (e: { target: { value: string } }) => {
         createQuery(e.target.value)
         console.log('Mobile - input change')
@@ -64,8 +69,8 @@ export const ResultsMobileNavigation = () => {
                             <div className="mobile-results-input-2">
                                 <TextInput
                                     inputClassName="mobile-results-input-3"
-                                    id="query"
-                                    value={queryValue || ''}
+                                    // id="query"
+                                    value={queryMade || ''}
                                     onChange={InputMobileChange}
                                     onClick={ClickMobileResultTrends}
                                     maxLength="2048"
