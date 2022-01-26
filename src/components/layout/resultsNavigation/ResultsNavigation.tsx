@@ -68,6 +68,7 @@ export const ResultsNavigation = () => {
                             </div>
                         </div>
                     </div>
+
                     <div className="mobile-results-2">
                         <Link to="/" className="mobile-results-container">
                             <img

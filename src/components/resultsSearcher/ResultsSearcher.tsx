@@ -9,7 +9,7 @@ import microphone from '../../assets/images/microphone.png'
 import { useSelector, useDispatch } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { actionCreators, State } from '../../state/index'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { DisplayTrends } from '../../functions/DisplayTrends'
 import { ResultsSearchHelper } from '../resultsSearchHelper/ResultsSearchHelper'
 import { DoNothing } from '../../functions/DoNothing'
@@ -25,15 +25,14 @@ export const ResultsSearcher = () => {
     const queryString = window.location.search
     const urlParams = new URLSearchParams(queryString)
     const queryMade = urlParams.get('q') || ''
+    const navigate = useNavigate()
 
-    const [displayedKeywords, setDisplayedKeywords] = useState(false)
 
-    let intViewportWidth = window.innerWidth
-    
+    // let intViewportWidth = window.innerWidth
 
-    useEffect(() => {
-        console.log(intViewportWidth)
-    })
+    // useEffect(() => {
+    //     console.log(intViewportWidth)
+    // })
 
     const ChangeResultsHelperContainer = () => {
         document.addEventListener('click', (e) => {
@@ -96,7 +95,7 @@ export const ResultsSearcher = () => {
             console.log(
                 'ClickResultTrends - the results searcher has been clicked!'
             )
-            console.log(queryValueLength)
+            // console.log(queryValueLength)
             document
                 .getElementById('results-query-container-1')
                 ?.classList.add('results-query-container-9')
@@ -135,8 +134,15 @@ export const ResultsSearcher = () => {
     }
     DisplayResultTrends()
 
+    const ResultsPressEnter = () => {
+        if (queryValueLength > 0) {
+            // console.log('Results form submitted!')
+            navigate('/search?q=' + queryValue)
+        }
+    }
+
     return (
-        <form className="results-form-container-1">
+        <form className="results-form-container-1" onSubmit={ResultsPressEnter}>
             <div id="container">
                 <div className="results-form-container-2">
                     <div className="results-logo-container">

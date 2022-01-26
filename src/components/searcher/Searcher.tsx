@@ -11,12 +11,14 @@ import { SearchHelper } from '../searchHelper/SearchHelper'
 import '../searchHelper/SearchHelper.scss'
 import { DisplayTrends } from '../../functions/DisplayTrends'
 import { useNavigate } from 'react-router-dom'
+import { PressEnter } from '../../functions/PressEnter'
 
 export const Searcher = () => {
     const dispatch = useDispatch()
     const { createQuery } = bindActionCreators(actionCreators, dispatch)
     const queryValue: string = useSelector((state: State) => state.searchQuery)
     const queryValueLength: number = queryValue.length
+    const navigate = useNavigate()
 
     DisplayTrends()
 
@@ -68,7 +70,7 @@ export const Searcher = () => {
         createQuery(e.target.value)
     }
 
-    const navigate = useNavigate()
+    
     const HomePressEnter = () => {
         if (queryValueLength > 0) {
             // console.log('Home form submitted!')

@@ -38,6 +38,12 @@ export const ResultsMobileNavigation = () => {
         }
     }
 
+    const DeleteMobileResultsQuery = () => {
+        createQuery('')
+        document.getElementById('query')?.focus()
+        console.log('DeleteMobileResultsQuery wrote this')
+    }
+
     return (
         <form className="mobile-results-form">
             <div>
@@ -59,7 +65,7 @@ export const ResultsMobileNavigation = () => {
                                 <TextInput
                                     inputClassName="mobile-results-input-3"
                                     id="query"
-                                    value={queryValue}
+                                    value={queryValue || ''}
                                     onChange={InputMobileChange}
                                     onClick={ClickMobileResultTrends}
                                     maxLength="2048"
@@ -68,15 +74,33 @@ export const ResultsMobileNavigation = () => {
                             </div>
                         </div>
                         <div className="mobile-results-x">
-                            <button className="mobile-results-x-2">
-                                <span className="mobile-results-x-3">
-                                    <img
-                                        src={theX}
-                                        alt="The X"
-                                        className="mobile-results-x-4"
-                                    ></img>
-                                </span>
-                            </button>
+                            <>
+                                {queryValueLength === 0 ? (
+                                    <div className="mobile-results-x-2">
+                                        <span className="mobile-results-x-3">
+                                            <img
+                                                src={theX}
+                                                alt="The X"
+                                                className="mobile-results-x-4"
+                                            />
+                                        </span>
+                                    </div>
+                                ) : (
+                                    <div
+                                        className="mobile-results-x-2"
+                                        onClick={DeleteMobileResultsQuery}
+                                        aria-hidden
+                                    >
+                                        <span className="mobile-results-x-3">
+                                            <img
+                                                src={theX}
+                                                alt="The X"
+                                                className="mobile-results-x-4"
+                                            />
+                                        </span>
+                                    </div>
+                                )}
+                            </>
                         </div>
                     </div>
                 </div>
