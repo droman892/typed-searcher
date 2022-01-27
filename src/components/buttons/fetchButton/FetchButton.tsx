@@ -27,12 +27,24 @@ export const FetchButton = () => {
                     <span>Google Search</span>
                 </Button>
             ) : (
+                // <Link
+                //     to={{
+                //         pathname: '/search',
+                //         search: '?q=' + queryPath,
+                //     }}
+                //     onClick={SetInitialResultsTitle}
+                // >
+                //     <Button className="fetch-button-style" node="button">
+                //         <span>Google Search</span>
+                //     </Button>
+                // </Link>
+
                 <Link
                     to={{
                         pathname: '/search',
                         search: '?q=' + queryPath,
                     }}
-                    onClick={SetInitialResultsTitle}
+                    // onClick={SetInitialResultsTitle}
                 >
                     <Button className="fetch-button-style" node="button">
                         <span>Google Search</span>

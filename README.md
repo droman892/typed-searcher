@@ -22,6 +22,10 @@ HOME PAGE:
 <p> React-Materialize: http://react-materialize.github.io/react-materialize/?path=/story/components-textinput--default </p>
 
 <p>
+useHistory
+session storage (for recording state on different pages)
+
+
 Google Images: https://rapidapi.com/Glavier/api/google-image-search1/
 Google Translate: https://rapidapi.com/googlecloud/api/google-translate1/
 Keywords for searching: https://rapidapi.com/fatimabirmingham@gmail.com/api/keywords4/ .... https://rapidapi.com/contextualwebsearch/api/keyword-analysis/pricing

@@ -9,13 +9,6 @@ import '../containers/resultsContainer/ResultsContainer.scss'
 export const Results = () => {
     const queryValue = useSelector((state: State) => state.searchQuery)
 
-    // useEffect(() => {
-    //     const changeTitle = () => {
-    //         document.title = `${queryValue} - Google`
-    //     }
-    //     changeTitle()
-    // }, []) 
-
     return (
         // <div className="page-flexbox-wrapper">
         //     <ResultsNavigation />

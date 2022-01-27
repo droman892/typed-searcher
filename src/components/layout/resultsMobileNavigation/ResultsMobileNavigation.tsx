@@ -79,37 +79,12 @@ export const ResultsMobileNavigation = () => {
             <div>
                 <div className="mobile-results-form-2">
                     <div className="mobile-results-form-3">
-
-
-
-                    <>
-                                {queryValueLength === 0 ? (
-
-                        <button className="mobile-results-glass" onClick={DoNothing}>
-                            <div className="mobile-results-glass-2">
-                                <span className="mobile-results-glass-3">
-                                    <img
-                                        src={magnifyingGlass}
-                                        alt="Magnifying Glass"
-                                        className="mobile-results-glass-4"
-                                    ></img>
-                                </span>
-                            </div>
-                        </button>
-
-                                ): (
-
-
-                                    <Link
-                                        to={{
-                                            pathname: '/search',
-                                            search: '?q=' + queryPath,
-                                        }}
-                                        onClick={SetMobileResultsURLPath}
-                                        className="mobile-results-glass"
-                                    >
-
-                                    <button className="mobile-results-glass">
+                        <>
+                            {queryValueLength === 0 ? (
+                                <button
+                                    className="mobile-results-glass"
+                                    onClick={DoNothing}
+                                >
                                     <div className="mobile-results-glass-2">
                                         <span className="mobile-results-glass-3">
                                             <img
@@ -120,12 +95,29 @@ export const ResultsMobileNavigation = () => {
                                         </span>
                                     </div>
                                 </button>
-</Link>
-                                )}
+                            ) : (
+                                <Link
+                                    to={{
+                                        pathname: '/search',
+                                        search: '?q=' + queryPath,
+                                    }}
+                                    // onClick={SetMobileResultsURLPath}
+                                    className="mobile-results-glass"
+                                >
+                                    <button className="mobile-results-glass">
+                                        <div className="mobile-results-glass-2">
+                                            <span className="mobile-results-glass-3">
+                                                <img
+                                                    src={magnifyingGlass}
+                                                    alt="Magnifying Glass"
+                                                    className="mobile-results-glass-4"
+                                                ></img>
+                                            </span>
+                                        </div>
+                                    </button>
+                                </Link>
+                            )}
                         </>
-
-
-
 
                         <div className="mobile-results-input">
                             <div className="mobile-results-input-2">

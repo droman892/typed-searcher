@@ -13,30 +13,38 @@ import { Link, useNavigate } from 'react-router-dom'
 import { DisplayTrends } from '../../functions/DisplayTrends'
 import { ResultsSearchHelper } from '../resultsSearchHelper/ResultsSearchHelper'
 import { DoNothing } from '../../functions/DoNothing'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 export const ResultsSearcher = () => {
-    const queryValue = useSelector((state: State) => state.searchQuery)
+    let queryValue = useSelector((state: State) => state.searchQuery)
     const queryValueLength: number = queryValue.length || 0
     let queryPath = queryValue
     queryPath = queryPath.replace(/\s+/g, '+')
     const dispatch = useDispatch()
     const { createQuery } = bindActionCreators(actionCreators, dispatch)
     const queryString = window.location.search
+    // console.log('QUERY STRING: ' + queryString)
     const urlParams = new URLSearchParams(queryString)
     const queryMade = urlParams.get('q') || ''
+    console.log('QUERY VALUE: ' + queryValue)
+    const queryTest = queryValue || queryMade
+    console.log('QUERY TEST: ' + queryTest)
+    console.log('QUERY MADE: ' + queryMade)
     const navigate = useNavigate()
 
+    const [inputQueryValue, setInputQueryValue] = useState(queryValue)
 
-    // let intViewportWidth = window.innerWidth
+    
 
-    // useEffect(() => {
-    //     console.log(intViewportWidth)
-    // })
+    const ResultsTitleChange = () => {
+        document.title = `${queryMade} - Google`
+        // createQuery(queryMade)
+    }
+    ResultsTitleChange()
 
     const ChangeResultsHelperContainer = () => {
         document.addEventListener('click', (e) => {
-            console.log('ChangeResultsHelperContainer - something was clicked!')
+            // console.log('ChangeResultsHelperContainer - something was clicked!')
             const inputResultsContainer = document.getElementById(
                 'results-query-container-1'
             )
@@ -64,15 +72,6 @@ export const ResultsSearcher = () => {
     }
     ChangeResultsHelperContainer()
 
-    useEffect(() => {
-        let inputValue = document.getElementById('query').value
-        document.title = `${queryMade} - Google`
-        inputValue = queryMade
-        createQuery(inputValue)
-
-        // console.log('ResultsSearcher - UseEffect')
-    }, [])
-
     const DeleteQuery = () => {
         createQuery('')
         document.getElementById('query')?.focus()
@@ -87,6 +86,8 @@ export const ResultsSearcher = () => {
     }
 
     const InputChange = (e: { target: { value: string } }) => {
+        console.log('RESULTS DESKTOP INPUT CHANGE')
+        // console.log(e.target.value)
         createQuery(e.target.value)
     }
 
@@ -141,6 +142,14 @@ export const ResultsSearcher = () => {
         }
     }
 
+    const DeleteSavedQuery = () => {
+        console.log('DeleteSavedQuery')
+        const inputQuery = document.getElementById('query')
+        // inputQuery?.value == 'Winner'
+        // inputQuery?.focus()
+        inputQuery?.setAttribute('value', 'awesome!')
+    }
+
     return (
         <form className="results-form-container-1" onSubmit={ResultsPressEnter}>
             <div id="container">
@@ -176,7 +185,11 @@ export const ResultsSearcher = () => {
                                 <>
                                     {queryValueLength === 0 ? (
                                         <div className="results-x-microphone">
-                                            <div className="results-x">
+                                            <div
+                                                className="results-x"
+                                                // onClick={DeleteSavedQuery}
+                                                // aria-hidden
+                                            >
                                                 <span className="results-x-2">
                                                     <img
                                                         src={theX}
@@ -244,7 +257,7 @@ export const ResultsSearcher = () => {
                                             search: '?q=' + queryPath,
                                         }}
                                         className="results-glass-link"
-                                        onClick={SetURLPath}
+                                        // onClick={SetURLPath}
                                     >
                                         <button className="results-query-button-container-1 results-glass-button">
                                             <div className="results-query-button-container-2">
