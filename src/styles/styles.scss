@@ -1,3 +1,5 @@
+@use './colors.scss' as *;
+
 @font-face {
     font-family: 'Roboto';
     src: local('Roboto'),
@@ -40,7 +42,7 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-    -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important;
+    -webkit-box-shadow: 0 0 0px 1000px $white inset !important;
 }
 
 @media only screen and (max-width: 519px) {
@@ -49,6 +51,15 @@ select:-webkit-autofill:focus {
     }
 }
 
+@media (min-width: 1121px) and (max-width: 1300px) {
+    .results-page-container-1 {
+        margin-left: calc((100vw - 1065px) / 2 - 180px);
+    }
+}
+
+::-webkit-scrollbar-thumb {
+    background: $nav-icon-hover;
+}
 
 * {
     font-family: 'Roboto', arial, sans-serif;
@@ -62,20 +73,17 @@ body {
     margin: 0;
     font-size: 14px;
     min-width: 400px;
-    // overflow-x: hidden !important;
-    // max-width:100%
+}
+
+.emptyDivStyle {
+    flex-grow: 1;
+    flex-shrink: 0;
+    box-sizing: border-box;
 }
 
 html {
     line-height: normal;
-    // overflow-y: scroll !important;
-    // overflow-x: hidden !important;
-    // max-width:100%
 }
-
-::-webkit-scrollbar-thumb {
-    background: red; 
-  }
 
 .layout-wrapper {
     height: 100%;
@@ -97,10 +105,15 @@ nav ul a {
     overflow-x: hidden;
 }
 
-@media (min-width: 1121px) and (max-width: 1300px) {
-    .results-page-container-1 {
-        margin-left: calc((100vw - 1065px) / 2 - 180px);
-    }
+.results-page-box-2 {
+    clear: both;
+    margin-left: 0;
+    padding-top: 20px;
+    box-sizing: border-box;
+    min-height: 100vh;
+    position: absolute;
+    width: 100%;
+    display: block;
 }
 
 .results-page-container-1 {
@@ -118,28 +131,6 @@ nav ul a {
     position: relative;
     margin-left: 180px;
     width: 652px;
-}
-
-.emptyDivStyle {
-    flex-grow: 1;
-    flex-shrink: 0;
-    box-sizing: border-box;
-}
-
-.results-page-box-2 {
-    clear: both;
-    // min-width: 833px;
-    margin-left: 0;
-    padding-top: 20px;
-    box-sizing: border-box;
-    // position: relative;
-    min-height: 100vh;
-
-    position: absolute;
-    // min-width: 1121px;
-    width: 100%;
-    display: block;
-    // background-color: yellow;
 }
 
 .test-container {

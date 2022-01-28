@@ -1,8 +1,14 @@
+@use '../../../styles/colors.scss' as *;
+
+.btn:focus {
+    background-color: initial;
+}
+
 .button-style {
-    background-color: #f8f9fa !important;
-    border: 1px solid #f8f9fa;
+    background-color: $fetch-button !important;
+    border: 1px solid $fetch-button;
     border-radius: 4px;
-    color: #3c4043;
+    color: $button-text;
     font-size: 14px;
     margin: 11px 4px;
     padding: 0 16px;
@@ -17,12 +23,8 @@
 }
 
 .button-style:hover {
-    box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
-    background-color: #f8f9fa;
-    border: 1px solid #dadce0;
-    color: #202124;
-}
-
-.btn:focus {
-    background-color: initial;
+    box-shadow: 0 1px 1px $button-shadow;
+    background-color: $fetch-button;
+    border: 1px solid $line;
+    color: $dark;
 }

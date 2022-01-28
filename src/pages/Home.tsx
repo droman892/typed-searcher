@@ -13,7 +13,6 @@ export const Home = () => {
 
     useEffect(() => {
         document.title = 'Google'
-
         createQuery('')
     }, [createQuery])
 

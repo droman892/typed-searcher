@@ -1,14 +1,14 @@
 @use '../../../styles/colors.scss' as *;
 
 @media only screen and (max-width: 1200px) {
-    .container {
-        justify-content: space-evenly !important;
-    }
-
     .center-footer-container {
         order: 0 !important;
         width: 100%;
         justify-content: center !important;
+    }
+
+    .container {
+        justify-content: space-evenly !important;
     }
 }
 
