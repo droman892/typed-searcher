@@ -1,3 +1,11 @@
+@use '../../../styles/colors.scss' as *;
+
+@media only screen and (max-width: 519px) {
+    .results-nav2-container-1 {
+        display: none !important;
+    }
+}
+
 @media (max-width: 1121px) {
     .results-nav2-container-1 {
         margin-left: -152px;
@@ -10,28 +18,29 @@
     }
 }
 
-@media only screen and (max-width: 519px) {
-    .results-nav2-container-1 {
-        display: none !important;
-    }
-}
-
 .blue-line {
-    background: #1a73e8;
+    background: $nav-button;
     height: 3px;
     margin-top: 11px;
 }
 
+.blue-link {
+    color: $nav-button;
+}
+
+.grey-link {
+    color: $apps-icon;
+}
+
 .results-nav2-container-1 {
-    border-bottom: 1px solid #ebebeb;
+    border-bottom: 1px solid $nav2-container;
     margin-top: -16px;
     position: relative;
     z-index: 1;
-    // margin-top: 75px;
 }
 
 .results-nav2-container-2 {
-    background: #fff;
+    background: $white;
     height: 58px;
     padding: 0;
     position: relative;
@@ -64,7 +73,7 @@
     margin-left: -1px;
     padding: 4px 11px;
     margin-right: -11px;
-    color: #5f6368;
+    color: $apps-icon;
     text-decoration: none;
     display: inline-block;
 }
@@ -72,24 +81,16 @@
 .results-nav2-container-5:hover {
     box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
     -webkit-transition: all 0s;
-    background-color: #f8f9fa;
+    background-color: $fetch-button;
     background-image: -webkit-gradient(
         linear,
         left top,
         left bottom,
-        from(#f8f9fa),
-        to(#f8f9fa)
+        from($fetch-button),
+        to($fetch-button)
     );
-    border: 1px solid #dadce0;
-    color: #202124;
-}
-
-.results-nav2-section {
-    // height: 16px;
-    line-height: 16px;
-    margin: 11px 1px 0;
-    display: inline-block;
-    white-space: nowrap;
+    border: 1px solid $line;
+    color: $dark;
 }
 
 .results-nav2-images {
@@ -98,18 +99,17 @@
     width: 100%;
 }
 
+.results-nav2-section {
+    line-height: 16px;
+    margin: 11px 1px 0;
+    display: inline-block;
+    white-space: nowrap;
+}
+
 .section-results-0 {
     padding: 17px 12px 0px 10px !important;
     text-decoration: none;
     display: inline-block;
-}
-
-.blue-link {
-    color: #1a73e8;
-}
-
-.grey-link {
-    color: #5f6368;
 }
 
 .section-results-1 {

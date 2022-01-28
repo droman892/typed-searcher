@@ -1,3 +1,17 @@
+@use '../../styles/colors.scss' as *;
+
+@media (min-width: 1121px) and (max-width: 1300px) {
+    .stats-bar {
+        margin-left: calc((100vw - 1065px) / 2 - 180px);
+    }
+}
+
+@media (min-width: 1300px) {
+    .stats-relative-1 {
+        margin-left: 0 !important;
+    }
+}
+
 #axios-data-1 {
     width: 600px !important;
     margin-top: 0;
@@ -15,7 +29,7 @@
 }
 
 #axios-data-5 {
-    color: #4d5156;
+    color: $axios-data;
 }
 
 .data-container {
@@ -41,7 +55,7 @@
 }
 
 #data-link {
-    color: #202124;
+    color: $dark;
     padding-top: 2px;
     padding-bottom: 2px;
     line-height: 1.3;
@@ -53,7 +67,7 @@
     margin-top: 0;
     margin-bottom: 3px;
     line-height: 1.3;
-    color: #1a0dab;
+    color: $data-title;
     font-size: 20px;
 }
 
@@ -66,20 +80,8 @@
     margin-bottom: 0;
 }
 
-@media (min-width: 1121px) and (max-width: 1300px) {
-    .stats-bar {
-        margin-left: calc((100vw - 1065px) / 2 - 180px);
-    }
-}
-
-@media (min-width: 1300px) {
-    .stats-relative-1 {
-        margin-left: 0 !important;
-    }
-}
-
 .stats-bar {
-    background: #fff;
+    background: $white;
     -webkit-box-sizing: border-box;
 }
 
@@ -97,7 +99,7 @@
     position: absolute;
     top: 0;
     -webkit-transition: all 220ms ease-in-out;
-    color: #70757a;
+    color: $footer-text-color;
     justify-content: space-between;
     min-width: 652px;
     line-height: 43px;

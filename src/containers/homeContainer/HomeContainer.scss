@@ -1,6 +1,8 @@
+@use '../../styles/colors.scss' as *;
+
 .home-container {
     margin: 0 auto;
-    background: #fff;
+    background: $white;
     position: absolute;
     left: 50%;
     top: 50%;
