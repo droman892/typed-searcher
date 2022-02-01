@@ -1,5 +1,51 @@
 @use '../../../styles/colors.scss' as *;
 
+.none {
+    display: none !important;
+}
+
+
+.mobile-results-helpers {
+    display: none;
+}
+
+.mobile-results-helpers-2 {
+    display: flex !important;
+    border: none;
+    box-shadow: none;
+    margin-left: 0;
+    margin-right: 0;
+    background: $white;
+    height: auto;
+    margin-top: 0;
+    max-height: 48px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.mobile-results-form-2-a {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background: $white !important;
+    z-index: 989;
+    border-radius: 0 !important;
+    overflow: auto;
+}
+
 .mobile-results-form {
     height: 44px;
     display: block;

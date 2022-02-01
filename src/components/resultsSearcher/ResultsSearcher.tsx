@@ -86,7 +86,7 @@ export const ResultsSearcher = () => {
     }
 
     const InputChange = (e: { target: { value: string } }) => {
-        console.log('RESULTS DESKTOP INPUT CHANGE')
+        // console.log('RESULTS DESKTOP INPUT CHANGE')
         // console.log(e.target.value)
         createQuery(e.target.value)
     }
@@ -104,7 +104,7 @@ export const ResultsSearcher = () => {
                 .getElementById('results-helper-container-1')
                 ?.classList.add('results-helper-container-2')
         } else {
-            console.log('input has NO value!')
+            // console.log('input has NO value!')
             document
                 .getElementById('results-query-container-1')
                 ?.classList.remove('results-query-container-9')
@@ -135,11 +135,27 @@ export const ResultsSearcher = () => {
     }
     DisplayResultTrends()
 
-    const ResultsPressEnter = () => {
-        if (queryValueLength > 0) {
-            // console.log('Results form submitted!')
-            navigate('/search?q=' + queryValue)
-        }
+    const ResultsPressEnter = (e: { preventDefault: () => void }) => {
+        e.preventDefault()
+        console.info('ZONIKS')
+        // if (queryValueLength > 0) {
+        //     // console.log('Results form submitted!')
+        //     navigate('/search?q=' + queryValue)
+        //     // document.getElementById('query')?.blur()
+        //     console.info('INTERESTING')
+        //     document
+        //         .getElementById('results-query-container-1')
+        //         ?.classList.remove('results-query-container-9')
+        //     document
+        //         .getElementById('results-helper-container-1')
+        //         ?.classList.remove('results-helper-container-2')
+        // }
+        
+    }
+
+    function handleSubmit(e: { preventDefault: () => void }) {
+        e.preventDefault()
+        console.log('OMGGGGGGGGGG')
     }
 
     const DeleteSavedQuery = () => {
@@ -151,7 +167,7 @@ export const ResultsSearcher = () => {
     }
 
     return (
-        <form className="results-form-container-1" onSubmit={ResultsPressEnter}>
+        <form className="results-form-container-1" onSubmit={handleSubmit}>
             <div id="container">
                 <div className="results-form-container-2">
                     <div className="results-logo-container">

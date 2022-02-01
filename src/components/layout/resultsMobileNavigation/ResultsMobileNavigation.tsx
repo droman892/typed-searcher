@@ -8,6 +8,7 @@ import { createQuery } from '../../../state/actionCreators'
 import { bindActionCreators } from 'redux'
 import { Link, useNavigate } from 'react-router-dom'
 import { DoNothing } from '../../../functions/DoNothing'
+import { MobileResultsHelpers } from '../../mobileResultsHelpers/MobileResultsHelpers'
 
 export const ResultsMobileNavigation = () => {
     const queryValue = useSelector((state: State) => state.searchQuery)
@@ -71,14 +72,55 @@ export const ResultsMobileNavigation = () => {
         console.log('SetMobileResultsURLPath wrote this')
     }
 
+    // const DisplayMobileResultTrends = () => {
+    //     const unfocusedInput = document.getElementById('query')
+
+    //     // && unfocusedInput === document.activeElement
+
+    //     if (queryValueLength > 0) {
+    //         console.log('SOMETHING')
+    //         document
+    //             .getElementById('mobile-results-form-3')
+    //             ?.classList.add('mobile-results-form-3-1')
+    //     } else {
+    //         console.log('NOTHING')
+    //         document
+    //             .getElementById('mobile-results-form-3')
+    //             ?.classList.remove('mobile-results-form-3-1')
+    //     }
+    // }
+    // DisplayMobileResultTrends()
+
+    const MobileResultsHelpersView = () => {
+        // const target = document.getElementById('mobile-query')
+        // console.log('eureka!!!')
+        if (queryValueLength > 0 && queryValue == queryMade) {
+            document
+                .getElementById('mobile-results-form-2')
+                ?.classList.add('mobile-results-form-2-a')
+            document
+                .getElementById('mobile-results-form-3')
+                ?.classList.add('none')
+            document
+                .getElementById('mobile-results-helpers')
+                ?.classList.add('mobile-results-helpers-2')
+        }
+    }
+
     return (
         <form
             className="mobile-results-form"
             onSubmit={MobileResultsPressEnter}
         >
             <div>
-                <div className="mobile-results-form-2">
-                    <div className="mobile-results-form-3">
+                <div
+                    className="mobile-results-form-2"
+                    id="mobile-results-form-2"
+                >
+                    <div
+                        className="mobile-results-form-3"
+                        id="mobile-results-form-3"
+                    >
                         <>
                             {queryValueLength === 0 ? (
                                 <button
@@ -123,10 +165,10 @@ export const ResultsMobileNavigation = () => {
                             <div className="mobile-results-input-2">
                                 <TextInput
                                     inputClassName="mobile-results-input-3"
-                                    // id="query"
+                                    id="mobile-query"
                                     value={queryValue || ''}
                                     onChange={InputMobileChange}
-                                    // onClick={ClickMobileResultTrends}
+                                    onClick={MobileResultsHelpersView}
                                     maxLength="2048"
                                     autoComplete="off"
                                 />
@@ -161,6 +203,12 @@ export const ResultsMobileNavigation = () => {
                                 )}
                             </>
                         </div>
+                    </div>
+                    <div
+                        id="mobile-results-helpers"
+                        className="mobile-results-helpers"
+                    >
+                        <MobileResultsHelpers />
                     </div>
                 </div>
             </div>

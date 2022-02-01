@@ -1,0 +1,108 @@
+@use '../../styles/colors.scss' as *;
+
+h1 {
+    color: black;
+}
+
+button.btn.mrh-arrow {
+    box-shadow: none;
+}
+
+button.btn.mrh-arrow:hover {
+    background-color: $white;
+}
+
+.back-arrow {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.mrh-arrow {
+    background: none;
+    border: none;
+    margin: 0 3px 0 5px;
+    padding: 0 12px;
+    flex: 0 0 auto;
+    height: 48px;
+}
+
+.mrh-arrow-2 {
+    color: #1a73e8;
+    height: 24px;
+}
+
+.mrh-arrow-3 {
+    display: inline-block;
+    fill: currentColor;
+    height: 24px;
+    line-height: 24px;
+    position: relative;
+    width: 24px;
+}
+
+.mrh-input {
+    padding: 12px 0 12px;
+    border: none;
+    flex: 1;
+    display: flex;
+}
+
+.mrh-input-2 {
+    display: flex;
+    flex: 1;
+}
+
+.mrh-text {
+    line-height: 24px;
+    padding-left: 3px !important;
+    padding-right: 2px !important;
+    overflow-y: hidden;
+    background-color: transparent !important;
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 0 0 16px !important;
+    font-size: 16px !important;
+    font-family: Roboto,Helvetica Neue,Arial,sans-serif;
+    color: rgba(0,0,0,.87);
+    word-wrap: break-word;
+    display: flex;
+    flex: 1;
+    -webkit-tap-highlight-color: transparent;
+    width: 100% !important;
+}
+
+.mrh-x {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: stretch;
+}
+
+.mrh-x-2 {
+    padding: 0 12px;
+    margin: 0 0;
+    outline: 0;
+    display: flex;
+    flex: 1;
+    color: #70757a;
+    cursor: pointer;
+    font: 27px/25px arial,sans-serif;
+    align-items: center;
+    border: 0;
+    background: transparent;
+}
+
+.mrh-x-3 {
+    display: inline-block;
+    fill: currentColor;
+    height: 24px;
+    line-height: 24px;
+    position: relative;
+    width: 24px;
+}
+
+.mrh-x-4 {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
