@@ -25,7 +25,6 @@ export const MobileResultsHelpers = () => {
 
     const RemoveDisplay = (e) => {
         e.preventDefault()
-        console.log('lit')
         document
             .getElementById('mobile-results-form-2')
             ?.classList.remove('mobile-results-form-2-a')
@@ -39,6 +38,8 @@ export const MobileResultsHelpers = () => {
             .getElementById('mobile-results-helpers-data-hidden')
             ?.classList.remove('mobile-results-helpers-data')
     }
+
+    
 
     return (
         <>

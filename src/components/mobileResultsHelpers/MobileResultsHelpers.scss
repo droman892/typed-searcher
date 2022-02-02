@@ -14,8 +14,8 @@ button.btn.mrh-arrow:hover {
 
 .back-arrow {
     display: block;
-    height: 100%;
-    width: 100%;
+    height: 90%;
+    width: 90%;
 }
 
 
@@ -71,6 +71,7 @@ button.btn.mrh-arrow:hover {
 }
 
 .mrh-text {
+    height: auto !important;
     line-height: 24px;
     padding-left: 3px !important;
     padding-right: 2px !important;
@@ -78,7 +79,7 @@ button.btn.mrh-arrow:hover {
     background-color: transparent !important;
     border: none !important;
     margin: 0 !important;
-    padding: 0 0 0 16px !important;
+    padding: 0 0 0 16px;
     font-size: 16px !important;
     font-family: Roboto,Helvetica Neue,Arial,sans-serif;
     color: rgba(0,0,0,.87);
@@ -87,6 +88,10 @@ button.btn.mrh-arrow:hover {
     flex: 1;
     -webkit-tap-highlight-color: transparent;
     width: 100% !important;
+}
+
+.mrh-text:focus {
+    box-shadow: 0 0 0 0 !important;
 }
 
 .mrh-x {
@@ -109,13 +114,17 @@ button.btn.mrh-arrow:hover {
     background: transparent;
 }
 
+.mrh-x-2:focus {
+    background-color: #fff;
+}
+
 .mrh-x-3 {
     display: inline-block;
     fill: currentColor;
-    height: 24px;
-    line-height: 24px;
+    height: 14px;
+    line-height: 14px;
     position: relative;
-    width: 24px;
+    width: 14px;
 }
 
 .mrh-x-4 {

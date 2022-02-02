@@ -10,6 +10,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { DoNothing } from '../../../functions/DoNothing'
 import { MobileResultsHelpers } from '../../mobileResultsHelpers/MobileResultsHelpers'
 import { MobileHelperData } from '../../mobileHelperData/MobileHelperData'
+import { useEffect } from 'react'
 
 export const ResultsMobileNavigation = () => {
     const queryValue = useSelector((state: State) => state.searchQuery)
@@ -115,6 +116,10 @@ export const ResultsMobileNavigation = () => {
         e.preventDefault()
         console.log('DAVID ROMAN!!!!!')
     }
+
+    useEffect(() => {
+        createQuery(queryMade)
+    }, [createQuery, queryMade])
 
     return (
         <form
@@ -229,14 +234,14 @@ export const ResultsMobileNavigation = () => {
                             <ul className="mobile-results-helpers-data-2">
                                 <div className="mobile-results-helpers-data-3">
                                     <ul className="mobile-results-helpers-data-4">
-                                        <MobileHelperData helperValue="David" />
+                                        <MobileHelperData helperValue="David Roman" />
                                         <MobileHelperData helperValue="Maria" />
                                         <MobileHelperData helperValue="Tom" />
                                         <MobileHelperData helperValue="Jess" />
                                         <MobileHelperData helperValue="Stuart" />
                                         <MobileHelperData helperValue="Jeff" />
                                         <MobileHelperData helperValue="Mike" />
-                                        <MobileHelperData helperValue="Sam" />
+                                        <MobileHelperData helperValue="Sam Robbins" />
                                         <MobileHelperData helperValue="Kevin" />
                                         <MobileHelperData helperValue="Steve" />
                                     </ul>

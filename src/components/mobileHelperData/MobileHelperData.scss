@@ -86,10 +86,14 @@
 }
 
 .mobile-results-helpers-data-switch-2 {
-    background: url(../../assets/images/magnifyingGlass.png) no-repeat 0 0;
-    background-size: 24px;
-    height: 24px;
-    width: 24px;
+    background: url(../../assets/images/upArrow.png) no-repeat 0 0;
+    background-size: 14px;
+    height: 14px;
+    width: 14px;
     align-self: center;
     flex: 1;
+}
+
+.mrh-link:hover {
+    background-color: none;
 }
