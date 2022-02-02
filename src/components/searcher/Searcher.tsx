@@ -43,7 +43,7 @@ export const Searcher = () => {
 
     const SetSearcherClick = () => {
         document.addEventListener('click', (e) => {
-            console.log('Searcher Component - SetSearcherClick Function')
+            // console.log('Searcher Component - SetSearcherClick Function')
             const buttonContainer = document.getElementById('search-engine')
             const searchHelper = document.getElementById('search-helper')
             let targetElement = e.target

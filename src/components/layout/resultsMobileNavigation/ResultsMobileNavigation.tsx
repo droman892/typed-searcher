@@ -119,7 +119,7 @@ export const ResultsMobileNavigation = () => {
 
     useEffect(() => {
         createQuery(queryMade)
-    }, [createQuery, queryMade])
+    }, [queryMade])
 
     return (
         <form

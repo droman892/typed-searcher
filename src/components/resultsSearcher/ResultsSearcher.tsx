@@ -16,7 +16,7 @@ import { DoNothing } from '../../functions/DoNothing'
 import { useEffect, useRef, useState } from 'react'
 
 export const ResultsSearcher = () => {
-    let queryValue = useSelector((state: State) => state.searchQuery)
+    const queryValue = useSelector((state: State) => state.searchQuery)
     const queryValueLength: number = queryValue.length || 0
     let queryPath = queryValue
     queryPath = queryPath.replace(/\s+/g, '+')
@@ -26,15 +26,25 @@ export const ResultsSearcher = () => {
     // console.log('QUERY STRING: ' + queryString)
     const urlParams = new URLSearchParams(queryString)
     const queryMade = urlParams.get('q') || ''
-    console.log('QUERY VALUE: ' + queryValue)
+    // console.log('QUERY VALUE: ' + queryValue)
     const queryTest = queryValue || queryMade
-    console.log('QUERY TEST: ' + queryTest)
-    console.log('QUERY MADE: ' + queryMade)
+    // console.log('QUERY TEST: ' + queryTest)
+    // console.log('QUERY MADE: ' + queryMade)
     const navigate = useNavigate()
 
     const [inputQueryValue, setInputQueryValue] = useState(queryValue)
 
-    
+    useEffect(() => {
+        const resultsInput = document.getElementById('query')
+        resultsInput?.blur()
+
+        document
+            .getElementById('results-query-container-1')
+            ?.classList.remove('results-query-container-9')
+        document
+            .getElementById('results-helper-container-1')
+            ?.classList.remove('results-helper-container-2')
+    }, [queryMade])
 
     const ResultsTitleChange = () => {
         document.title = `${queryMade} - Google`
@@ -135,23 +145,23 @@ export const ResultsSearcher = () => {
     }
     DisplayResultTrends()
 
-    const ResultsPressEnter = (e: { preventDefault: () => void }) => {
-        e.preventDefault()
-        console.info('ZONIKS')
-        // if (queryValueLength > 0) {
-        //     // console.log('Results form submitted!')
-        //     navigate('/search?q=' + queryValue)
-        //     // document.getElementById('query')?.blur()
-        //     console.info('INTERESTING')
-        //     document
-        //         .getElementById('results-query-container-1')
-        //         ?.classList.remove('results-query-container-9')
-        //     document
-        //         .getElementById('results-helper-container-1')
-        //         ?.classList.remove('results-helper-container-2')
-        // }
-        
-    }
+    // const ResultsPressEnter = (e: { preventDefault: () => void }) => {
+    //     e.preventDefault()
+    //     console.info('ZONIKS')
+    //     // if (queryValueLength > 0) {
+    //     //     // console.log('Results form submitted!')
+    //     //     navigate('/search?q=' + queryValue)
+    //     //     // document.getElementById('query')?.blur()
+    //     //     console.info('INTERESTING')
+    //     //     document
+    //     //         .getElementById('results-query-container-1')
+    //     //         ?.classList.remove('results-query-container-9')
+    //     //     document
+    //     //         .getElementById('results-helper-container-1')
+    //     //         ?.classList.remove('results-helper-container-2')
+    //     // }
+
+    // }
 
     function handleSubmit(e: { preventDefault: () => void }) {
         e.preventDefault()
@@ -166,8 +176,15 @@ export const ResultsSearcher = () => {
         inputQuery?.setAttribute('value', 'awesome!')
     }
 
+    const ResultsPressEnter = () => {
+        if (queryValueLength > 0) {
+            console.log('Results form submitted!')
+            navigate('/search?q=' + queryValue)
+        }
+    }
+
     return (
-        <form className="results-form-container-1" onSubmit={handleSubmit}>
+        <form className="results-form-container-1">
             <div id="container">
                 <div className="results-form-container-2">
                     <div className="results-logo-container">

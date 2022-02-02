@@ -16,7 +16,7 @@ export const HelperItem = (props: { name: string }) => {
 
     const SetStateTitle = () => {
         createQuery(props.name)
-        console.log('HelperItem - SetStateTitle wrote this')
+        // console.log('HelperItem - SetStateTitle wrote this')
         document.title = `${props.name} - Google`
         document
             .getElementById('results-query-container-1')
