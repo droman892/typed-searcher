@@ -35,6 +35,9 @@ export const MobileResultsHelpers = () => {
         document
             .getElementById('mobile-results-helpers')
             ?.classList.remove('mobile-results-helpers-2')
+        document
+            .getElementById('mobile-results-helpers-data-hidden')
+            ?.classList.remove('mobile-results-helpers-data')
     }
 
     return (
@@ -68,6 +71,17 @@ export const MobileResultsHelpers = () => {
                     </span>
                 </button>
             </div>
+            {/* <div className="mobile-results-helpers-data">
+                <ul className="mobile-results-helpers-data-2">
+                    <div className="mobile-results-helpers-data-3">
+                        <ul className="mobile-results-helpers-data-4">
+                            <li className="mobile-results-helpers-data-5">
+                                <div className="mobile-results-helpers-data-glass"></div>
+                            </li>
+                        </ul>
+                    </div>
+                </ul>
+            </div> */}
         </>
     )
 }

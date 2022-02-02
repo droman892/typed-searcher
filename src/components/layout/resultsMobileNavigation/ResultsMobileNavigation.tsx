@@ -9,6 +9,7 @@ import { bindActionCreators } from 'redux'
 import { Link, useNavigate } from 'react-router-dom'
 import { DoNothing } from '../../../functions/DoNothing'
 import { MobileResultsHelpers } from '../../mobileResultsHelpers/MobileResultsHelpers'
+import { MobileHelperData } from '../../mobileHelperData/MobileHelperData'
 
 export const ResultsMobileNavigation = () => {
     const queryValue = useSelector((state: State) => state.searchQuery)
@@ -104,13 +105,22 @@ export const ResultsMobileNavigation = () => {
             document
                 .getElementById('mobile-results-helpers')
                 ?.classList.add('mobile-results-helpers-2')
+            document
+                .getElementById('mobile-results-helpers-data-hidden')
+                ?.classList.add('mobile-results-helpers-data')
         }
+    }
+
+    const whatever = (e) => {
+        e.preventDefault()
+        console.log('DAVID ROMAN!!!!!')
     }
 
     return (
         <form
             className="mobile-results-form"
-            onSubmit={MobileResultsPressEnter}
+            // onSubmit={MobileResultsPressEnter}
+            onSubmit={whatever}
         >
             <div>
                 <div
@@ -204,11 +214,35 @@ export const ResultsMobileNavigation = () => {
                             </>
                         </div>
                     </div>
-                    <div
-                        id="mobile-results-helpers"
-                        className="mobile-results-helpers"
-                    >
-                        <MobileResultsHelpers />
+
+                    <div className="mrh-container">
+                        <div
+                            id="mobile-results-helpers"
+                            className="mobile-results-helpers"
+                        >
+                            <MobileResultsHelpers />
+                        </div>
+                        <div
+                            className="mobile-results-helpers-data-hidden"
+                            id="mobile-results-helpers-data-hidden"
+                        >
+                            <ul className="mobile-results-helpers-data-2">
+                                <div className="mobile-results-helpers-data-3">
+                                    <ul className="mobile-results-helpers-data-4">
+                                        <MobileHelperData helperValue="David" />
+                                        <MobileHelperData helperValue="Maria" />
+                                        <MobileHelperData helperValue="Tom" />
+                                        <MobileHelperData helperValue="Jess" />
+                                        <MobileHelperData helperValue="Stuart" />
+                                        <MobileHelperData helperValue="Jeff" />
+                                        <MobileHelperData helperValue="Mike" />
+                                        <MobileHelperData helperValue="Sam" />
+                                        <MobileHelperData helperValue="Kevin" />
+                                        <MobileHelperData helperValue="Steve" />
+                                    </ul>
+                                </div>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
