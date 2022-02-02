@@ -5,6 +5,7 @@ import { State } from '../state/index'
 import { DefaultResultsLayout } from '../components/layout/DefaultResultsLayout'
 import '../styles/styles.scss'
 import '../containers/resultsContainer/ResultsContainer.scss'
+import { ResultsContainer } from '../containers/resultsContainer/ResultsContainer'
 
 export const Results = () => {
     const queryValue = useSelector((state: State) => state.searchQuery)
@@ -26,7 +27,9 @@ export const Results = () => {
             <main className="results-page-container-1">
                 <div className="results-page-container-2">
                     <div className="results-page-container-3">
-                        {/* <ResultsContainer /> */}
+
+                        
+
                         {/* <div className="stats-bar">
                             <div>
                                 <div className="stats-relative-0">
@@ -47,7 +50,13 @@ export const Results = () => {
                                 </div>
                             </div>
                         </div> */}
+
+                        <ResultsContainer />
+
                         {/* <div className="test-container"></div> */}
+
+
+
                     </div>
                 </div>
             </main>

@@ -1,18 +1,18 @@
 import './ResultsContainer.scss'
 import '../../styles/_index.scss'
-// import { Query } from '../../api/Query'
-// import { useState, useEffect } from 'react'
-// import { useState } from 'react'
-// import axios from 'axios'
-// import { useSelector } from 'react-redux'
-// import { ResultsPreloader } from '../../components/preloader/ResultsPreloader'
-// import { ResultsDataContainer } from '../resultsDataContainer/ResultsDataContainer'
+import { Query } from '../../api/Query'
+import { useState, useEffect } from 'react'
+import axios from 'axios'
+import { useSelector } from 'react-redux'
+import { ResultsPreloader } from '../../components/preloader/ResultsPreloader'
+import { ResultsDataContainer } from '../resultsDataContainer/ResultsDataContainer'
+import { ResultsHelperListItems } from '../../components/keywords/ResultsHelperListItems'
 
 export const ResultsContainer = () => {
-    // let searchQuery: string = useSelector((state) => state.searchQuery)
-    // searchQuery = searchQuery.replace(/\s+/g, '+')
+    let searchQuery: string = useSelector((state) => state.searchQuery)
+    searchQuery = searchQuery.replace(/\s+/g, '+')
 
-    // const [loading, setLoading] = useState(false)
+    const [loading, setLoading] = useState(false)
 
     // const queryData: object = {
     //     method: 'GET',
@@ -107,6 +107,89 @@ export const ResultsContainer = () => {
 
     return (
         <>
+            <div className="stats-bar">
+                <div>
+                    <div className="stats-relative-0">
+                        <div className="stats-relative-1">
+                            <div className="stats-relative-2">
+                                <div className="stats-relative-3">
+                                    About <span id="results-total" />{' '}
+                                    results&nbsp;
+                                    <span>
+                                        (<span id="results-ts"></span> seconds)
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <ResultsHelperListItems
+                urlPath="https://www.searchEngineProjectDR.tech"
+                head="Offial Search Engine Project (DR) Test Component"
+                desc="This is simply a description of this component used to test if the actual API information fetched through Axios will be presented how I want it do."
+            />
+            <ResultsHelperListItems
+                urlPath="https://www.searchEngineProjectDR.tech"
+                head="Offial Search Engine Project (DR) Test Component"
+                desc="This is simply a description of this component used to test if the actual API information fetched through Axios will be presented how I want it do."
+            />
+            <ResultsHelperListItems
+                urlPath="https://www.searchEngineProjectDR.tech"
+                head="Offial Search Engine Project (DR) Test Component"
+                desc="This is simply a description of this component used to test if the actual API information fetched through Axios will be presented how I want it do."
+            />
+            <ResultsHelperListItems
+                urlPath="https://www.searchEngineProjectDR.tech"
+                head="Offial Search Engine Project (DR) Test Component"
+                desc="This is simply a description of this component used to test if the actual API information fetched through Axios will be presented how I want it do."
+            />
+            <ResultsHelperListItems
+                urlPath="https://www.searchEngineProjectDR.tech"
+                head="Offial Search Engine Project (DR) Test Component"
+                desc="This is simply a description of this component used to test if the actual API information fetched through Axios will be presented how I want it do."
+            />
+            <ResultsHelperListItems
+                urlPath="https://www.searchEngineProjectDR.tech"
+                head="Offial Search Engine Project (DR) Test Component"
+                desc="This is simply a description of this component used to test if the actual API information fetched through Axios will be presented how I want it do."
+            />
+            <ResultsHelperListItems
+                urlPath="https://www.searchEngineProjectDR.tech"
+                head="Offial Search Engine Project (DR) Test Component"
+                desc="This is simply a description of this component used to test if the actual API information fetched through Axios will be presented how I want it do."
+            />
+            <ResultsHelperListItems
+                urlPath="https://www.searchEngineProjectDR.tech"
+                head="Offial Search Engine Project (DR) Test Component"
+                desc="This is simply a description of this component used to test if the actual API information fetched through Axios will be presented how I want it do."
+            />
+            <ResultsHelperListItems
+                urlPath="https://www.searchEngineProjectDR.tech"
+                head="Offial Search Engine Project (DR) Test Component"
+                desc="This is simply a description of this component used to test if the actual API information fetched through Axios will be presented how I want it do."
+            />
+            <ResultsHelperListItems
+                urlPath="https://www.searchEngineProjectDR.tech"
+                head="Offial Search Engine Project (DR) Test Component"
+                desc="This is simply a description of this component used to test if the actual API information fetched through Axios will be presented how I want it do."
+            />
+
+            {/* <h1>DAVID</h1>
+            <h1>This is just a placeholder</h1>
+            <h1>This is just a placeholder</h1>
+            <h1>This is just a placeholder</h1>
+            <h1>This is just a placeholder</h1>
+            <h1>This is just a placeholder</h1>
+            <h1>This is just a placeholder</h1>
+            <h1>This is just a placeholder</h1>
+            <h1>This is just a placeholder</h1>
+            <h1>This is just a placeholder</h1>
+            <h1>This is just a placeholder</h1>
+            <h1>This is just a placeholder</h1>
+            <h1>This is just a placeholder</h1> */}
+
             {/* <div className="stats-bar">
                 <div>
                     <div className="stats-relative-0">
