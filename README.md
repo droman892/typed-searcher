@@ -1,39 +1,37 @@
 ![Typed Searcher]()
 
+<p align="center"> This is a Google look-alike application featuring both of Google's own keywords and search API. </p>  
 
-
-<p align="center"> This is a search application... </p>  
-
-<p align="center"> icons </p>
+<p align="center"> :iphone: :mag: :computer: </p>
 
 ## Description
 
-<p align="center"> This application was built specifically...</p>
+<p align="center">This applications foundation was built completely from scratch (i.e., each package was manually installed) for a truly customized product.</p>
 
-<p align="center"> Fonts are locally hosted with font-face </p>
+<p align="center">Notable technologies used:</p>
+<p align="center">React</p>
+<p align="center">React Router</p>
+<p align="center">Node</p>
+<p align="center">TypeScript</p>
+<p align="center">Redux</p>
+<p align="center">SASS/SCSS</p>
+<p align="center">Axios</p>
+<p align="center">Webpack</p>
+<p align="center">Materialize</p>
+<p align="center">ESLint</p>
+<p align="center">Prettier</p>
+<p align="center">Husky</p>
+
+<p align="center"> This application began with the intent to create a search engine utilizing Google's search API in a custom search engine.  During development, many of the ideas to be implemented were modeled after the Google search engine itself (e.g., keywords, mobile views, conditional rendering), ultimately leading development to essentially re-create much of Google's front-end.</p>
+
 
 <p>
-HOME PAGE:
-- error handling in case no keyword is returned (doesn't exist or service temporarily unavailable)
-</p>
-
-
-<p> Font squirrel, Google Search API (https://rapidapi.com/apigeek/api/google-search3/)</p>
-<p> React-Materialize: http://react-materialize.github.io/react-materialize/?path=/story/components-textinput--default </p>
-
-<p>
-useHistory
-session storage (for recording state on different pages)
-
-
-Google Images: https://rapidapi.com/Glavier/api/google-image-search1/
-Google Translate: https://rapidapi.com/googlecloud/api/google-translate1/
-Keywords for searching: https://rapidapi.com/fatimabirmingham@gmail.com/api/keywords4/ .... https://rapidapi.com/contextualwebsearch/api/keyword-analysis/pricing
 Random Words API for the basic button: https://rapidapi.com/sheharyar566/api/random-words5/pricing
 Google Trending (home page): https://rapidapi.com/truelife-truelife-default/api/google-trends-us/
 ADD CSS MINI EXTRACT PLUGIN
 Dropdown on click: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_dropdown
 </p>
+
 ## Preview
 
 ![Typed Searcher - GIF]()
@@ -43,6 +41,8 @@ Dropdown on click: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css
 ## Business Use Case
 
 - Individual/Business needs a modern user interface/application for customers to search desired items
+
+- Individual/Business needs a prototype search engine available to fetch data and elegantly display it
 
 ## Status
 
@@ -61,8 +61,8 @@ After the project files are downloaded, in the terminal, in the root folder, run
 
 This application is an on-going project, open to contributions and critique.  Functionality that would appropriately flesh out the application include the following:
 1) incorporate automated testing
-2) 
-3) 
+2) fetch and display data from the Google Trends API
+3) add functionality to display multiple pages of data
 
 ## Bugs and Issues
 
