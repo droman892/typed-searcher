@@ -6,6 +6,7 @@ import { actionCreators, State } from '../../state'
 import { createQuery } from '../../state/actionCreators'
 import theX from '../../assets/images/theX.png'
 import { bindActionCreators } from 'redux'
+import { useEffect } from 'react'
 
 export const MobileResultsHelpers = () => {
     const queryValue = useSelector((state: State) => state.searchQuery)
@@ -39,6 +40,20 @@ export const MobileResultsHelpers = () => {
             ?.classList.remove('mobile-results-helpers-data')
     }
 
+    useEffect(() => {
+        document
+            .getElementById('mobile-results-form-2')
+            ?.classList.remove('mobile-results-form-2-a')
+        document
+            .getElementById('mobile-results-form-3')
+            ?.classList.remove('none')
+        document
+            .getElementById('mobile-results-helpers')
+            ?.classList.remove('mobile-results-helpers-2')
+        document
+            .getElementById('mobile-results-helpers-data-hidden')
+            ?.classList.remove('mobile-results-helpers-data')
+    }, [queryMade])
     
 
     return (

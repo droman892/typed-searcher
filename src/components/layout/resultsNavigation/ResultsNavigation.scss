@@ -1,5 +1,11 @@
 @use '../../../styles/colors.scss' as *;
 
+@media only screen and (min-width: 520px) {
+    .mobile-results-query-data {
+        display: none;
+    }
+}
+
 // Code below is native to Materialize; classes are shared with LayoutNavigation.scss
 
 a {
@@ -184,6 +190,11 @@ ul.sidenav {
 
 i.material-icons.results-apps-icon {
     height: 24px;
+}
+
+.mobile-results-query-data {
+    background-color: #ebedef;
+    margin: 0 -2px;
 }
 
 .mobile-results-2 {
@@ -467,4 +478,116 @@ nav ul li {
     fill: $nav-button;
     height: 27px;
     width: 27px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#mobile-description {
+    color: black;
+}
+
+.mobile-axios-data-2:not(:empty) {
+    background-color: #fff;
+    margin: 0 0 8px 0;
+    // box-shadow: 0 0 0 1px #ebedef;
+    border-radius: 0;
+}
+
+.mobile-axios-data-3 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    contain: layout paint;
+}
+
+.mobile-axios-data-4 {
+    padding-top: 12px;
+    padding-right: 16px;
+    padding-left: 16px;
+    padding-bottom: 6px;
+    display: block;
+    flex: 0 0 auto;
+    flex-direction: row;
+    line-height: normal;
+}
+
+.mobile-axios-data-5 {
+    margin-bottom: -16px;
+    position: relative;
+    z-index: 1;
+    margin: -12px -16px;
+}
+
+.mobile-axios-data-6 {
+    display: block;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+}
+
+.mobile-axios-data-6:hover {
+    background-color: rgba(0,0,0,0);
+}
+
+.mobile-axios-data-7 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 40px;
+}
+
+.mobile-axios-data-8 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #202124;
+    margin-bottom: 12px;
+    white-space: nowrap;
+    padding-top: 1px;
+    font-size: 12px;
+}
+
+.mobile-axios-data-9 {
+    font-size: 16px;
+    line-height: 20px;
+    padding-top: 1px;
+    margin-bottom: -1px;
+}
+
+.mobile-axios-data-10 {
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #1558d6;
+}
+
+.mobile-axios-data-11 {
+    padding-top: 2px;
+    padding-right: 16px;
+    padding-left: 16px;
+    padding-bottom: 12px;
+    flex: 1 1 auto;
+    display: block;
+    flex-direction: row;
+}
+
+.mobile-axios-data-12 {
+    -webkit-line-clamp: 3;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    padding-top: 1px;
+    margin-bottom: -1px;
+    color: black;
+    line-height: normal;
 }

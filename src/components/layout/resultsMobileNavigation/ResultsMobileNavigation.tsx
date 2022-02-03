@@ -11,6 +11,7 @@ import { DoNothing } from '../../../functions/DoNothing'
 import { MobileResultsHelpers } from '../../mobileResultsHelpers/MobileResultsHelpers'
 import { MobileHelperData } from '../../mobileHelperData/MobileHelperData'
 import { useEffect } from 'react'
+import { ResultsHelperListItems } from '../../keywords/ResultsHelperListItems'
 
 export const ResultsMobileNavigation = () => {
     const queryValue = useSelector((state: State) => state.searchQuery)
@@ -118,6 +119,8 @@ export const ResultsMobileNavigation = () => {
     }
 
     useEffect(() => {
+        const resultsInput = document.getElementById('mobile-query')
+        resultsInput?.blur()
         createQuery(queryMade)
     }, [queryMade])
 

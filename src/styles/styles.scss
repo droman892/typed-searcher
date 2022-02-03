@@ -49,6 +49,10 @@ select:-webkit-autofill:focus {
     .results-page-box-2 {
         padding-top: 0 !important;
     }
+
+    .results-page-container-2 {
+        display: none;
+    }
 }
 
 @media (max-width: 1121px) {

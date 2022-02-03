@@ -9,6 +9,8 @@ import GoogleLogo from '../../../assets/images/GoogleLogo.svg'
 import userProfile from '../../../assets/images/userProfile.png'
 import { ResultsMobileNavigation } from '../resultsMobileNavigation/ResultsMobileNavigation'
 import { Link } from 'react-router-dom'
+import { ResultsHelperListItems } from '../../keywords/ResultsHelperListItems'
+import { MobileResultsData } from '../../keywords/MobileResultsData'
 
 export const ResultsNavigation = () => {
     return (
@@ -92,7 +94,10 @@ export const ResultsNavigation = () => {
                             <ResultsMobileNavigation />
                         </div>
                     </div>
-                    <div className="mobile-results-items-container">
+                    <div
+                        id="mobile-results-items-container"
+                        className="mobile-results-items-container"
+                    >
                         <div>
                             <div className="mobile-results-items-container-2">
                                 <div className="mobile-results-items-container-3">
@@ -161,6 +166,62 @@ export const ResultsNavigation = () => {
                                 </div>
                             </div>
                         </div>
+                    </div>
+
+                    <div
+                        id="mobile-results-query-data"
+                        className="mobile-results-query-data"
+                    >
+                        <MobileResultsData
+                            urlPath="https://www.searchEngineProjectDR.tech"
+                            head="FIRST Official Search Engine Project (DR) Test Component"
+                            desc="This is simply a description of this component used to test if the actual API information fetched through Axios will be presented how I want it do."
+                        />
+                        <MobileResultsData
+                            urlPath="https://www.searchEngineProjectDR.tech"
+                            head="Official Search Engine Project (DR) Test Component"
+                            desc="This is simply a description of this component used to test if the actual API information fetched through Axios will be presented how I want it do."
+                        />
+                        <MobileResultsData
+                            urlPath="https://www.searchEngineProjectDR.tech"
+                            head="Official Search Engine Project (DR) Test Component"
+                            desc="This is simply a description of this component used to test if the actual API information fetched through Axios will be presented how I want it do."
+                        />
+                        <MobileResultsData
+                            urlPath="https://www.searchEngineProjectDR.tech"
+                            head="Official Search Engine Project (DR) Test Component"
+                            desc="This is simply a description of this component used to test if the actual API information fetched through Axios will be presented how I want it do."
+                        />
+                        <MobileResultsData
+                            urlPath="https://www.searchEngineProjectDR.tech"
+                            head="Official Search Engine Project (DR) Test Component"
+                            desc="This is simply a description of this component used to test if the actual API information fetched through Axios will be presented how I want it do."
+                        />
+                        <MobileResultsData
+                            urlPath="https://www.searchEngineProjectDR.tech"
+                            head="Official Search Engine Project (DR) Test Component"
+                            desc="This is simply a description of this component used to test if the actual API information fetched through Axios will be presented how I want it do."
+                        />
+                        <MobileResultsData
+                            urlPath="https://www.searchEngineProjectDR.tech"
+                            head="Official Search Engine Project (DR) Test Component"
+                            desc="This is simply a description of this component used to test if the actual API information fetched through Axios will be presented how I want it do."
+                        />
+                        <MobileResultsData
+                            urlPath="https://www.searchEngineProjectDR.tech"
+                            head="Official Search Engine Project (DR) Test Component"
+                            desc="This is simply a description of this component used to test if the actual API information fetched through Axios will be presented how I want it do."
+                        />
+                        <MobileResultsData
+                            urlPath="https://www.searchEngineProjectDR.tech"
+                            head="Official Search Engine Project (DR) Test Component"
+                            desc="This is simply a description of this component used to test if the actual API information fetched through Axios will be presented how I want it do."
+                        />
+                        <MobileResultsData
+                            urlPath="https://www.searchEngineProjectDR.tech"
+                            head="Official Search Engine Project (DR) Test Component"
+                            desc="This is simply a description of this component used to test if the actual API information fetched through Axios will be presented how I want it do."
+                        />
                     </div>
                 </Navbar>
             </div>
