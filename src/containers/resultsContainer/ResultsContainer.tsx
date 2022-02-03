@@ -113,10 +113,10 @@ export const ResultsContainer = () => {
                         <div className="stats-relative-1">
                             <div className="stats-relative-2">
                                 <div className="stats-relative-3">
-                                    About <span id="results-total" />{' '}
+                                    About <span id="results-total" />{'SOMETHIG '}
                                     results&nbsp;
                                     <span>
-                                        (<span id="results-ts"></span> seconds)
+                                        (<span id="results-ts"></span>1,000,000,000 seconds)
                                     </span>
                                 </div>
                             </div>

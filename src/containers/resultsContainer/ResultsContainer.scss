@@ -1,10 +1,10 @@
 @use '../../styles/colors.scss' as *;
 
-@media (min-width: 1121px) and (max-width: 1300px) {
-    .stats-bar {
-        margin-left: calc((100vw - 1065px) / 2 - 180px);
-    }
-}
+// @media (min-width: 1121px) and (max-width: 1300px) {
+//     .stats-bar {
+//         margin-left: calc((100vw - 1065px) / 2 - 180px);
+//     }
+// }
 
 @media (min-width: 1300px) {
     .stats-relative-1 {
@@ -91,7 +91,7 @@
 
 .stats-relative-1 {
     height: 43px;
-    margin-left: 90px;
+    // margin-left: 90px;
 }
 
 .stats-relative-2 {
