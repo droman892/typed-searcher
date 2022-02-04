@@ -19,11 +19,11 @@ export const ResultsSearchHelper = () => {
                 </div>
             </div>
 
-            {/* <div className="results-search-helper-text">
+            <div className="results-search-helper-text">
                 <a className="results-helper-link" href="#!">
                     Report inappropriate predictions
                 </a>
-            </div> */}
+            </div>
         </div>
     )
 }
