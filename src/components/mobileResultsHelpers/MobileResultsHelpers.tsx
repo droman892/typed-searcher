@@ -55,6 +55,12 @@ export const MobileResultsHelpers = () => {
             ?.classList.remove('mobile-results-helpers-data')
     }, [queryMade])
     
+    const DeleteMRQuery = () => {
+        createQuery('')
+        document.getElementById('mrh')?.focus()
+        console.log('DeleteMRQuery wrote this')
+    }
+
 
     return (
         <>
@@ -72,6 +78,7 @@ export const MobileResultsHelpers = () => {
             <div className="mrh-input">
                 <div className="mrh-input-2">
                     <TextInput
+                    id="mhr"
                         inputClassName="mrh-text"
                         value={queryValue || ''}
                         onChange={InputResultsMobileChange}

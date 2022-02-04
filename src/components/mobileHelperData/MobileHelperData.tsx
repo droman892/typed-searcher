@@ -6,6 +6,7 @@ import { createQuery } from '../../state/actionCreators'
 import './MobileHelperData.scss'
 
 export const MobileHelperData = (props) => {
+    // console.log(props)
     // const queryValue = useSelector((state: State) => state.searchQuery)
     // let queryPath = queryValue
     // queryPath = queryPath.replace(/\s+/g, '+')
@@ -16,6 +17,7 @@ export const MobileHelperData = (props) => {
     const { createQuery } = bindActionCreators(actionCreators, dispatch)
 
     let helperLink = props.helperValue
+    // console.log(props.helperValue)
     helperLink = helperLink.replace(/\s+/g, '+')
 
     const SetState = () => {

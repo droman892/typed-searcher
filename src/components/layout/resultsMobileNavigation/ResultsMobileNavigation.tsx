@@ -10,8 +10,9 @@ import { Link, useNavigate } from 'react-router-dom'
 import { DoNothing } from '../../../functions/DoNothing'
 import { MobileResultsHelpers } from '../../mobileResultsHelpers/MobileResultsHelpers'
 import { MobileHelperData } from '../../mobileHelperData/MobileHelperData'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { ResultsHelperListItems } from '../../keywords/ResultsHelperListItems'
+import axios from 'axios'
 
 export const ResultsMobileNavigation = () => {
     const queryValue = useSelector((state: State) => state.searchQuery)
@@ -26,6 +27,37 @@ export const ResultsMobileNavigation = () => {
     const queryMade = urlParams.get('q') || ''
     // console.log('MOBILE - ' + queryMade)
     const navigate = useNavigate()
+    const [responseMRData, setMRResponseData] = useState('')
+
+    // console.log(responseMRData)
+    // console.log(responseMRData[0])
+
+    useEffect(() => {
+        const options = {
+            method: 'GET',
+            url: 'https://keywords4.p.rapidapi.com/google-topLevel-10-keywords',
+            params: { search: queryValue, country: 'us' },
+            headers: {
+                'content-type': 'application/json',
+                'x-rapidapi-host': 'keywords4.p.rapidapi.com',
+                'x-rapidapi-key':
+                    '9cdabbc96amsh83dd832ad95c9e2p1f9988jsn41ca0b264b55',
+            },
+        }
+
+        axios
+            .request(options)
+            .then(function (response) {
+                // console.log(response.data.googleGuggestedKeywords)
+                if (response.data.googleGuggestedKeywords !== undefined) {
+                    const keywordArray = response.data.googleGuggestedKeywords
+                    setMRResponseData(keywordArray)
+                }
+            })
+            .catch(function (error) {
+                console.error(error)
+            })
+    }, [queryValue])
 
     const InputMobileChange = (e: { target: { value: string } }) => {
         createQuery(e.target.value)
@@ -237,16 +269,56 @@ export const ResultsMobileNavigation = () => {
                             <ul className="mobile-results-helpers-data-2">
                                 <div className="mobile-results-helpers-data-3">
                                     <ul className="mobile-results-helpers-data-4">
-                                        <MobileHelperData helperValue="David Roman" />
-                                        <MobileHelperData helperValue="Maria" />
-                                        <MobileHelperData helperValue="Tom" />
-                                        <MobileHelperData helperValue="Jess" />
-                                        <MobileHelperData helperValue="Stuart" />
-                                        <MobileHelperData helperValue="Jeff" />
-                                        <MobileHelperData helperValue="Mike" />
-                                        <MobileHelperData helperValue="Sam Robbins" />
-                                        <MobileHelperData helperValue="Kevin" />
-                                        <MobileHelperData helperValue="Steve" />
+                                        <MobileHelperData
+                                            helperValue={
+                                                responseMRData[0] || ''
+                                            }
+                                        />
+                                        <MobileHelperData
+                                            helperValue={
+                                                responseMRData[1] || ''
+                                            }
+                                        />
+                                        <MobileHelperData
+                                            helperValue={
+                                                responseMRData[2] || ''
+                                            }
+                                        />
+                                        <MobileHelperData
+                                            helperValue={
+                                                responseMRData[3] || ''
+                                            }
+                                        />
+                                        <MobileHelperData
+                                            helperValue={
+                                                responseMRData[4] || ''
+                                            }
+                                        />
+                                        <MobileHelperData
+                                            helperValue={
+                                                responseMRData[5] || ''
+                                            }
+                                        />
+                                        <MobileHelperData
+                                            helperValue={
+                                                responseMRData[6] || ''
+                                            }
+                                        />
+                                        <MobileHelperData
+                                            helperValue={
+                                                responseMRData[7] || ''
+                                            }
+                                        />
+                                        <MobileHelperData
+                                            helperValue={
+                                                responseMRData[8] || ''
+                                            }
+                                        />
+                                        <MobileHelperData
+                                            helperValue={
+                                                responseMRData[9] || ''
+                                            }
+                                        />
                                     </ul>
                                 </div>
                             </ul>

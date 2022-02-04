@@ -1,5 +1,5 @@
 export const MobileResultsData = (props) => {
-    console.log(props)
+    // console.log(props)
     return (
         // <div id="axios-data-1">
         //     <div id="axios-data-2">

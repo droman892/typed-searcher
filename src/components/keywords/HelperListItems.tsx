@@ -8,36 +8,36 @@ export const HelperListItems = () => {
     const queryValue = useSelector((state: State) => state.searchQuery)
     const [responseData, setResponseData] = useState('')
 
-    // useEffect(() => {
-    //     const options = {
-    //         method: 'GET',
-    //         url: 'https://keywords4.p.rapidapi.com/google-topLevel-10-keywords',
-    //         params: { search: queryValue, country: 'us' },
-    //         headers: {
-    //             'content-type': 'application/json',
-    //             'x-rapidapi-host': 'keywords4.p.rapidapi.com',
-    //             'x-rapidapi-key':
-    //                 '9cdabbc96amsh83dd832ad95c9e2p1f9988jsn41ca0b264b55',
-    //         },
-    //     }
+    useEffect(() => {
+        const options = {
+            method: 'GET',
+            url: 'https://keywords4.p.rapidapi.com/google-topLevel-10-keywords',
+            params: { search: queryValue, country: 'us' },
+            headers: {
+                'content-type': 'application/json',
+                'x-rapidapi-host': 'keywords4.p.rapidapi.com',
+                'x-rapidapi-key':
+                    '9cdabbc96amsh83dd832ad95c9e2p1f9988jsn41ca0b264b55',
+            },
+        }
 
-    //     axios
-    //         .request(options)
-    //         .then(function (response) {
-    //             console.log(response.data.googleGuggestedKeywords)
-    //             if (response.data.googleGuggestedKeywords !== undefined) {
-    //                 const keywordArray = response.data.googleGuggestedKeywords
-    //                 setResponseData(keywordArray)
-    //             }
-    //         })
-    //         .catch(function (error) {
-    //             console.error(error)
-    //         })
-    // }, [queryValue])
+        axios
+            .request(options)
+            .then(function (response) {
+                // console.log(response.data.googleGuggestedKeywords)
+                if (response.data.googleGuggestedKeywords !== undefined) {
+                    const keywordArray = response.data.googleGuggestedKeywords
+                    setResponseData(keywordArray)
+                }
+            })
+            .catch(function (error) {
+                console.error(error)
+            })
+    }, [queryValue])
 
     return (
         <>
-            <HelperItem name={'David Smith'} />
+            {/* <HelperItem name={'David Smith'} />
             <HelperItem name={'Maria Smith'} />
             <HelperItem name={'Kevin Smith'} />
             <HelperItem name={'Paul Smith'} />
@@ -46,8 +46,10 @@ export const HelperListItems = () => {
             <HelperItem name={'Rick Smith'} />
             <HelperItem name={'Morty Smith'} />
             <HelperItem name={'Alfred Smith'} />
-            <HelperItem name={'Steve Smith'} />
-            {/* <HelperItem name={responseData[0]} />
+            <HelperItem name={'Steve Smith'} /> */}
+
+
+            <HelperItem name={responseData[0]} />
             <HelperItem name={responseData[1]} />
             <HelperItem name={responseData[2]} />
             <HelperItem name={responseData[3]} />
@@ -56,7 +58,7 @@ export const HelperListItems = () => {
             <HelperItem name={responseData[6]} />
             <HelperItem name={responseData[7]} />
             <HelperItem name={responseData[8]} />
-            <HelperItem name={responseData[9]} /> */}
+            <HelperItem name={responseData[9]} />
         </>
     )
 }
