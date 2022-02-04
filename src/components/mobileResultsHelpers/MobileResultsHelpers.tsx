@@ -10,6 +10,7 @@ import { useEffect } from 'react'
 
 export const MobileResultsHelpers = () => {
     const queryValue = useSelector((state: State) => state.searchQuery)
+    const queryValueLength: number = queryValue.length || 0
     const dispatch = useDispatch()
     const { createQuery } = bindActionCreators(actionCreators, dispatch)
 
@@ -38,6 +39,8 @@ export const MobileResultsHelpers = () => {
         document
             .getElementById('mobile-results-helpers-data-hidden')
             ?.classList.remove('mobile-results-helpers-data')
+
+        createQuery(queryMade)
     }
 
     useEffect(() => {
@@ -61,6 +64,10 @@ export const MobileResultsHelpers = () => {
         console.log('DeleteMRQuery wrote this')
     }
 
+    const DeleteMobileResultsQuery = () => {
+        createQuery('')
+        document.getElementById('mhr')?.focus()
+    }
 
     return (
         <>
@@ -78,7 +85,7 @@ export const MobileResultsHelpers = () => {
             <div className="mrh-input">
                 <div className="mrh-input-2">
                     <TextInput
-                    id="mhr"
+                        id="mhr"
                         inputClassName="mrh-text"
                         value={queryValue || ''}
                         onChange={InputResultsMobileChange}
@@ -87,6 +94,11 @@ export const MobileResultsHelpers = () => {
                     />
                 </div>
             </div>
+
+
+            <>
+            {queryValueLength === 0 ? (
+
             <div className="mrh-x">
                 <button className="mrh-x-2">
                     <span className="mrh-x-3">
@@ -94,6 +106,22 @@ export const MobileResultsHelpers = () => {
                     </span>
                 </button>
             </div>
+            ) : (
+
+<div className="mrh-x">
+                <button className="mrh-x-2" onClick={DeleteMobileResultsQuery}>
+                    <span className="mrh-x-3">
+                        <img src={theX} alt="The X" className="mrh-x-4" />
+                    </span>
+                </button>
+            </div>
+
+                
+            )}
+
+</>
+
+
             {/* <div className="mobile-results-helpers-data">
                 <ul className="mobile-results-helpers-data-2">
                     <div className="mobile-results-helpers-data-3">

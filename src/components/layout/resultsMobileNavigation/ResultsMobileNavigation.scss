@@ -135,6 +135,7 @@
     padding-right: 0;
     flex: 0 0 auto;
     margin: 0;
+    cursor: pointer;
 }
 
 .mobile-results-glass:focus {
@@ -194,6 +195,7 @@
     flex: 1;
     -webkit-tap-highlight-color: transparent;
     width: 100% !important;
+    cursor: pointer;
 }
 
 .mobile-results-input-3:focus {

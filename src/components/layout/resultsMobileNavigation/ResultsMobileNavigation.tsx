@@ -129,7 +129,8 @@ export const ResultsMobileNavigation = () => {
     const MobileResultsHelpersView = () => {
         // const target = document.getElementById('mobile-query')
         // console.log('eureka!!!')
-        if (queryValueLength > 0 && queryValue == queryMade) {
+
+        // if (queryValueLength > 0 && queryValue == queryMade) {
             document
                 .getElementById('mobile-results-form-2')
                 ?.classList.add('mobile-results-form-2-a')
@@ -142,7 +143,14 @@ export const ResultsMobileNavigation = () => {
             document
                 .getElementById('mobile-results-helpers-data-hidden')
                 ?.classList.add('mobile-results-helpers-data')
-        }
+        // }
+    }
+
+    const xHelperView = () => {
+        MobileResultsHelpersView()
+        createQuery('')
+        const resultsInput = document.getElementById('mhr')
+        resultsInput?.focus()
     }
 
     const whatever = (e) => {
@@ -195,6 +203,7 @@ export const ResultsMobileNavigation = () => {
                                     }}
                                     // onClick={SetMobileResultsURLPath}
                                     className="mobile-results-glass"
+                                    onClick={MobileResultsHelpersView}
                                 >
                                     <button className="mobile-results-glass">
                                         <div className="mobile-results-glass-2">
@@ -239,7 +248,8 @@ export const ResultsMobileNavigation = () => {
                                 ) : (
                                     <div
                                         className="mobile-results-x-2"
-                                        onClick={DeleteMobileResultsQuery}
+                                        // onClick={DeleteMobileResultsQuery}
+                                        onClick={xHelperView}
                                         aria-hidden
                                     >
                                         <span className="mobile-results-x-3">
@@ -269,12 +279,113 @@ export const ResultsMobileNavigation = () => {
                             <ul className="mobile-results-helpers-data-2">
                                 <div className="mobile-results-helpers-data-3">
                                     <ul className="mobile-results-helpers-data-4">
-                                        <MobileHelperData
+                                        {responseMRData[0] ? (
+                                            <MobileHelperData
+                                                helperValue={
+                                                    responseMRData[0] || ''
+                                                }
+                                            />
+                                        ) : (
+                                            ''
+                                        )}
+
+                                        {responseMRData[1] ? (
+                                            <MobileHelperData
+                                                helperValue={
+                                                    responseMRData[1] || ''
+                                                }
+                                            />
+                                        ) : (
+                                            ''
+                                        )}
+
+                                        {responseMRData[2] ? (
+                                            <MobileHelperData
+                                                helperValue={
+                                                    responseMRData[2] || ''
+                                                }
+                                            />
+                                        ) : (
+                                            ''
+                                        )}
+
+                                        {responseMRData[3] ? (
+                                            <MobileHelperData
+                                                helperValue={
+                                                    responseMRData[3] || ''
+                                                }
+                                            />
+                                        ) : (
+                                            ''
+                                        )}
+
+                                        {responseMRData[4] ? (
+                                            <MobileHelperData
+                                                helperValue={
+                                                    responseMRData[4] || ''
+                                                }
+                                            />
+                                        ) : (
+                                            ''
+                                        )}
+
+                                        {responseMRData[5] ? (
+                                            <MobileHelperData
+                                                helperValue={
+                                                    responseMRData[5] || ''
+                                                }
+                                            />
+                                        ) : (
+                                            ''
+                                        )}
+
+                                        {responseMRData[6] ? (
+                                            <MobileHelperData
+                                                helperValue={
+                                                    responseMRData[6] || ''
+                                                }
+                                            />
+                                        ) : (
+                                            ''
+                                        )}
+
+                                        {responseMRData[7] ? (
+                                            <MobileHelperData
+                                                helperValue={
+                                                    responseMRData[7] || ''
+                                                }
+                                            />
+                                        ) : (
+                                            ''
+                                        )}
+
+                                        {responseMRData[8] ? (
+                                            <MobileHelperData
+                                                helperValue={
+                                                    responseMRData[8] || ''
+                                                }
+                                            />
+                                        ) : (
+                                            ''
+                                        )}
+
+                                        {responseMRData[9] ? (
+                                            <MobileHelperData
+                                                helperValue={
+                                                    responseMRData[9] || ''
+                                                }
+                                            />
+                                        ) : (
+                                            ''
+                                        )}
+
+                                        {/* <MobileHelperData
                                             helperValue={
                                                 responseMRData[0] || ''
                                             }
-                                        />
-                                        <MobileHelperData
+                                        /> */}
+
+                                        {/* <MobileHelperData
                                             helperValue={
                                                 responseMRData[1] || ''
                                             }
@@ -318,7 +429,7 @@ export const ResultsMobileNavigation = () => {
                                             helperValue={
                                                 responseMRData[9] || ''
                                             }
-                                        />
+                                        /> */}
                                     </ul>
                                 </div>
                             </ul>
