@@ -49,7 +49,7 @@ export const HelperListItems = () => {
             <HelperItem name={'Steve Smith'} /> */}
 
 
-            <HelperItem name={responseData[0]} />
+            {/* <HelperItem name={responseData[0]} />
             <HelperItem name={responseData[1]} />
             <HelperItem name={responseData[2]} />
             <HelperItem name={responseData[3]} />
@@ -57,8 +57,19 @@ export const HelperListItems = () => {
             <HelperItem name={responseData[5]} />
             <HelperItem name={responseData[6]} />
             <HelperItem name={responseData[7]} />
-            <HelperItem name={responseData[8]} />
-            <HelperItem name={responseData[9]} />
+            <HelperItem name={responseData[8]} /> */}
+            {/* <HelperItem name={responseData[9]} /> */}
+
+            {responseData[0] ? <HelperItem name={responseData[0]} /> : ''}
+            {responseData[1] ? <HelperItem name={responseData[1]} /> : ''}
+            {responseData[2] ? <HelperItem name={responseData[2]} /> : ''}
+            {responseData[3] ? <HelperItem name={responseData[3]} /> : ''}
+            {responseData[4] ? <HelperItem name={responseData[4]} /> : ''}
+            {responseData[5] ? <HelperItem name={responseData[5]} /> : ''}
+            {responseData[6] ? <HelperItem name={responseData[6]} /> : ''}
+            {responseData[7] ? <HelperItem name={responseData[7]} /> : ''}
+            {responseData[8] ? <HelperItem name={responseData[8]} /> : ''}
+            {responseData[9] ? <HelperItem name={responseData[9]} /> : ''}
         </>
     )
 }

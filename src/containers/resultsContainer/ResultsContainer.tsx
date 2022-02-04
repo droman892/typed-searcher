@@ -127,52 +127,52 @@ export const ResultsContainer = () => {
 
             <ResultsHelperListItems
                 urlPath="https://www.searchEngineProjectDR.tech"
-                head="Offial Search Engine Project (DR) Test Component"
+                head="Official Search Engine Project (DR) Test Component"
                 desc="This is simply a description of this component used to test if the actual API information fetched through Axios will be presented how I want it do."
             />
             <ResultsHelperListItems
                 urlPath="https://www.searchEngineProjectDR.tech"
-                head="Offial Search Engine Project (DR) Test Component"
+                head="Official Search Engine Project (DR) Test Component"
                 desc="This is simply a description of this component used to test if the actual API information fetched through Axios will be presented how I want it do."
             />
             <ResultsHelperListItems
                 urlPath="https://www.searchEngineProjectDR.tech"
-                head="Offial Search Engine Project (DR) Test Component"
+                head="Official Search Engine Project (DR) Test Component"
                 desc="This is simply a description of this component used to test if the actual API information fetched through Axios will be presented how I want it do."
             />
             <ResultsHelperListItems
                 urlPath="https://www.searchEngineProjectDR.tech"
-                head="Offial Search Engine Project (DR) Test Component"
+                head="Official Search Engine Project (DR) Test Component"
                 desc="This is simply a description of this component used to test if the actual API information fetched through Axios will be presented how I want it do."
             />
             <ResultsHelperListItems
                 urlPath="https://www.searchEngineProjectDR.tech"
-                head="Offial Search Engine Project (DR) Test Component"
+                head="Official Search Engine Project (DR) Test Component"
                 desc="This is simply a description of this component used to test if the actual API information fetched through Axios will be presented how I want it do."
             />
             <ResultsHelperListItems
                 urlPath="https://www.searchEngineProjectDR.tech"
-                head="Offial Search Engine Project (DR) Test Component"
+                head="Official Search Engine Project (DR) Test Component"
                 desc="This is simply a description of this component used to test if the actual API information fetched through Axios will be presented how I want it do."
             />
             <ResultsHelperListItems
                 urlPath="https://www.searchEngineProjectDR.tech"
-                head="Offial Search Engine Project (DR) Test Component"
+                head="Official Search Engine Project (DR) Test Component"
                 desc="This is simply a description of this component used to test if the actual API information fetched through Axios will be presented how I want it do."
             />
             <ResultsHelperListItems
                 urlPath="https://www.searchEngineProjectDR.tech"
-                head="Offial Search Engine Project (DR) Test Component"
+                head="Official Search Engine Project (DR) Test Component"
                 desc="This is simply a description of this component used to test if the actual API information fetched through Axios will be presented how I want it do."
             />
             <ResultsHelperListItems
                 urlPath="https://www.searchEngineProjectDR.tech"
-                head="Offial Search Engine Project (DR) Test Component"
+                head="Official Search Engine Project (DR) Test Component"
                 desc="This is simply a description of this component used to test if the actual API information fetched through Axios will be presented how I want it do."
             />
             <ResultsHelperListItems
                 urlPath="https://www.searchEngineProjectDR.tech"
-                head="Offial Search Engine Project (DR) Test Component"
+                head="Official Search Engine Project (DR) Test Component"
                 desc="This is simply a description of this component used to test if the actual API information fetched through Axios will be presented how I want it do."
             />
 
