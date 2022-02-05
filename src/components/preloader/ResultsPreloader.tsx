@@ -12,14 +12,30 @@ export const ResultsPreloader = () => {
         //     </Row>
         // </div>
 
-        <div className="preloader-container-1">
-            <div className="preloader-container-2">
-                <Row className="preloader">
-                    <Col s={4}>
-                        <Preloader active flashing={true} size="big" />
-                    </Col>
-                </Row>
-            </div>
-        </div>
+        // <div className="preloader-container-1">
+        //     <div className="preloader-container-2">
+        //         <Row className="preloader">
+        //             <Col s={4}>
+        //                 <Preloader active flashing={true} size="big" />
+        //             </Col>
+        //         </Row>
+        //     </div>
+        // </div>
+
+        // <Row className="preloader">
+        //     <Col s={4}>
+        //         <Preloader active flashing={true} size="big" />
+        //     </Col>
+        // </Row>
+
+        <>
+            {/* <Preloader active flashing={true} size="big" /> */}
+
+            <Row>
+                <Col s={1}>
+                    <Preloader active color="blue" flashing={true} size="big" />
+                </Col>
+            </Row>
+        </>
     )
 }
