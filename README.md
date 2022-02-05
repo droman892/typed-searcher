@@ -50,6 +50,7 @@ Dropdown on click: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css
 
 <p align="center"> <img src="https://img.shields.io/github/repo-size/droman892/typed-searcher" /> </p>
 
+<p>Google Search API: https://rapidapi.com/apigeek/api/google-search3/</p>
 ## Download and Installation
 
 - Clone the repo: `git clone https://github.com/droman892/typed-searcher.git` 

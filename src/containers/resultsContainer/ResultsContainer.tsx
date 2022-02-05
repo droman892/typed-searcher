@@ -12,98 +12,102 @@ export const ResultsContainer = () => {
     let searchQuery: string = useSelector((state) => state.searchQuery)
     searchQuery = searchQuery.replace(/\s+/g, '+')
 
+    const [resultsResponseData, setResultsResponseData] = useState('')
+
+    const [stats, setStats] = useState('')
+    console.log(stats)
+
     const [loading, setLoading] = useState(false)
 
-    // const queryData: object = {
-    //     method: 'GET',
-    //     url: `https://google-search3.p.rapidapi.com/api/v1/search/q=${searchQuery}&num=100`,
-    //     headers: {
-    //         'x-user-agent': 'desktop',
-    //         'x-proxy-location': 'US',
-    //         'x-rapidapi-host': 'google-search3.p.rapidapi.com',
-    //         'x-rapidapi-key':
-    //             '9cdabbc96amsh83dd832ad95c9e2p1f9988jsn41ca0b264b55',
-    //     },
-    // }
+    const count = stats.total
+    console.log(count)
+    // const resultCount = count.replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ',')
+    // console.log(resultCount)
+
+    // const timing = stats.ts
+    // console.log(timing)
+    // const resultTiming = timing.toFixed(2)
+    // console.log(resultTiming)
+
+
+
+
+
+    // const count = 10000000000
+    // console.log(count)
+    // const resultCount = count
+    //     .toString()
+    //     .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ',')
+    // console.log(resultCount)
+
+    // const timing = 34.233432423434
+    // console.log(timing)
+    // const resultTiming = timing.toFixed(2)
+    // console.log(resultTiming)
+
+
+
+
+
 
     // useEffect(() => {
-    //     const axiosFunction = async () => {
-    //         axios
-    //             .request(queryData)
-    //             .then(function (response) {
-    //                 console.log(response)
-    //                 console.log(response.data)
-    //                 console.log(response.data.results)
-    //                 console.log(response.data.total)
-    //                 console.log(response.data.ts)
+    //     console.log('API MAGIC')
 
-    //                 const resultsCount = (x) => {
-    //                     return x
-    //                         .toString()
-    //                         .replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ',')
-    //                 }
-
-    //                 const resultsTotal = document.getElementById('results-total')
-
-    //                 const apiCount = response.data.total
-
-    //                 const finalNum = resultsCount(apiCount)
-
-    //                 const resultsAPITotal = `${finalNum}`
-
-    //                 resultsTotal.innerHTML = resultsAPITotal
-
-    //                 const resultsTS = document.getElementById('results-ts')
-
-    //                 const apiTime = response.data.ts
-
-    //                 const finalTime = apiTime.toFixed(2)
-
-    //                 const resultsAPITS = `${finalTime}`
-
-    //                 resultsTS.innerHTML = resultsAPITS
-
-    //                 const dataResults = document.getElementById('queriedData')
-
-    //                 let dataResultsList = ''
-
-    //                 for (let i = 0; i < response.data.results.length; i++) {
-    //                     dataResultsList += `<div id="axios-data-1">
-    //                             <div id="axios-data-2">
-    //                                 <div id="axios-data-3">
-    //                                     <div className="axios-data-4">
-    //                                         <a
-    //                                             href="${response.data.results[i].link}"
-    //                                             target="_blank"
-    //                                         >
-    //                                             <p id="data-link">
-    //                                                 ${response.data.results[i].link}
-    //                                             </p>
-    //                                             <h3 id="data-title">
-    //                                                 ${response.data.results[i].title}
-    //                                             </h3>
-    //                                         </a>
-    //                                     </div>
-    //                                     <div id="axios-data-5">
-    //                                         <p id="description">
-    //                                             ${response.data.results[i].description}
-    //                                         </p>
-    //                                     </div>
-    //                                 </div>
-    //                             </div>
-    //                         </div>`
-
-    //                     dataResults.innerHTML = dataResultsList
-    //                 }
-    //                 setLoading(true)
-    //             })
-    //             .catch(function (error) {
-    //                 console.error(error)
-    //             })
+    //     const options = {
+    //         method: 'GET',
+    //         url: 'https://google-search3.p.rapidapi.com/api/v1/search/q=${searchQuery}&num=10',
+    //         headers: {
+    //             'x-user-agent': 'desktop',
+    //             'x-proxy-location': 'EU',
+    //             'x-rapidapi-host': 'google-search3.p.rapidapi.com',
+    //             'x-rapidapi-key':
+    //                 '9cdabbc96amsh83dd832ad95c9e2p1f9988jsn41ca0b264b55',
+    //         },
     //     }
 
-    //     axiosFunction()
+    //     axios
+    //         .request(options)
+    //         .then(function (response) {
+    //             console.log(response.data)
+    //             console.log(response.data.results)
+
+    //              if (response.data !== undefined) {
+    //                 const resultsStatsArray = response.data
+
+
+    //                 setStats(resultsStatsArray)
+    //             }
+
+    //             if (response.data.results !== undefined) {
+    //                 const resultsDataArray = response.data.results
+    //                 setResultsResponseData(resultsDataArray)
+    //             }
+    //         })
+    //         .catch(function (error) {
+    //             console.error(error)
+    //         })
     // }, [])
+    // console.log(stats)
+    // console.log(resultsResponseData)
+
+    // console.log(stats.total)
+    // console.log(stats.ts)
+
+
+
+
+    // const linkData = {resultsResponseData[0].link}
+    // const titleData = {resultsResponseData[0].title}
+    // const descData = {resultsResponseData[0].description}
+
+    // console.log(resultsResponseData[0].link)
+    // console.log(resultsResponseData[0].title)
+    // console.log(resultsResponseData[0].description)
+
+    // console.log(resultsResponseData[0])
+    // console.log(resultsResponseData[0].link)
+    // console.log(resultsResponseData[0].title)
+    // console.log(resultsResponseData[0].description)
 
     return (
         <>
@@ -113,10 +117,12 @@ export const ResultsContainer = () => {
                         <div className="stats-relative-1">
                             <div className="stats-relative-2">
                                 <div className="stats-relative-3">
-                                    About <span id="results-total" />{'SOMETHIG '}
+                                    About <span id="results-total" />
+                                    {stats.total}
                                     results&nbsp;
                                     <span>
-                                        (<span id="results-ts"></span>1,000,000,000 seconds)
+                                        (<span id="results-ts"></span>
+                                        {stats.ts} seconds)
                                     </span>
                                 </div>
                             </div>
@@ -125,125 +131,122 @@ export const ResultsContainer = () => {
                 </div>
             </div>
 
-            <ResultsHelperListItems
-                urlPath="https://www.searchEngineProjectDR.tech"
-                head="Official Search Engine Project (DR) Test Component"
-                desc="This is simply a description of this component used to test if the actual API information fetched through Axios will be presented how I want it do."
-            />
-            <ResultsHelperListItems
-                urlPath="https://www.searchEngineProjectDR.tech"
-                head="Official Search Engine Project (DR) Test Component"
-                desc="This is simply a description of this component used to test if the actual API information fetched through Axios will be presented how I want it do."
-            />
-            <ResultsHelperListItems
-                urlPath="https://www.searchEngineProjectDR.tech"
-                head="Official Search Engine Project (DR) Test Component"
-                desc="This is simply a description of this component used to test if the actual API information fetched through Axios will be presented how I want it do."
-            />
-            <ResultsHelperListItems
-                urlPath="https://www.searchEngineProjectDR.tech"
-                head="Official Search Engine Project (DR) Test Component"
-                desc="This is simply a description of this component used to test if the actual API information fetched through Axios will be presented how I want it do."
-            />
-            <ResultsHelperListItems
-                urlPath="https://www.searchEngineProjectDR.tech"
-                head="Official Search Engine Project (DR) Test Component"
-                desc="This is simply a description of this component used to test if the actual API information fetched through Axios will be presented how I want it do."
-            />
-            <ResultsHelperListItems
-                urlPath="https://www.searchEngineProjectDR.tech"
-                head="Official Search Engine Project (DR) Test Component"
-                desc="This is simply a description of this component used to test if the actual API information fetched through Axios will be presented how I want it do."
-            />
-            <ResultsHelperListItems
-                urlPath="https://www.searchEngineProjectDR.tech"
-                head="Official Search Engine Project (DR) Test Component"
-                desc="This is simply a description of this component used to test if the actual API information fetched through Axios will be presented how I want it do."
-            />
-            <ResultsHelperListItems
-                urlPath="https://www.searchEngineProjectDR.tech"
-                head="Official Search Engine Project (DR) Test Component"
-                desc="This is simply a description of this component used to test if the actual API information fetched through Axios will be presented how I want it do."
-            />
-            <ResultsHelperListItems
-                urlPath="https://www.searchEngineProjectDR.tech"
-                head="Official Search Engine Project (DR) Test Component"
-                desc="This is simply a description of this component used to test if the actual API information fetched through Axios will be presented how I want it do."
-            />
-            <ResultsHelperListItems
-                urlPath="https://www.searchEngineProjectDR.tech"
-                head="Official Search Engine Project (DR) Test Component"
-                desc="This is simply a description of this component used to test if the actual API information fetched through Axios will be presented how I want it do."
+            {/* <ResultsHelperListItems
+                urlPath={resultsResponseData[0].link}
+                head={resultsResponseData[0].title}
+                desc={resultsResponseData[0].description}
+            /> */}
+
+            {/* <ResultsHelperListItems
+                urlPath={resultsResponseData[1].link}
+                head={resultsResponseData[1].title}
+                desc={resultsResponseData[1].description}
             />
 
-            {/* <h1>DAVID</h1>
-            <h1>This is just a placeholder</h1>
-            <h1>This is just a placeholder</h1>
-            <h1>This is just a placeholder</h1>
-            <h1>This is just a placeholder</h1>
-            <h1>This is just a placeholder</h1>
-            <h1>This is just a placeholder</h1>
-            <h1>This is just a placeholder</h1>
-            <h1>This is just a placeholder</h1>
-            <h1>This is just a placeholder</h1>
-            <h1>This is just a placeholder</h1>
-            <h1>This is just a placeholder</h1>
-            <h1>This is just a placeholder</h1> */}
+            <ResultsHelperListItems
+                urlPath={resultsResponseData[2].link}
+                head={resultsResponseData[2].title}
+                desc={resultsResponseData[2].description}
+            />
 
-            {/* <div className="stats-bar">
-                <div>
-                    <div className="stats-relative-0">
-                        <div className="stats-relative-1">
-                            <div className="stats-relative-2">
-                                <div className="stats-relative-3">
-                                    About <span id="results-total" />{' '}
-                                    results&nbsp;
-                                    <span>
-                                        (<span id="results-ts"></span> seconds)
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <ResultsHelperListItems
+                urlPath={resultsResponseData[3].link}
+                head={resultsResponseData[3].title}
+                desc={resultsResponseData[3].description}
+            />
 
-            <div className="data-container">
-                <div className="data-container-2">
-                    <div className="data-container-3">
-                        <div id="queriedData"></div>
-                    </div>
-                </div>
-            </div> */}
+            <ResultsHelperListItems
+                urlPath={resultsResponseData[4].link}
+                head={resultsResponseData[4].title}
+                desc={resultsResponseData[4].description}
+            />
 
-            {/* {loading ? <div id="queriedData"></div> : <ResultsPreloader />} */}
+            <ResultsHelperListItems
+                urlPath={resultsResponseData[5].link}
+                head={resultsResponseData[5].title}
+                desc={resultsResponseData[5].description}
+            />
 
-            {/* <ResultsDataContainer /> perhaps you can make this particular component invisible */}
+            <ResultsHelperListItems
+                urlPath={resultsResponseData[6].link}
+                head={resultsResponseData[6].title}
+                desc={resultsResponseData[6].description}
+            />
 
-            {/* {loading ? <ResultsDataContainer /> : <ResultsPreloader />} */}
+            <ResultsHelperListItems
+                urlPath={resultsResponseData[7].link}
+                head={resultsResponseData[7].title}
+                desc={resultsResponseData[7].description}
+            />
 
-            {/* {loading ? <ResultsDataContainer /> : 
-            <>
-            <h1>This is just a placeholder</h1>
-            <h1>This is just a placeholder</h1>
-            <h1>This is just a placeholder</h1>
-            <h1>This is just a placeholder</h1>
-            <h1>This is just a placeholder</h1>
-            <h1>This is just a placeholder</h1>
-            <h1>This is just a placeholder</h1>
-            <h1>This is just a placeholder</h1>
-            <h1>This is just a placeholder</h1>
-            <h1>This is just a placeholder</h1>
-            <h1>This is just a placeholder</h1>
-            <h1>This is just a placeholder</h1>
-            </>
-            
-            } */}
+            <ResultsHelperListItems
+                urlPath={resultsResponseData[8].link}
+                head={resultsResponseData[8].title}
+                desc={resultsResponseData[8].description}
+            />
 
-            {/* <ResultsDataContainer /> */}
-            {/* <ResultsPreloader /> */}
+            <ResultsHelperListItems
+                urlPath={resultsResponseData[9].link}
+                head={resultsResponseData[9].title}
+                desc={resultsResponseData[9].description}
+            /> */}
 
-            {/* <div className="test-container"></div> */}
+            {/* <ResultsHelperListItems
+                urlPath="https://www.searchEngineProjectDR.tech"
+                head="Official Search Engine Project (DR) Test Component"
+                desc="This is simply a description of this component used to test if the actual API information fetched through Axios will be presented how I want it do."
+            /> */}
+
+            {/* <ResultsHelperListItems
+                urlPath="https://www.searchEngineProjectDR.tech"
+                head="Official Search Engine Project (DR) Test Component"
+                desc="This is simply a description of this component used to test if the actual API information fetched through Axios will be presented how I want it do."
+            />
+            <ResultsHelperListItems
+                urlPath="https://www.searchEngineProjectDR.tech"
+                head="Official Search Engine Project (DR) Test Component"
+                desc="This is simply a description of this component used to test if the actual API information fetched through Axios will be presented how I want it do."
+            />
+            <ResultsHelperListItems
+                urlPath="https://www.searchEngineProjectDR.tech"
+                head="Official Search Engine Project (DR) Test Component"
+                desc="This is simply a description of this component used to test if the actual API information fetched through Axios will be presented how I want it do."
+            />
+            <ResultsHelperListItems
+                urlPath="https://www.searchEngineProjectDR.tech"
+                head="Official Search Engine Project (DR) Test Component"
+                desc="This is simply a description of this component used to test if the actual API information fetched through Axios will be presented how I want it do."
+            />
+            <ResultsHelperListItems
+                urlPath="https://www.searchEngineProjectDR.tech"
+                head="Official Search Engine Project (DR) Test Component"
+                desc="This is simply a description of this component used to test if the actual API information fetched through Axios will be presented how I want it do."
+            />
+            <ResultsHelperListItems
+                urlPath="https://www.searchEngineProjectDR.tech"
+                head="Official Search Engine Project (DR) Test Component"
+                desc="This is simply a description of this component used to test if the actual API information fetched through Axios will be presented how I want it do."
+            />
+            <ResultsHelperListItems
+                urlPath="https://www.searchEngineProjectDR.tech"
+                head="Official Search Engine Project (DR) Test Component"
+                desc="This is simply a description of this component used to test if the actual API information fetched through Axios will be presented how I want it do."
+            />
+            <ResultsHelperListItems
+                urlPath="https://www.searchEngineProjectDR.tech"
+                head="Official Search Engine Project (DR) Test Component"
+                desc="This is simply a description of this component used to test if the actual API information fetched through Axios will be presented how I want it do."
+            />
+            <ResultsHelperListItems
+                urlPath="https://www.searchEngineProjectDR.tech"
+                head="Official Search Engine Project (DR) Test Component"
+                desc="This is simply a description of this component used to test if the actual API information fetched through Axios will be presented how I want it do."
+            />
+            <ResultsHelperListItems
+                urlPath="https://www.searchEngineProjectDR.tech"
+                head="Official Search Engine Project (DR) Test Component"
+                desc="This is simply a description of this component used to test if the actual API information fetched through Axios will be presented how I want it do."
+            /> */}
         </>
     )
 }
