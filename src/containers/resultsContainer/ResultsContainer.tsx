@@ -191,8 +191,6 @@ export const ResultsContainer = () => {
             ) : (
                 ''
             )}
-
-            <ResultsPreloader />
         </>
     )
 }
