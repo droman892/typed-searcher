@@ -29,6 +29,12 @@ export const ResultsContainer = () => {
     const urlParams = new URLSearchParams(queryString)
     const queryMade = urlParams.get('q') || ''
 
+
+    // useEffect(() => {
+    //     console.log('DESKTOP USEEFFECT')
+    // },[queryMade])
+
+
     // useEffect(() => {
 
     //     const options = {
@@ -191,6 +197,17 @@ export const ResultsContainer = () => {
             ) : (
                 ''
             )}
+
+            <h1>PLACEHOLDER</h1>
+            <h1>PLACEHOLDER</h1>
+            <h1>PLACEHOLDER</h1>
+            <h1>PLACEHOLDER</h1>
+            <h1>PLACEHOLDER</h1>
+            <h1>PLACEHOLDER</h1>
+            <h1>PLACEHOLDER</h1>
+            <h1>PLACEHOLDER</h1>
+            <h1>PLACEHOLDER</h1>
+            <h1>PLACEHOLDER</h1>
         </>
     )
 }

@@ -2,8 +2,16 @@
     text-align: center;
 }
 
+.flex {
+    display: flex !important;
+}
+
 h5 {
     text-align: left;
+}
+
+.none {
+    display: none !important;
 }
 
 .notice {
@@ -16,14 +24,20 @@ h5 {
 }
 
 .notice-container {
+    display: none;
+    align-items: center;
+    justify-content: center;
     position: fixed;
     top: 0;
     left: 0;
     height: 100vh;
     width: 100vw;
-    background-color: red;
+    z-index: -1;
 }
 
+.preloader {
+    display: block;
+}
 
 .preloader-container-1 {
     position: fixed;

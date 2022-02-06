@@ -2,7 +2,6 @@ import { useSelector } from 'react-redux'
 import { State } from '../state'
 
 export const DisplayTrends = () => {
-    console.log('DisplayTrends')
     const queryValue = useSelector((state: State) => state.searchQuery)
     const queryValueLength: number = queryValue.length
     if (queryValueLength > 0) {

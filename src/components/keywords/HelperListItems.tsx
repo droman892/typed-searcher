@@ -4,9 +4,14 @@ import { useSelector } from 'react-redux'
 import { HelperItem } from './HelperItem'
 import { State } from '../../state/index'
 
+
+
 export const HelperListItems = () => {
     const queryValue = useSelector((state: State) => state.searchQuery)
     const [responseData, setResponseData] = useState('')
+
+    // export const firstItem = responseData[0]
+    // console.log('FIRST ITEM: ' + firstItem)
 
     useEffect(() => {
         const options = {
@@ -37,29 +42,6 @@ export const HelperListItems = () => {
 
     return (
         <>
-            {/* <HelperItem name={'David Smith'} />
-            <HelperItem name={'Maria Smith'} />
-            <HelperItem name={'Kevin Smith'} />
-            <HelperItem name={'Paul Smith'} />
-            <HelperItem name={'Mike Smith'} />
-            <HelperItem name={'Judith Smith'} />
-            <HelperItem name={'Rick Smith'} />
-            <HelperItem name={'Morty Smith'} />
-            <HelperItem name={'Alfred Smith'} />
-            <HelperItem name={'Steve Smith'} /> */}
-
-
-            {/* <HelperItem name={responseData[0]} />
-            <HelperItem name={responseData[1]} />
-            <HelperItem name={responseData[2]} />
-            <HelperItem name={responseData[3]} />
-            <HelperItem name={responseData[4]} />
-            <HelperItem name={responseData[5]} />
-            <HelperItem name={responseData[6]} />
-            <HelperItem name={responseData[7]} />
-            <HelperItem name={responseData[8]} /> */}
-            {/* <HelperItem name={responseData[9]} /> */}
-
             {responseData[0] ? <HelperItem name={responseData[0]} /> : ''}
             {responseData[1] ? <HelperItem name={responseData[1]} /> : ''}
             {responseData[2] ? <HelperItem name={responseData[2]} /> : ''}

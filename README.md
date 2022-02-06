@@ -64,6 +64,7 @@ This application is an on-going project, open to contributions and critique.  Fu
 1) incorporate automated testing
 2) fetch and display data from the Google Trends API
 3) add functionality to display multiple pages of data
+4) incorporate asynchronous functions to wait for returned responses before displaying keywords
 
 ## Bugs and Issues
 

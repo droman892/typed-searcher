@@ -29,9 +29,6 @@ export const ResultsMobileNavigation = () => {
     const navigate = useNavigate()
     const [responseMRData, setMRResponseData] = useState('')
 
-    // console.log(responseMRData)
-    // console.log(responseMRData[0])
-
     useEffect(() => {
         const options = {
             method: 'GET',
@@ -378,58 +375,6 @@ export const ResultsMobileNavigation = () => {
                                         ) : (
                                             ''
                                         )}
-
-                                        {/* <MobileHelperData
-                                            helperValue={
-                                                responseMRData[0] || ''
-                                            }
-                                        /> */}
-
-                                        {/* <MobileHelperData
-                                            helperValue={
-                                                responseMRData[1] || ''
-                                            }
-                                        />
-                                        <MobileHelperData
-                                            helperValue={
-                                                responseMRData[2] || ''
-                                            }
-                                        />
-                                        <MobileHelperData
-                                            helperValue={
-                                                responseMRData[3] || ''
-                                            }
-                                        />
-                                        <MobileHelperData
-                                            helperValue={
-                                                responseMRData[4] || ''
-                                            }
-                                        />
-                                        <MobileHelperData
-                                            helperValue={
-                                                responseMRData[5] || ''
-                                            }
-                                        />
-                                        <MobileHelperData
-                                            helperValue={
-                                                responseMRData[6] || ''
-                                            }
-                                        />
-                                        <MobileHelperData
-                                            helperValue={
-                                                responseMRData[7] || ''
-                                            }
-                                        />
-                                        <MobileHelperData
-                                            helperValue={
-                                                responseMRData[8] || ''
-                                            }
-                                        />
-                                        <MobileHelperData
-                                            helperValue={
-                                                responseMRData[9] || ''
-                                            }
-                                        /> */}
                                     </ul>
                                 </div>
                             </ul>

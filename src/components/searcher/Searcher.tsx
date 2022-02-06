@@ -13,6 +13,12 @@ import { DisplayTrends } from '../../functions/DisplayTrends'
 import { useNavigate } from 'react-router-dom'
 import { PressEnter } from '../../functions/PressEnter'
 
+// async const returnedItems = () => {
+//     await 
+// }
+
+
+
 export const Searcher = () => {
     const dispatch = useDispatch()
     const { createQuery } = bindActionCreators(actionCreators, dispatch)
@@ -23,7 +29,10 @@ export const Searcher = () => {
     DisplayTrends()
 
     const clickTrends = () => {
-        console.log('Searcher clickTrends was clicked')
+        // const helperListItems = document.getElementById('query') || false
+        // const helperListItemsCount = helperListItems.childElementCount
+        // console.log(helperListItemsCount)
+        // console.log('Searcher clickTrends was clicked')
         if (queryValueLength > 0) {
             document
                 .getElementById('search-engine')
@@ -68,9 +77,12 @@ export const Searcher = () => {
 
     const setInputChange = (e: { target: { value: string } }) => {
         createQuery(e.target.value)
+
+        // const helperListItems = document.getElementById('query') || false
+        // const helperListItemsCount = helperListItems.childElementCount
+        // console.log(helperListItemsCount)
     }
 
-    
     const HomePressEnter = () => {
         if (queryValueLength > 0) {
             // console.log('Home form submitted!')

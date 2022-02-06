@@ -103,10 +103,10 @@ export const ResultsSearcher = () => {
 
     const ClickResultTrends = () => {
         if (queryValueLength > 0) {
-            console.log(
-                'ClickResultTrends - the results searcher has been clicked!'
-            )
-            // console.log(queryValueLength)
+            // console.log(
+            //     'ClickResultTrends - the results searcher has been clicked!'
+            // )
+            // console.log('queryValueLength')
             document
                 .getElementById('results-query-container-1')
                 ?.classList.add('results-query-container-9')

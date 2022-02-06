@@ -1,5 +1,5 @@
 import { ResultsNavigation } from './resultsNavigation/ResultsNavigation'
-// import { ResultsFooter } from './resultsFooter/ResultsFooter'
+import { ResultsFooter } from './resultsFooter/ResultsFooter'
 import '../../styles/_index.scss'
 
 interface MyProps {
@@ -12,7 +12,7 @@ export const DefaultResultsLayout = ({ children }: MyProps) => {
             <div className="results-page-box-2">
                 <ResultsNavigation />
                 {children}
-                {/* <ResultsFooter /> */}
+                <ResultsFooter />
             </div>
         </div>
     )
