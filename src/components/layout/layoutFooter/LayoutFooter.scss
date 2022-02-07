@@ -1,5 +1,31 @@
 @use '../../../styles/colors.scss' as *;
 
+// specific to Materialize
+
+// this container style has a media query below
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100% !important;
+    max-width: 100%;
+    padding: 0 20px;
+}
+
+.footer-copyright {
+    padding: 0px !important;
+    width: 100%;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    background-color: $footer-copyright;
+    min-height: 47px !important;
+}
+
+
+
+// custom code
+
 @media only screen and (max-width: 1200px) {
     .center-footer-container {
         order: 0 !important;
@@ -19,23 +45,13 @@
     display: flex;
 }
 
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 100% !important;
-    max-width: 100%;
-    padding: 0 20px;
-}
-
-.footer-copyright {
-    padding: 0px !important;
-    width: 100%;
+.custom-page-footer {
     flex-shrink: 0;
     box-sizing: border-box;
-    background-color: $footer-copyright;
-    min-height: 47px !important;
+    background-color: $white;
 }
+
+
 
 .footer-leaf {
     height: auto;
@@ -63,11 +79,7 @@
     float: left;
 }
 
-.page-footer {
-    flex-shrink: 0;
-    box-sizing: border-box;
-    background-color: $white;
-}
+
 
 .right-footer-container {
     order: 3;
