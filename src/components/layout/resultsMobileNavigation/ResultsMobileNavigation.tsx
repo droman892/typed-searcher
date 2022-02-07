@@ -15,7 +15,7 @@ import { ResultsHelperListItems } from '../../keywords/ResultsHelperListItems'
 import axios from 'axios'
 
 export const ResultsMobileNavigation = () => {
-    const queryValue = useSelector((state: State) => state.searchQuery)
+    const queryValue = useSelector((state: State) => state.searchQuery) || ''
     const queryValueLength: number = queryValue.length || 0
     let queryPath = queryValue
     queryPath = queryPath.replace(/\s+/g, '+')
@@ -276,7 +276,7 @@ export const ResultsMobileNavigation = () => {
                             <ul className="mobile-results-helpers-data-2">
                                 <div className="mobile-results-helpers-data-3">
                                     <ul className="mobile-results-helpers-data-4">
-                                        {responseMRData[0] ? (
+                                        {responseMRData[0] && queryValueLength > 0 ? (
                                             <MobileHelperData
                                                 helperValue={
                                                     responseMRData[0] || ''
@@ -286,7 +286,7 @@ export const ResultsMobileNavigation = () => {
                                             ''
                                         )}
 
-                                        {responseMRData[1] ? (
+                                        {responseMRData[1] && queryValueLength > 0  ? (
                                             <MobileHelperData
                                                 helperValue={
                                                     responseMRData[1] || ''
@@ -296,7 +296,7 @@ export const ResultsMobileNavigation = () => {
                                             ''
                                         )}
 
-                                        {responseMRData[2] ? (
+                                        {responseMRData[2] && queryValueLength > 0  ? (
                                             <MobileHelperData
                                                 helperValue={
                                                     responseMRData[2] || ''
@@ -306,7 +306,7 @@ export const ResultsMobileNavigation = () => {
                                             ''
                                         )}
 
-                                        {responseMRData[3] ? (
+                                        {responseMRData[3] && queryValueLength > 0  ? (
                                             <MobileHelperData
                                                 helperValue={
                                                     responseMRData[3] || ''
@@ -316,7 +316,7 @@ export const ResultsMobileNavigation = () => {
                                             ''
                                         )}
 
-                                        {responseMRData[4] ? (
+                                        {responseMRData[4] && queryValueLength > 0  ? (
                                             <MobileHelperData
                                                 helperValue={
                                                     responseMRData[4] || ''
@@ -326,7 +326,7 @@ export const ResultsMobileNavigation = () => {
                                             ''
                                         )}
 
-                                        {responseMRData[5] ? (
+                                        {responseMRData[5] && queryValueLength > 0  ? (
                                             <MobileHelperData
                                                 helperValue={
                                                     responseMRData[5] || ''
@@ -336,7 +336,7 @@ export const ResultsMobileNavigation = () => {
                                             ''
                                         )}
 
-                                        {responseMRData[6] ? (
+                                        {responseMRData[6] && queryValueLength > 0  ? (
                                             <MobileHelperData
                                                 helperValue={
                                                     responseMRData[6] || ''
@@ -346,7 +346,7 @@ export const ResultsMobileNavigation = () => {
                                             ''
                                         )}
 
-                                        {responseMRData[7] ? (
+                                        {responseMRData[7] && queryValueLength > 0  ? (
                                             <MobileHelperData
                                                 helperValue={
                                                     responseMRData[7] || ''
@@ -356,7 +356,7 @@ export const ResultsMobileNavigation = () => {
                                             ''
                                         )}
 
-                                        {responseMRData[8] ? (
+                                        {responseMRData[8] && queryValueLength > 0  ? (
                                             <MobileHelperData
                                                 helperValue={
                                                     responseMRData[8] || ''
@@ -366,7 +366,7 @@ export const ResultsMobileNavigation = () => {
                                             ''
                                         )}
 
-                                        {responseMRData[9] ? (
+                                        {responseMRData[9] && queryValueLength > 0  ? (
                                             <MobileHelperData
                                                 helperValue={
                                                     responseMRData[9] || ''

@@ -64,7 +64,7 @@ export const ResultsNavigation = () => {
     //         .catch(function (error) {
     //             console.error(error)
     //         })
-    // }, [])
+    // }, [queryMade])
 
     return (
         <header>

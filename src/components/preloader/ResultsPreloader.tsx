@@ -8,10 +8,20 @@ export const ResultsPreloader = () => {
         document.getElementById('notice-container')?.classList.add('flex')
     }
 
-    setTimeout(sorryNotice, 10000)
+    setTimeout(sorryNotice, 3000)
 
     return (
         <>
+            {/* <div id="preloader" className="preloader">
+                <Preloader
+                    active
+                    color="green"
+                    flashing={false}
+                    size="big"
+                    className="preloader-container-1"
+                />
+            </div> */}
+
             <div id="preloader" className="preloader">
                 <Preloader
                     active
@@ -28,7 +38,6 @@ export const ResultsPreloader = () => {
                     <h5 className="explanation">
                         Looks like something happened with the server...
                     </h5>
-                    <br></br>
                     <h5 className="troubleshoot">
                         Recommended Troubleshooting:
                     </h5>

@@ -71,7 +71,7 @@ export const ResultsContainer = () => {
     //         .catch(function (error) {
     //             console.error(error)
     //         })
-    // }, [])
+    // }, [queryMade])
 
     return (
         <>

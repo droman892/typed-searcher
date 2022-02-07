@@ -76,6 +76,9 @@
     flex: 1;
     font-weight: normal;
     color: #202124;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .mobile-results-helpers-data-switch {

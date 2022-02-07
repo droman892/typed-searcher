@@ -1,13 +1,51 @@
+// @media (max-width: 1121px) {
+// .notice-container {
+//     margin-left: -28px !important;
+// }
+// }
+
+
+@media only screen and (max-width: 1121px) {
+    .notice-container {
+        margin-left: -28px !important;
+    }
+}
+
+@media only screen and (min-width: 1121px) and (max-width: 1300px) {
+    .notice-container {
+        margin-left: calc(-1 * (100vw - 1065px) / 2) !important;
+    }
+}
+
+
+@media only screen and (max-width: 1121px) {
+    .preloader {
+        margin-left: -28px !important;
+    }
+}
+
+@media only screen and (min-width: 1121px) and (max-width: 1300px) {
+    .preloader {
+        margin-left: calc(-1 * (100vw - 1065px) / 2) !important;
+    }
+}
+
 .explanation {
     text-align: center;
+    padding: 0 10px;
 }
 
 .flex {
     display: flex !important;
 }
 
+h4 {
+    font-size: 26px;
+}
+
 h5 {
     text-align: left;
+    font-size: 20px;
 }
 
 .none {
@@ -15,36 +53,55 @@ h5 {
 }
 
 .notice {
-    // position: fixed;
     left: 50%;
     top: 25rem;
     text-align: center;
     max-width: 600px;
-    padding: 90px;
+    padding: 0 30px;
+    padding-top: 3rem;
 }
 
 .notice-container {
     display: none;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
+
+
+
     width: 100vw;
-    z-index: -1;
+    justify-content: center;
+    margin-left: -180px;
+
+
+    // align-items: center;
+    // justify-content: center;
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    // height: 100vh;
+    // width: 100vw;
+    // z-index: -1;
 }
+
+// .preloader {
+//     display: block;
+// }
 
 .preloader {
-    display: block;
+    width: 100vw;
+    justify-content: center;
+    display: flex;
+    margin-left: -180px;
 }
 
+// .preloader-container-1 {
+//     position: fixed;
+//     width: 100vw;
+//     height: 100vh;
+//     left: 50%;
+//     top: 25rem;
+// }
+
 .preloader-container-1 {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    left: 50%;
-    top: 25rem;
+    top: 10rem;
 }
 
 .support {
@@ -58,4 +115,5 @@ h5 {
 
 .troubleshoot {
     font-weight: 400;
+    padding-top: 10px;
 }
