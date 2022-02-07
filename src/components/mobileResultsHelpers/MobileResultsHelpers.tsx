@@ -57,7 +57,7 @@ export const MobileResultsHelpers = () => {
             .getElementById('mobile-results-helpers-data-hidden')
             ?.classList.remove('mobile-results-helpers-data')
     }, [queryMade])
-    
+
     const DeleteMRQuery = () => {
         createQuery('')
         document.getElementById('mrh')?.focus()
@@ -95,32 +95,36 @@ export const MobileResultsHelpers = () => {
                 </div>
             </div>
 
-
             <>
-            {queryValueLength === 0 ? (
-
-            <div className="mrh-x">
-                <button className="mrh-x-2">
-                    <span className="mrh-x-3">
-                        <img src={theX} alt="The X" className="mrh-x-4" />
-                    </span>
-                </button>
-            </div>
-            ) : (
-
-<div className="mrh-x">
-                <button className="mrh-x-2" onClick={DeleteMobileResultsQuery}>
-                    <span className="mrh-x-3">
-                        <img src={theX} alt="The X" className="mrh-x-4" />
-                    </span>
-                </button>
-            </div>
-
-                
-            )}
-
-</>
-
+                {queryValueLength === 0 ? (
+                    <div className="mrh-x">
+                        <button className="mrh-x-2">
+                            <span className="mrh-x-3">
+                                <img
+                                    src={theX}
+                                    alt="The X"
+                                    className="mrh-x-4"
+                                />
+                            </span>
+                        </button>
+                    </div>
+                ) : (
+                    <div className="mrh-x">
+                        <button
+                            className="mrh-x-2"
+                            onClick={DeleteMobileResultsQuery}
+                        >
+                            <span className="mrh-x-3">
+                                <img
+                                    src={theX}
+                                    alt="The X"
+                                    className="mrh-x-4"
+                                />
+                            </span>
+                        </button>
+                    </div>
+                )}
+            </>
 
             {/* <div className="mobile-results-helpers-data">
                 <ul className="mobile-results-helpers-data-2">
