@@ -8,20 +8,10 @@ export const ResultsPreloader = () => {
         document.getElementById('notice-container')?.classList.add('flex')
     }
 
-    setTimeout(sorryNotice, 3000)
+    setTimeout(sorryNotice, 8000)
 
     return (
         <>
-            {/* <div id="preloader" className="preloader">
-                <Preloader
-                    active
-                    color="green"
-                    flashing={false}
-                    size="big"
-                    className="preloader-container-1"
-                />
-            </div> */}
-
             <div id="preloader" className="preloader">
                 <Preloader
                     active

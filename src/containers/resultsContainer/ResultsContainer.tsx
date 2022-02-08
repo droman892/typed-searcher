@@ -29,14 +29,13 @@ export const ResultsContainer = () => {
     const urlParams = new URLSearchParams(queryString)
     const queryMade = urlParams.get('q') || ''
 
-
     // useEffect(() => {
     //     console.log('DESKTOP USEEFFECT')
     // },[queryMade])
 
 
-    // useEffect(() => {
 
+    // useEffect(() => {
     //     const options = {
     //         method: 'GET',
     //         url: `https://google-search3.p.rapidapi.com/api/v1/search/q=${queryMade}&num=10`,
@@ -194,6 +193,112 @@ export const ResultsContainer = () => {
                     head={resultsResponseData[9].title}
                     desc={resultsResponseData[9].description}
                 />
+            ) : (
+                ''
+            )}
+
+            {resultsResponseData.length > 3 ? (
+                <div className="google-table">
+                    <table className="table">
+                        <tbody>
+                            <tr>
+                                <td className="bottom-letter">
+                                    <span className="bottom-letter-span google-blue">
+                                        G
+                                    </span>
+                                    <span className="empty">.</span>
+                                </td>
+                                <>
+                                    <td className="bottom-o">
+                                        <span className="bottom-o-span google-red">
+                                            o
+                                        </span>{' '}
+                                        <span className="unbold">1</span>
+                                    </td>
+
+                                    <td className="bottom-o cursor">
+                                        <span className="bottom-o-span google-yellow">
+                                            o
+                                        </span>{' '}
+                                        <span className="unbold-blue">2</span>
+                                    </td>
+                                    <td className="bottom-o cursor">
+                                        <span className="bottom-o-span google-yellow">
+                                            o
+                                        </span>{' '}
+                                        <span className="unbold-blue">3</span>
+                                    </td>
+                                    <td className="bottom-o cursor">
+                                        <span className="bottom-o-span google-yellow">
+                                            o
+                                        </span>{' '}
+                                        <span className="unbold-blue">4</span>
+                                    </td>
+                                    <td className="bottom-o cursor">
+                                        <span className="bottom-o-span google-yellow">
+                                            o
+                                        </span>{' '}
+                                        <span className="unbold-blue">5</span>
+                                    </td>
+                                    <td className="bottom-o cursor">
+                                        <span className="bottom-o-span google-yellow">
+                                            o
+                                        </span>{' '}
+                                        <span className="unbold-blue">6</span>
+                                    </td>
+                                    <td className="bottom-o cursor">
+                                        <span className="bottom-o-span google-yellow">
+                                            o
+                                        </span>{' '}
+                                        <span className="unbold-blue">7</span>
+                                    </td>
+                                    <td className="bottom-o cursor">
+                                        <span className="bottom-o-span google-yellow">
+                                            o
+                                        </span>{' '}
+                                        <span className="unbold-blue">8</span>
+                                    </td>
+                                    <td className="bottom-o cursor">
+                                        <span className="bottom-o-span google-yellow">
+                                            o
+                                        </span>{' '}
+                                        <span className="unbold-blue">9</span>
+                                    </td>
+                                    <td className="bottom-o cursor">
+                                        <span className="bottom-o-span google-yellow">
+                                            o
+                                        </span>{' '}
+                                        <span className="unbold-blue">10</span>
+                                    </td>
+                                </>
+                                <td className="bottom-letter">
+                                    <span className="bottom-letter-span google-blue">
+                                        g
+                                    </span>
+                                    <span className="empty">.</span>
+                                </td>
+                                <td className="bottom-letter">
+                                    <span className="bottom-letter-span google-green adjusted">
+                                        l
+                                    </span>
+                                    <span className="empty">.</span>
+                                </td>
+                                <td className="bottom-letter">
+                                    <span className="bottom-letter-span google-red">
+                                        e
+                                    </span>
+                                    <span className="empty">.</span>
+                                </td>
+                                <td className="bottom-letter">
+                                    <span className="bottom-letter-span google-blue">
+                                        {'>'}
+                                    </span>
+                                    <span className="unbold-blue">Next</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             ) : (
                 ''
             )}

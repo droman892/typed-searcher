@@ -113,3 +113,133 @@
     padding-bottom: 0;
     padding-right: 8px;
 }
+
+
+
+
+
+
+
+
+.adjusted {
+    margin-right: -10px;
+    margin-left: -10px;
+}
+
+.google-blue {
+    color: #4885ed;
+}
+
+.google-green {
+    color: #3cba54;
+}
+
+.bottom-letter {
+    font-weight: 700;
+    padding: 0;
+    text-align: center;
+    
+}
+
+
+
+.bottom-letter-span {
+    // background: url(../../assets/images/theX.png) no-repeat;
+    background-position: -24px 0;
+    width: 28px;
+    overflow: hidden;
+    background-position: 0 0;
+    height: 40px;
+    display: block;
+    font-size: 30px;
+}
+
+.bottom-o {
+    padding: 0;
+    text-align: center;
+    color: #202124;
+    font-weight: 700;
+    
+    
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.google-red {
+    color: #db3236;
+}
+
+.google-table {
+    margin-bottom: 106px;
+}
+
+.bottom-o-span {
+    background: url(../../assets/images/theX.png) no-repeat;
+    background-position: -53px 0;
+    width: 20px;
+    overflow: hidden;
+    height: 40px;
+    display: block;
+    
+    font-size: 30px;
+}
+
+.bottom-yellow-o {
+    padding: 0;
+    text-align: center;
+}
+
+.bottom-yellow-o-link {
+    display: block;
+    
+    font-weight: normal;
+}
+
+.google-yellow {
+    color: #f4c20d;
+    text-decoration: none !important;
+}
+
+// .google-yellow:hover {
+//     text-decoration: none !important;
+// }
+
+.bottom-yellow-o-span {
+    // background: url(../../assets/images/theX.png) no-repeat;
+    background-position: -74px 0;
+    width: 20px;
+    cursor: pointer;
+    overflow: hidden;
+    height: 40px;
+    display: block;
+    
+    font-weight: 30px !important;
+}
+
+.empty {
+    color: rgba(255, 255, 255, 0);
+}
+
+.table {
+    border-collapse: separate;
+    text-align: left;
+    margin: 30px auto 30px;
+    width: auto;
+}
+
+.unbold {
+    font-weight: normal;
+}
+
+.unbold-blue {
+    font-weight: normal;
+    color: #4285f4;
+}
+
+.hov-line:hover {
+    color: red;
+    text-decoration: underline;
+}
+
