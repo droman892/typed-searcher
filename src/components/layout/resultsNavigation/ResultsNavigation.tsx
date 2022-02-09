@@ -217,7 +217,7 @@ export const ResultsNavigation = () => {
                         </div>
                     </div>
 
-                    {/* <MobileResultsPreloader /> */}
+                    <MobileResultsPreloader />
 
                     <div
                         id="mobile-results-query-data"

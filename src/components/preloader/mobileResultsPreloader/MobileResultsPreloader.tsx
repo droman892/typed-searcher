@@ -3,12 +3,14 @@ import '../../../styles/_index.scss'
 import { Preloader } from 'react-materialize'
 
 export const MobileResultsPreloader = () => {
-    const sorryNotice = () => {
-        document.getElementById('preloader')?.classList.add('none')
-        document.getElementById('notice-container')?.classList.add('flex')
+    const mobileSorryNotice = () => {
+        document.getElementById('mobile-preloader')?.classList.add('none')
+        document
+            .getElementById('mobile-notice-container')
+            ?.classList.add('flex')
     }
 
-    setTimeout(sorryNotice, 8000)
+    setTimeout(mobileSorryNotice, 8000)
 
     return (
         <>
@@ -22,28 +24,33 @@ export const MobileResultsPreloader = () => {
                 />
             </div>
 
-            <div className="notice-container" id="notice-container">
-                <div className="notice">
-                    <h4 className="load-text">Oops! - 500: Internal Server Error</h4>
-                    <h5 className="explanation load-text">
+            <div
+                className="mobile-notice-container"
+                id="mobile-notice-container"
+            >
+                <div className="mobile-notice">
+                    <h5 className="mobile-load-header">
+                        Oops! - 500: Internal Server Error
+                    </h5>
+                    <h6 className="mobile-explanation load-text mobile-load-header">
                         Looks like something happened with the server...
-                    </h5>
-                    <h5 className="troubleshoot load-text">
+                    </h6>
+                    <h6 className="mobile-explanation mobile-load-text">
                         Recommended Troubleshooting:
-                    </h5>
-                    <h5 className="load-text">- Refresh the page</h5>
-                    <h5 className="load-text">- Try again later</h5>
-                    <h5 className="load-text">
+                    </h6>
+                    <h6 className="mobile-load-text">- Refresh the page</h6>
+                    <h6 className="mobile-load-text">- Try again later</h6>
+                    <h6 className="mobile-load-text">
                         - Contact our{' '}
                         <a
                             href="https://www.linkedin.com/in/david-roman-%E2%98%85-software-engineer/"
                             target="_blank"
-                            className="support"
+                            className="mobile-support"
                             rel="noreferrer"
                         >
                             support team
-                        </a>{' '}
-                    </h5>
+                        </a>
+                    </h6>
                 </div>
             </div>
         </>

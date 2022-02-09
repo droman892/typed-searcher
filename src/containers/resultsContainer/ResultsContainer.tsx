@@ -27,42 +27,42 @@ export const ResultsContainer = () => {
     const urlParams = new URLSearchParams(queryString)
     const queryMade = urlParams.get('q') || ''
 
-    // useEffect(() => {
-    //     const options = {
-    //         method: 'GET',
-    //         url: `https://google-search3.p.rapidapi.com/api/v1/search/q=${queryMade}&num=10`,
-    //         headers: {
-    //             'x-user-agent': 'desktop',
-    //             'x-proxy-location': 'EU',
-    //             'x-rapidapi-host': 'google-search3.p.rapidapi.com',
-    //             'x-rapidapi-key':
-    //                 '9cdabbc96amsh83dd832ad95c9e2p1f9988jsn41ca0b264b55',
-    //         },
-    //     }
+    useEffect(() => {
+        const options = {
+            method: 'GET',
+            url: `https://google-search3.p.rapidapi.com/api/v1/search/q=${queryMade}&num=10`,
+            headers: {
+                'x-user-agent': 'desktop',
+                'x-proxy-location': 'EU',
+                'x-rapidapi-host': 'google-search3.p.rapidapi.com',
+                'x-rapidapi-key':
+                    '9cdabbc96amsh83dd832ad95c9e2p1f9988jsn41ca0b264b55',
+            },
+        }
 
-    //     axios
-    //         .request(options)
-    //         .then(function (response) {
-    //             // console.log(response.data)
-    //             // console.log(response.data.results)
+        axios
+            .request(options)
+            .then(function (response) {
+                // console.log(response.data)
+                // console.log(response.data.results)
 
-    //             if (response.data !== undefined) {
-    //                 const resultsStatsArray = response.data
-    //                 // console.log(resultsStatsArray)
+                if (response.data !== undefined) {
+                    const resultsStatsArray = response.data
+                    // console.log(resultsStatsArray)
 
-    //                 setStats(resultsStatsArray)
-    //             }
+                    setStats(resultsStatsArray)
+                }
 
-    //             if (response.data.results !== undefined) {
-    //                 const resultsDataArray = response.data.results
-    //                 console.log(resultsDataArray)
-    //                 setResultsResponseData(resultsDataArray)
-    //             }
-    //         })
-    //         .catch(function (error) {
-    //             console.error(error)
-    //         })
-    // }, [queryMade])
+                if (response.data.results !== undefined) {
+                    const resultsDataArray = response.data.results
+                    console.log(resultsDataArray)
+                    setResultsResponseData(resultsDataArray)
+                }
+            })
+            .catch(function (error) {
+                console.error(error)
+            })
+    }, [queryMade])
 
     return (
         <>
@@ -86,7 +86,7 @@ export const ResultsContainer = () => {
                     </div>
                 </div>
             ) : (
-                // <ResultsPreloader />
+                // <ResultsPreloader /> 
                 ''
             )}
 

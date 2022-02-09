@@ -1,98 +1,51 @@
-// @media only screen and (min-width: 519px) {
-//     .mobile-preloader {
-//         display: none !important;
-//     }
-// }
+@media only screen and (min-width: 520px) {
+    .mobile-preloader {
+        display: none !important;
+    }
 
+    .mobile-notice-container {
+        display: none !important;
+    }
+}
 
-// @media only screen and (max-width: 1121px) {
-//     .notice-container {
-//         margin-left: -28px !important;
-//     }
-// }
+.flex {
+    display: flex;
+}
 
-// @media only screen and (min-width: 1121px) and (max-width: 1300px) {
-//     .notice-container {
-//         margin-left: calc(-1 * (100vw - 1065px) / 2) !important;
-//     }
-// }
+.mobile-explanation {
+    padding-top: 10px;
+}
 
+.mobile-load-header {
+    text-align: center;
+}
 
-// @media only screen and (max-width: 1121px) {
-//     .preloader {
-//         margin-left: -28px !important;
-//     }
-// }
+.mobile-notice-container {
+    display: none;
+    justify-content: center;
+    color: black;
+    padding: 10px 30px;
+}
 
-// @media only screen and (min-width: 1121px) and (max-width: 1300px) {
-//     .preloader {
-//         margin-left: calc(-1 * (100vw - 1065px) / 2) !important;
-//     }
-// }
+.mobile-preloader {
+    width: 100vw;
+    justify-content: center;
+    display: flex;
+    top: 15rem;
+    margin-top: 8rem;
+}
 
-// .explanation {
-//     text-align: center;
-//     padding: 0 10px;
-// }
+.mobile-support {
+    display: inline-block;
+    color: black;
+    text-decoration: underline;
+}
 
-// .flex {
-//     display: flex !important;
-// }
+.mobile-support:hover {
+    color: rgba(0, 0, 0, 0.753);
+    background-color: rgba(0,0,0,0);
+}
 
-// h4 {
-//     font-size: 26px;
-// }
-
-// h5 {
-//     text-align: left;
-//     font-size: 20px;
-// }
-
-// .load-text {
-//     color: black;
-// }
-
-// .none {
-//     display: none !important;
-// }
-
-// .notice {
-//     left: 50%;
-//     top: 25rem;
-//     text-align: center;
-//     max-width: 600px;
-//     padding: 0 30px;
-//     padding-top: 3rem;
-// }
-
-// .notice-container {
-//     display: none;
-//     width: 100vw;
-//     justify-content: center;
-//     margin-left: -180px;
-// }
-
-// .preloader {
-//     width: 100vw;
-//     justify-content: center;
-//     display: flex;
-//     margin-left: -180px;
-// }
-
-// .preloader-container-1 {
-//     top: 10rem;
-// }
-
-// .support {
-//     color: black;
-//     text-decoration: underline;
-// }
-
-// .support:hover {
-//     color: rgba(0, 0, 0, 0.808);
-// }
-
-// .troubleshoot {
-//     font-weight: 400;
-//     padding-top: 10px;
-// }
+.none {
+    display: none;
+}
