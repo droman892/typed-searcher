@@ -1,6 +1,6 @@
-@media screen and (max-width: 519px) {
+@media screen and (min-width: 520px) {
     .query-header-1 {
-        padding: 30px 20px 0 20px;
+        padding: 0 !important;
     }
 }
 
@@ -23,6 +23,7 @@
     height: calc(100% - 560px);
     flex-shrink: 0;
     box-sizing: border-box;
+    padding: 30px 20px 0 20px;
 }
 
 .query-header-2 {

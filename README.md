@@ -77,7 +77,7 @@ Please make sure to update tests as appropriate.
 
 ## About
 
-This full-stack search application is maintained by [David Roman](https://www.linkedin.com/in/david-roman-front-end-engineer/).
+This search application is maintained by [David Roman](https://www.linkedin.com/in/david-roman-front-end-engineer/).
 
 ## License
 

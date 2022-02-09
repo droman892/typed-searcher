@@ -49,11 +49,12 @@ div.nav-wrapper {
 }
 
 i.material-icons {
-    height: 100%;
+    height: 100% !important;
     display: flex !important;
     justify-content: center;
     align-items: center;
     color: $apps-icon;
+    line-height: 48px !important;
 }
 
 .line {
@@ -362,6 +363,7 @@ i.material-icons.results-apps-icon {
 
 .nav-container-right-results {
     display: flex;
+    margin-left: 10px;
 }
 
 .nav-gear {
@@ -464,7 +466,7 @@ nav ul li {
 }
 
 .results-nav-item-apps:hover {
-    background-color: $niah-shadow;
+    background-color: rgba(60, 64, 67, 0.08);
 }
 
 .results-nav-item-container {
