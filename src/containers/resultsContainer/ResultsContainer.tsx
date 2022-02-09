@@ -14,8 +14,6 @@ export const ResultsContainer = () => {
 
     const [resultsResponseData, setResultsResponseData] = useState('')
 
-    const [loading, setLoading] = useState(false)
-
     const [stats, setStats] = useState('')
 
     const count = stats.total || '...'
@@ -25,15 +23,9 @@ export const ResultsContainer = () => {
     const resultsTiming = timing.toFixed(2)
 
     const queryString = window.location.search
-    // console.log('QUERY STRING: ' + queryString)
+
     const urlParams = new URLSearchParams(queryString)
     const queryMade = urlParams.get('q') || ''
-
-    // useEffect(() => {
-    //     console.log('DESKTOP USEEFFECT')
-    // },[queryMade])
-
-
 
     // useEffect(() => {
     //     const options = {
@@ -94,7 +86,8 @@ export const ResultsContainer = () => {
                     </div>
                 </div>
             ) : (
-                <ResultsPreloader />
+                // <ResultsPreloader />
+                ''
             )}
 
             {resultsResponseData[0] ? (

@@ -13,6 +13,7 @@ import { ResultsHelperListItems } from '../../keywords/ResultsHelperListItems'
 import { MobileResultsData } from '../../keywords/MobileResultsData'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
+import { MobileResultsPreloader } from '../../preloader/mobileResultsPreloader/MobileResultsPreloader'
 
 export const ResultsNavigation = () => {
     const [stats, setStats] = useState('')
@@ -20,14 +21,9 @@ export const ResultsNavigation = () => {
     const [resultsResponseData, setResultsResponseData] = useState('')
 
     const queryString = window.location.search
-    // console.log('QUERY STRING: ' + queryString)
+
     const urlParams = new URLSearchParams(queryString)
     const queryMade = urlParams.get('q') || ''
-
-
-    // useEffect(() => {
-    //     console.log('MOBILE USEEFFECT')
-    // })
 
     // useEffect(() => {
     //     const options = {
@@ -221,22 +217,12 @@ export const ResultsNavigation = () => {
                         </div>
                     </div>
 
+                    {/* <MobileResultsPreloader /> */}
+
                     <div
                         id="mobile-results-query-data"
                         className="mobile-results-query-data"
                     >
-                        {/* <MobileResultsData
-                            urlPath={resultsResponseData[0].link}
-                            head={resultsResponseData[0].title}
-                            desc={resultsResponseData[0].description}
-                        />
-
-                        <MobileResultsData
-                            urlPath="https://www.searchEngineProjectDR.tech"
-                            head="FIRST Official Search Engine Project (DR) Test Component"
-                            desc="This is simply a description of this component used to test if the actual API information fetched through Axios will be presented how I want it do."
-                        /> */}
-
                         {resultsResponseData[0] ? (
                             <MobileResultsData
                                 urlPath={resultsResponseData[0].link}

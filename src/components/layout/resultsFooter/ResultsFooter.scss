@@ -1,14 +1,28 @@
 @use '../../../styles/colors.scss' as *;
 
-@media only screen and (max-width: 519px) {
+@media only screen and (min-width: 520px) {
     .mobile-results-footer {
-        display: block !important;
+        display: none !important;
     }
 
+    // .results-page-footer {
+    //     display: none !important;
+    // }
+}
+
+@media only screen and (min-width: 520px) {
+
     .results-page-footer {
-        min-width: initial !important;
+        display: block !important;
     }
 }
+
+// @media only screen and (max-width: 519px) {
+
+//     .results-page-footer {
+//         min-width: initial !important;
+//     }
+// }
 
 @media only screen and (max-width: 1121px) {
     .results-footer-span {
@@ -25,8 +39,8 @@
 .mobile-results-footer {
     padding-top: 16px;
     padding-bottom: 28px;
-    display: none;
-
+    display: block;
+    min-width: 350px;
 
     background: #f2f2f2;
     position: absolute;
@@ -84,6 +98,7 @@
     bottom: 0;
     width: 100%;
     min-width: 906px;
+    display: none;
 }
 
 // #root {

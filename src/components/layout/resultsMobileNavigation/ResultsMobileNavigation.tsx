@@ -128,18 +128,16 @@ export const ResultsMobileNavigation = () => {
         // console.log('eureka!!!')
 
         // if (queryValueLength > 0 && queryValue == queryMade) {
-            document
-                .getElementById('mobile-results-form-2')
-                ?.classList.add('mobile-results-form-2-a')
-            document
-                .getElementById('mobile-results-form-3')
-                ?.classList.add('none')
-            document
-                .getElementById('mobile-results-helpers')
-                ?.classList.add('mobile-results-helpers-2')
-            document
-                .getElementById('mobile-results-helpers-data-hidden')
-                ?.classList.add('mobile-results-helpers-data')
+        document
+            .getElementById('mobile-results-form-2')
+            ?.classList.add('mobile-results-form-2-a')
+        document.getElementById('mobile-results-form-3')?.classList.add('none')
+        document
+            .getElementById('mobile-results-helpers')
+            ?.classList.add('mobile-results-helpers-2')
+        document
+            .getElementById('mobile-results-helpers-data-hidden')
+            ?.classList.add('mobile-results-helpers-data')
         // }
     }
 
@@ -276,7 +274,8 @@ export const ResultsMobileNavigation = () => {
                             <ul className="mobile-results-helpers-data-2">
                                 <div className="mobile-results-helpers-data-3">
                                     <ul className="mobile-results-helpers-data-4">
-                                        {responseMRData[0] && queryValueLength > 0 ? (
+                                        {responseMRData[0] &&
+                                        queryValueLength > 0 ? (
                                             <MobileHelperData
                                                 helperValue={
                                                     responseMRData[0] || ''
@@ -286,7 +285,8 @@ export const ResultsMobileNavigation = () => {
                                             ''
                                         )}
 
-                                        {responseMRData[1] && queryValueLength > 0  ? (
+                                        {responseMRData[1] &&
+                                        queryValueLength > 0 ? (
                                             <MobileHelperData
                                                 helperValue={
                                                     responseMRData[1] || ''
@@ -296,7 +296,8 @@ export const ResultsMobileNavigation = () => {
                                             ''
                                         )}
 
-                                        {responseMRData[2] && queryValueLength > 0  ? (
+                                        {responseMRData[2] &&
+                                        queryValueLength > 0 ? (
                                             <MobileHelperData
                                                 helperValue={
                                                     responseMRData[2] || ''
@@ -306,7 +307,8 @@ export const ResultsMobileNavigation = () => {
                                             ''
                                         )}
 
-                                        {responseMRData[3] && queryValueLength > 0  ? (
+                                        {responseMRData[3] &&
+                                        queryValueLength > 0 ? (
                                             <MobileHelperData
                                                 helperValue={
                                                     responseMRData[3] || ''
@@ -316,7 +318,8 @@ export const ResultsMobileNavigation = () => {
                                             ''
                                         )}
 
-                                        {responseMRData[4] && queryValueLength > 0  ? (
+                                        {responseMRData[4] &&
+                                        queryValueLength > 0 ? (
                                             <MobileHelperData
                                                 helperValue={
                                                     responseMRData[4] || ''
@@ -326,7 +329,8 @@ export const ResultsMobileNavigation = () => {
                                             ''
                                         )}
 
-                                        {responseMRData[5] && queryValueLength > 0  ? (
+                                        {responseMRData[5] &&
+                                        queryValueLength > 0 ? (
                                             <MobileHelperData
                                                 helperValue={
                                                     responseMRData[5] || ''
@@ -336,7 +340,8 @@ export const ResultsMobileNavigation = () => {
                                             ''
                                         )}
 
-                                        {responseMRData[6] && queryValueLength > 0  ? (
+                                        {responseMRData[6] &&
+                                        queryValueLength > 0 ? (
                                             <MobileHelperData
                                                 helperValue={
                                                     responseMRData[6] || ''
@@ -346,7 +351,8 @@ export const ResultsMobileNavigation = () => {
                                             ''
                                         )}
 
-                                        {responseMRData[7] && queryValueLength > 0  ? (
+                                        {responseMRData[7] &&
+                                        queryValueLength > 0 ? (
                                             <MobileHelperData
                                                 helperValue={
                                                     responseMRData[7] || ''
@@ -356,7 +362,8 @@ export const ResultsMobileNavigation = () => {
                                             ''
                                         )}
 
-                                        {responseMRData[8] && queryValueLength > 0  ? (
+                                        {responseMRData[8] &&
+                                        queryValueLength > 0 ? (
                                             <MobileHelperData
                                                 helperValue={
                                                     responseMRData[8] || ''
@@ -366,7 +373,8 @@ export const ResultsMobileNavigation = () => {
                                             ''
                                         )}
 
-                                        {responseMRData[9] && queryValueLength > 0  ? (
+                                        {responseMRData[9] &&
+                                        queryValueLength > 0 ? (
                                             <MobileHelperData
                                                 helperValue={
                                                     responseMRData[9] || ''

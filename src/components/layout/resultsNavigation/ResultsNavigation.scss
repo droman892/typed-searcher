@@ -1,10 +1,40 @@
 @use '../../../styles/colors.scss' as *;
 
+// @media only screen and (max-width: 520px) {
+//     .nav-container-results {
+//         display: none !important;
+//     }
+
+// }
+
+
 @media only screen and (min-width: 520px) {
     .mobile-results-query-data {
         display: none;
     }
+
+    .results-nav2-container-1 {
+        display: block !important;
+    }
+
+    .mobile-results-items-container {
+        display: none !important;
+    }
+
+        .nav-container-results {
+        display: flex !important;
+    }
 }
+
+
+
+
+.results-nav2-container-1 {
+    display: none;
+}
+
+
+
 
 // Code below is native to Materialize; classes are shared with LayoutNavigation.scss
 
@@ -112,10 +142,10 @@ ul.sidenav {
 
 // ---------------------------- Code below is specific to the ResultsNavigation.tsx component
 
-@media only screen and (max-width: 519px) {
-    .nav-container-results {
-        display: none !important;
-    }
+@media only screen and (max-width: 520px) {
+    // .nav-container-results {
+    //     display: none !important;
+    // }
 
     .results-container-image {
         max-height: 40px !important;
@@ -324,9 +354,10 @@ i.material-icons.results-apps-icon {
     background-color: $mobile-tools;
 }
 .nav-container-results {
-    display: flex;
+    display: none;
     justify-content: space-between;
     max-height: 46px;
+    
 }
 
 .nav-container-right-results {
@@ -466,6 +497,7 @@ nav ul li {
     margin: 6px 0 4px;
     height: 65px;
     z-index: 999;
+    min-width: 350px;
 }
 
 .settings-icon {

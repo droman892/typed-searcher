@@ -1,8 +1,8 @@
-import './ResultsPreloader.scss'
-import '../../styles/_index.scss'
+import './MobileResultsPreloader.scss'
+import '../../../styles/_index.scss'
 import { Preloader } from 'react-materialize'
 
-export const ResultsPreloader = () => {
+export const MobileResultsPreloader = () => {
     const sorryNotice = () => {
         document.getElementById('preloader')?.classList.add('none')
         document.getElementById('notice-container')?.classList.add('flex')
@@ -12,13 +12,13 @@ export const ResultsPreloader = () => {
 
     return (
         <>
-            <div id="preloader" className="preloader">
+            <div id="mobile-preloader" className="mobile-preloader">
                 <Preloader
                     active
                     color="green"
                     flashing={false}
                     size="big"
-                    className="preloader-container-1"
+                    className="mobile-preloader-container-1"
                 />
             </div>
 
