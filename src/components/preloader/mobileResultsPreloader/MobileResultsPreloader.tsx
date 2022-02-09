@@ -4,10 +4,12 @@ import { Preloader } from 'react-materialize'
 
 export const MobileResultsPreloader = () => {
     const mobileSorryNotice = () => {
-        document.getElementById('mobile-preloader')?.classList.add('none')
+        document
+            .getElementById('mobile-preloader')
+            ?.classList.add('mobile-none')
         document
             .getElementById('mobile-notice-container')
-            ?.classList.add('flex')
+            ?.classList.add('mobile-flex')
     }
 
     setTimeout(mobileSorryNotice, 8000)

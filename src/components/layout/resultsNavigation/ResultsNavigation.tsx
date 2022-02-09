@@ -217,21 +217,28 @@ export const ResultsNavigation = () => {
                         </div>
                     </div>
 
-                    <MobileResultsPreloader />
-
                     <div
                         id="mobile-results-query-data"
                         className="mobile-results-query-data"
                     >
-                        {resultsResponseData[0] ? (
+                        {/* <h1>MOBILE DATA</h1>
+                        <h1>MOBILE DATA</h1>
+                        <h1>MOBILE DATA</h1>
+                        <h1>MOBILE DATA</h1>
+                        <h1>MOBILE DATA</h1>
+                        <h1>MOBILE DATA</h1>
+                        <h1>MOBILE DATA</h1>
+                        <h1>MOBILE DATA</h1> */}
+
+                        {/* {resultsResponseData[0] ? (
                             <MobileResultsData
                                 urlPath={resultsResponseData[0].link}
                                 head={resultsResponseData[0].title}
                                 desc={resultsResponseData[0].description}
                             />
                         ) : (
-                            ''
-                        )}
+                            <MobileResultsPreloader />
+                        )} */}
 
                         {resultsResponseData[1] ? (
                             <MobileResultsData

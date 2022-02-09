@@ -8,8 +8,8 @@
     }
 }
 
-.flex {
-    display: flex;
+.mobile-flex {
+    display: flex !important;
 }
 
 .mobile-explanation {
@@ -24,7 +24,9 @@
     display: none;
     justify-content: center;
     color: black;
-    padding: 10px 30px;
+    padding: 10px 20px;
+    background-color: white;
+    min-width: 312px;
 }
 
 .mobile-preloader {
@@ -33,6 +35,7 @@
     display: flex;
     top: 15rem;
     margin-top: 8rem;
+    background-color: white;
 }
 
 .mobile-support {
@@ -46,6 +49,6 @@
     background-color: rgba(0,0,0,0);
 }
 
-.none {
+.mobile-none {
     display: none;
 }
