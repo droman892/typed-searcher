@@ -313,7 +313,7 @@ export const ResultsContainer = (props) => {
                 ''
             )} */}
 
-            {resultsResponseData.length > 3 ? (
+            {props.resultsLength > 3 ? (
                 <div className="google-table">
                     <table className="table">
                         <tbody>

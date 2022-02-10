@@ -6,9 +6,13 @@ import { MobileResultsData } from '../components/keywords/MobileResultsData'
 import { MobileResultsPreloader } from '../components/preloader/mobileResultsPreloader/MobileResultsPreloader'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
+import { v4 as uuidv4 } from 'uuid';
 
 export const Results = () => {
-    const [resultsResponseData, setResultsResponseData] = useState('')
+    const [resultsResponseData, setResultsResponseData] = useState([])
+
+    // const [elmo, setElmo] = useState([9, 4, 3])
+    // console.log(elmo)
 
     const [pageFreshness, setPageFreshness] = useState(false)
 
@@ -118,7 +122,34 @@ export const Results = () => {
                     </div>
                 </div>
                 <div className="results-mobile-container">
-                    <>
+                    <div className="mobile-res-container">
+                        {resultsResponseData.map((result) => (
+                            <MobileResultsData
+                                key={uuidv4()}
+                                urlPath={result.link}
+                                head={result.title}
+                                desc={result.description}
+                            />
+                        ))}
+                    </div>
+
+                    {resultsResponseData.length == 0 ? (
+                        <MobileResultsPreloader />
+                    ) : (
+                        ''
+                    )}
+
+
+                    {/* <h1>MORNING</h1>
+                    <h1>MORNING</h1>
+                    <h1>MORNING</h1>
+                    <h1>MORNING</h1>
+                    <h1>MORNING</h1>
+                    <h1>MORNING</h1>
+                    <h1>MORNING</h1>
+                    <h1>MORNING</h1> */}
+
+                    {/* <>
                         {resultsResponseData[0] ? (
                             <MobileResultsData
                                 urlPath={resultsResponseData[0].link}
@@ -218,7 +249,7 @@ export const Results = () => {
                         ) : (
                             ''
                         )}
-                    </>
+                    </> */}
                 </div>
             </main>
         </DefaultResultsLayout>
