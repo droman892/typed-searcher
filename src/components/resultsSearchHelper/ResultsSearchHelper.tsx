@@ -12,7 +12,7 @@ export const ResultsSearchHelper = () => {
     useEffect(() => {
         const itemsList = document.getElementById('items-list')
         const itemsListCount = itemsList?.childElementCount || 0
-        console.log('ITEMS LIST COUNT: ' + itemsListCount)
+        // console.log('ITEMS LIST COUNT: ' + itemsListCount)
     })
 
     return (

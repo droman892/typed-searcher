@@ -67,7 +67,130 @@ export const ResultsContainer = (props) => {
 
     return (
         <>
-            {resultsResponseData.length > 1 ? (
+            {props.resultsLength > 1 ? (
+                <div className="stats-bar">
+                    <div>
+                        <div className="stats-relative-0">
+                            <div className="stats-relative-1">
+                                <div className="stats-relative-2">
+                                    <div className="stats-relative-3">
+                                        About <span id="results-total" />
+                                        {props.resultsCount} results&nbsp;
+                                        <span>
+                                            (<span id="results-ts"></span>
+                                            {props.resultsTiming} seconds)
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            ) : (
+                <ResultsPreloader />
+            )}
+
+            {props.res0 ? (
+                <ResultsHelperListItems
+                    urlPath={props.link0}
+                    head={props.title0}
+                    desc={props.desc0}
+                />
+            ) : (
+                ''
+            )}
+
+            {props.res1 ? (
+                <ResultsHelperListItems
+                    urlPath={props.link1}
+                    head={props.title1}
+                    desc={props.desc1}
+                />
+            ) : (
+                ''
+            )}
+
+            {props.res2 ? (
+                <ResultsHelperListItems
+                    urlPath={props.link2}
+                    head={props.title2}
+                    desc={props.desc2}
+                />
+            ) : (
+                ''
+            )}
+
+            {props.res3 ? (
+                <ResultsHelperListItems
+                    urlPath={props.link3}
+                    head={props.title3}
+                    desc={props.desc3}
+                />
+            ) : (
+                ''
+            )}
+
+            {props.res4 ? (
+                <ResultsHelperListItems
+                    urlPath={props.link4}
+                    head={props.title4}
+                    desc={props.desc4}
+                />
+            ) : (
+                ''
+            )}
+
+            {props.res5 ? (
+                <ResultsHelperListItems
+                    urlPath={props.link5}
+                    head={props.title5}
+                    desc={props.desc5}
+                />
+            ) : (
+                ''
+            )}
+
+            {props.res6 ? (
+                <ResultsHelperListItems
+                    urlPath={props.link6}
+                    head={props.title6}
+                    desc={props.desc6}
+                />
+            ) : (
+                ''
+            )}
+
+            {props.res7 ? (
+                <ResultsHelperListItems
+                    urlPath={props.link7}
+                    head={props.title7}
+                    desc={props.desc7}
+                />
+            ) : (
+                ''
+            )}
+
+            {props.res8 ? (
+                <ResultsHelperListItems
+                    urlPath={props.link8}
+                    head={props.title8}
+                    desc={props.desc8}
+                />
+            ) : (
+                ''
+            )}
+
+            {props.res9 ? (
+                <ResultsHelperListItems
+                    urlPath={props.link9}
+                    head={props.title9}
+                    desc={props.desc9}
+                />
+            ) : (
+                ''
+            )}
+
+            {/* {resultsResponseData.length > 1 ? (
                 <div className="stats-bar">
                     <div>
                         <div className="stats-relative-0">
@@ -108,9 +231,9 @@ export const ResultsContainer = (props) => {
                 />
             ) : (
                 ''
-            )}
+            )} */}
 
-            {resultsResponseData[2] ? (
+            {/* {resultsResponseData[2] ? (
                 <ResultsHelperListItems
                     urlPath={resultsResponseData[2].link}
                     head={resultsResponseData[2].title}
@@ -188,7 +311,7 @@ export const ResultsContainer = (props) => {
                 />
             ) : (
                 ''
-            )}
+            )} */}
 
             {resultsResponseData.length > 3 ? (
                 <div className="google-table">
