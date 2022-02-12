@@ -4,14 +4,9 @@ import { useSelector } from 'react-redux'
 import { HelperItem } from './HelperItem'
 import { State } from '../../state/index'
 
-
-
 export const HelperListItems = () => {
     const queryValue = useSelector((state: State) => state.searchQuery)
     const [responseData, setResponseData] = useState('')
-
-    // export const firstItem = responseData[0]
-    // console.log('FIRST ITEM: ' + firstItem)
 
     useEffect(() => {
         const options = {
@@ -29,7 +24,6 @@ export const HelperListItems = () => {
         axios
             .request(options)
             .then(function (response) {
-                // console.log(response.data.googleGuggestedKeywords)
                 if (response.data.googleGuggestedKeywords !== undefined) {
                     const keywordArray = response.data.googleGuggestedKeywords
                     setResponseData(keywordArray)

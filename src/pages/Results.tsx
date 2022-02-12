@@ -6,7 +6,7 @@ import { MobileResultsData } from '../components/keywords/MobileResultsData'
 import { MobileResultsPreloader } from '../components/preloader/mobileResultsPreloader/MobileResultsPreloader'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from 'uuid'
 
 export const Results = () => {
     const [resultsResponseData, setResultsResponseData] = useState([])
@@ -21,6 +21,8 @@ export const Results = () => {
     const urlParams = new URLSearchParams(queryString)
     const queryMade = urlParams.get('q') || ''
 
+    console.log(queryMade)
+
     const [stats, setStats] = useState('')
 
     const count = stats.total || '...'
@@ -28,6 +30,30 @@ export const Results = () => {
 
     const timing = stats.ts || 0
     const resultsTiming = timing.toFixed(2)
+
+    // const [currentURL, setCurrentURL] = useState(queryMade)
+    // console.log('CURRENT URL: ' + currentURL)
+
+    // const handleURL = () => {
+    //     console.log('URL CHANGED')
+    //     setCurrentURL(queryMade)
+    // }
+
+    // useEffect(() => {
+    //     console.log('success')
+    //     window.addEventListener('url', handleURL)
+
+    //     return () => {
+    //         console.log('okerrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr')
+    //     }
+
+    // }, [handleURL, queryMade])
+
+    // useEffect(() => {
+    //     return history.listen((window.location) => {
+    //         console.log(`You changed the page to: ${location.pathname}`)
+    //     })
+    // }, [history])
 
     // useEffect(() => {
     //     const options = {
@@ -73,6 +99,8 @@ export const Results = () => {
             <main className="results-page-container-1">
                 <div className="results-page-container-2">
                     <div className="results-page-container-3">
+                        <h1>DAVID ROMAN</h1>
+                        {/* {currentURL} */}
                         <ResultsContainer
                             resultsData="GREAT"
                             resultsLength={resultsResponseData.length || 0}
@@ -138,7 +166,6 @@ export const Results = () => {
                     ) : (
                         ''
                     )}
-
 
                     {/* <h1>MORNING</h1>
                     <h1>MORNING</h1>

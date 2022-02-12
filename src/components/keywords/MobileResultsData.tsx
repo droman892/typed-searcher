@@ -1,4 +1,16 @@
-export const MobileResultsData = (props) => {
+import { ReactChild, ReactFragment, ReactPortal } from 'react'
+
+export const MobileResultsData = (props: {
+    urlPath:
+        | boolean
+        | ReactChild
+        | ReactFragment
+        | ReactPortal
+        | null
+        | undefined
+    head: boolean | ReactChild | ReactFragment | ReactPortal | null | undefined
+    desc: boolean | ReactChild | ReactFragment | ReactPortal | null | undefined
+}) => {
     // console.log(props)
     return (
         <div id="mobile-axios-data-1" className="mobile-axios-data-1">

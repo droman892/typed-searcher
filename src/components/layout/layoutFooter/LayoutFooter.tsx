@@ -27,8 +27,6 @@ export const LayoutFooter = () => {
                         </span>
                     </span>
 
-                    {/* this span below originally had hide-on-med-and-down */}
-
                     <span className="center-footer-container hide-on-small-only">
                         <a href="/#" className="footer-link">
                             <img

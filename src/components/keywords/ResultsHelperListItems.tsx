@@ -1,5 +1,10 @@
-export const ResultsHelperListItems = (props) => {
-    // console.log(props)
+import { ReactChild, ReactFragment, ReactPortal } from 'react'
+
+export const ResultsHelperListItems = (props: {
+    urlPath: {} | null | undefined
+    head: boolean | ReactChild | ReactFragment | ReactPortal | null | undefined
+    desc: boolean | ReactChild | ReactFragment | ReactPortal | null | undefined
+}) => {
     return (
         <div id="axios-data-1">
             <div id="axios-data-2">
