@@ -7,6 +7,7 @@ import { actionCreators } from '../state/index'
 import { DefaultHomeLayout } from '../components/layout/DefaultHomeLayout'
 import '../styles/styles.scss'
 import { DefaultResultsLayout } from '../components/layout/DefaultResultsLayout'
+import { NotFoundMessage } from '../components/notFoundMessage/NotFoundMessage'
 
 export const NotFound = () => {
     const dispatch = useDispatch()
@@ -22,13 +23,7 @@ export const NotFound = () => {
             <main className="results-page-container-1">
                 <div className="results-page-container-2">
                     <div className="results-page-container-3">
-                        <div className="not-found-container">
-                            <div className="not-found-container-2">
-                                <h4>oooooo</h4>
-                            </div>
-                        </div>
-
-                        
+                        <NotFoundMessage />
                     </div>
                 </div>
             </main>
