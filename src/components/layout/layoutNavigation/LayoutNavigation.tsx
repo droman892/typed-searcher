@@ -10,7 +10,6 @@ export const LayoutNavigation = () => {
             <div className="section">
                 <Navbar
                     id="mobile-nav"
-                    // extendWith={<MobileNav />}
                     menuIcon={<Icon>menu</Icon>}
                     options={{
                         draggable: true,

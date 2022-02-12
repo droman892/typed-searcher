@@ -4,14 +4,12 @@ import theX from '../../../assets/images/theX.png'
 import { TextInput } from 'react-materialize'
 import { useDispatch, useSelector } from 'react-redux'
 import { actionCreators, State } from '../../../state'
-import { createQuery } from '../../../state/actionCreators'
 import { bindActionCreators } from 'redux'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { DoNothing } from '../../../functions/DoNothing'
 import { MobileResultsHelpers } from '../../mobileResultsHelpers/MobileResultsHelpers'
 import { MobileHelperData } from '../../mobileHelperData/MobileHelperData'
 import { useEffect, useState } from 'react'
-import { ResultsHelperListItems } from '../../keywords/ResultsHelperListItems'
 import axios from 'axios'
 
 export const ResultsMobileNavigation = () => {
@@ -25,8 +23,6 @@ export const ResultsMobileNavigation = () => {
     const queryString = window.location.search
     const urlParams = new URLSearchParams(queryString)
     const queryMade = urlParams.get('q') || ''
-    // console.log('MOBILE - ' + queryMade)
-    const navigate = useNavigate()
     const [responseMRData, setMRResponseData] = useState('')
 
     useEffect(() => {
@@ -58,76 +54,9 @@ export const ResultsMobileNavigation = () => {
 
     const InputMobileChange = (e: { target: { value: string } }) => {
         createQuery(e.target.value)
-        // console.log('Mobile - input change')
     }
-
-    const ClickMobileResultTrends = () => {
-        if (queryValueLength > 0) {
-            console.log(queryValueLength)
-            console.log(
-                'MOBILE-ResultTrends - the results searcher has been clicked!'
-            )
-            document
-                .getElementById('mobile-results-form-3')
-                ?.classList.add('mobile-results-form-3-1')
-            // document
-            //     .getElementById('results-helper-container-1')
-            //     ?.classList.add('results-helper-container-2')
-        } else {
-            console.log('input has NO value!')
-            // document
-            //     .getElementById('results-query-container-1')
-            //     ?.classList.remove('results-query-container-9')
-            // document
-            //     .getElementById('results-helper-container-1')
-            //     ?.classList.remove('results-helper-container-2')
-        }
-    }
-
-    const DeleteMobileResultsQuery = () => {
-        createQuery('')
-        document.getElementById('query')?.focus()
-        console.log('DeleteMobileResultsQuery wrote this')
-    }
-
-    const MobileResultsPressEnter = () => {
-        if (queryValueLength > 0) {
-            console.log('Mobile Results form submitted!')
-            navigate('/search?q=' + queryValue)
-        }
-    }
-
-    const SetMobileResultsURLPath = () => {
-        const inputValue = document.getElementById('query')
-        document.title = `${queryValue} - Google`
-        inputValue?.blur()
-        console.log('SetMobileResultsURLPath wrote this')
-    }
-
-    // const DisplayMobileResultTrends = () => {
-    //     const unfocusedInput = document.getElementById('query')
-
-    //     // && unfocusedInput === document.activeElement
-
-    //     if (queryValueLength > 0) {
-    //         console.log('SOMETHING')
-    //         document
-    //             .getElementById('mobile-results-form-3')
-    //             ?.classList.add('mobile-results-form-3-1')
-    //     } else {
-    //         console.log('NOTHING')
-    //         document
-    //             .getElementById('mobile-results-form-3')
-    //             ?.classList.remove('mobile-results-form-3-1')
-    //     }
-    // }
-    // DisplayMobileResultTrends()
 
     const MobileResultsHelpersView = () => {
-        // const target = document.getElementById('mobile-query')
-        // console.log('eureka!!!')
-
-        // if (queryValueLength > 0 && queryValue == queryMade) {
         document
             .getElementById('mobile-results-form-2')
             ?.classList.add('mobile-results-form-2-a')
@@ -138,7 +67,6 @@ export const ResultsMobileNavigation = () => {
         document
             .getElementById('mobile-results-helpers-data-hidden')
             ?.classList.add('mobile-results-helpers-data')
-        // }
     }
 
     const xHelperView = () => {
@@ -148,11 +76,6 @@ export const ResultsMobileNavigation = () => {
         resultsInput?.focus()
     }
 
-    const whatever = (e) => {
-        e.preventDefault()
-        console.log('DAVID ROMAN!!!!!')
-    }
-
     useEffect(() => {
         const resultsInput = document.getElementById('mobile-query')
         resultsInput?.blur()
@@ -160,11 +83,7 @@ export const ResultsMobileNavigation = () => {
     }, [queryMade])
 
     return (
-        <form
-            className="mobile-results-form"
-            // onSubmit={MobileResultsPressEnter}
-            onSubmit={whatever}
-        >
+        <form className="mobile-results-form">
             <div>
                 <div
                     className="mobile-results-form-2"
@@ -196,7 +115,6 @@ export const ResultsMobileNavigation = () => {
                                         pathname: '/search',
                                         search: '?q=' + queryPath,
                                     }}
-                                    // onClick={SetMobileResultsURLPath}
                                     className="mobile-results-glass"
                                     onClick={MobileResultsHelpersView}
                                 >
@@ -243,7 +161,6 @@ export const ResultsMobileNavigation = () => {
                                 ) : (
                                     <div
                                         className="mobile-results-x-2"
-                                        // onClick={DeleteMobileResultsQuery}
                                         onClick={xHelperView}
                                         aria-hidden
                                     >

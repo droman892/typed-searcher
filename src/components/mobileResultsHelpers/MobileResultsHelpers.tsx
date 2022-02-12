@@ -3,7 +3,6 @@ import './MobileResultsHelpers.scss'
 import arrow from '../../assets/images/arrow.png'
 import { useDispatch, useSelector } from 'react-redux'
 import { actionCreators, State } from '../../state'
-import { createQuery } from '../../state/actionCreators'
 import theX from '../../assets/images/theX.png'
 import { bindActionCreators } from 'redux'
 import { useEffect } from 'react'
@@ -15,14 +14,11 @@ export const MobileResultsHelpers = () => {
     const { createQuery } = bindActionCreators(actionCreators, dispatch)
 
     const queryString = window.location.search
-    // console.log('QUERY STRING: ' + queryString)
     const urlParams = new URLSearchParams(queryString)
     const queryMade = urlParams.get('q') || ''
-    // console.log('YUPPPP: ' + queryMade)
 
     const InputResultsMobileChange = (e: { target: { value: string } }) => {
         createQuery(e.target.value)
-        // console.log('Mobile - input change')
     }
 
     const RemoveDisplay = (e) => {
@@ -57,12 +53,6 @@ export const MobileResultsHelpers = () => {
             .getElementById('mobile-results-helpers-data-hidden')
             ?.classList.remove('mobile-results-helpers-data')
     }, [queryMade])
-
-    const DeleteMRQuery = () => {
-        createQuery('')
-        document.getElementById('mrh')?.focus()
-        console.log('DeleteMRQuery wrote this')
-    }
 
     const DeleteMobileResultsQuery = () => {
         createQuery('')
@@ -125,18 +115,6 @@ export const MobileResultsHelpers = () => {
                     </div>
                 )}
             </>
-
-            {/* <div className="mobile-results-helpers-data">
-                <ul className="mobile-results-helpers-data-2">
-                    <div className="mobile-results-helpers-data-3">
-                        <ul className="mobile-results-helpers-data-4">
-                            <li className="mobile-results-helpers-data-5">
-                                <div className="mobile-results-helpers-data-glass"></div>
-                            </li>
-                        </ul>
-                    </div>
-                </ul>
-            </div> */}
         </>
     )
 }

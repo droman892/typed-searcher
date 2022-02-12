@@ -11,10 +11,6 @@ export const Home = () => {
     const dispatch = useDispatch()
     const { createQuery } = bindActionCreators(actionCreators, dispatch)
 
-    // useEffect(() => {
-    //     console.log('ok now!')
-    // })
-
     useEffect(() => {
         document.title = 'Google'
         createQuery('')

@@ -3,9 +3,6 @@
 // Code below is native to Materialize; classes are shared with ResultsNavigation.scss
 
 @media only screen and (max-width: 519px) {
-    // .mobile-header {
-    //     display: flex;
-    // }
 
     .nav-container-left {
         display: none !important;
@@ -164,27 +161,12 @@ ul.sidenav {
 }
 
 @media only screen and (max-width: 519px) {
-    // a.sidenav-trigger {
-    //     padding: 12px 16px !important;
-    // }
-
-    // .header-home {
-    //     height: 48px !important;
-    //     width: 100%;
-    //     padding: 0px !important;
-    //     box-sizing: content-box !important;
-    // }
 
     i {
         width: 24px;
         height: 24px !important;
     }
 
-    // .sidenav-trigger {
-    //     height: 27px !important;
-    //     margin: 0 !important;
-    //     display: block;
-    // }
 }
 
 .all {

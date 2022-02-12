@@ -9,11 +9,10 @@ import microphone from '../../assets/images/microphone.png'
 import { useSelector, useDispatch } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { actionCreators, State } from '../../state/index'
-import { Link, useNavigate } from 'react-router-dom'
-import { DisplayTrends } from '../../functions/DisplayTrends'
+import { Link } from 'react-router-dom'
 import { ResultsSearchHelper } from '../resultsSearchHelper/ResultsSearchHelper'
 import { DoNothing } from '../../functions/DoNothing'
-import { useEffect, useRef, useState } from 'react'
+import { useEffect } from 'react'
 
 export const ResultsSearcher = () => {
     const queryValue = useSelector((state: State) => state.searchQuery)
@@ -23,16 +22,9 @@ export const ResultsSearcher = () => {
     const dispatch = useDispatch()
     const { createQuery } = bindActionCreators(actionCreators, dispatch)
     const queryString = window.location.search
-    // console.log('QUERY STRING: ' + queryString)
+
     const urlParams = new URLSearchParams(queryString)
     const queryMade = urlParams.get('q') || ''
-    // console.log('QUERY VALUE: ' + queryValue)
-    const queryTest = queryValue || queryMade
-    // console.log('QUERY TEST: ' + queryTest)
-    // console.log('QUERY MADE: ' + queryMade)
-    const navigate = useNavigate()
-
-    const [inputQueryValue, setInputQueryValue] = useState(queryValue)
 
     useEffect(() => {
         const resultsInput = document.getElementById('query')
@@ -48,13 +40,11 @@ export const ResultsSearcher = () => {
 
     const ResultsTitleChange = () => {
         document.title = `${queryMade} - Google`
-        // createQuery(queryMade)
     }
     ResultsTitleChange()
 
     const ChangeResultsHelperContainer = () => {
         document.addEventListener('click', (e) => {
-            // console.log('ChangeResultsHelperContainer - something was clicked!')
             const inputResultsContainer = document.getElementById(
                 'results-query-container-1'
             )
@@ -85,28 +75,14 @@ export const ResultsSearcher = () => {
     const DeleteQuery = () => {
         createQuery('')
         document.getElementById('query')?.focus()
-        // console.log('DeleteQuery wrote this')
-    }
-
-    const SetURLPath = () => {
-        const inputValue = document.getElementById('query')
-        document.title = `${queryValue} - Google`
-        inputValue?.blur()
-        // console.log('SetURLPath wrote this')
     }
 
     const InputChange = (e: { target: { value: string } }) => {
-        // console.log('RESULTS DESKTOP INPUT CHANGE')
-        // console.log(e.target.value)
         createQuery(e.target.value)
     }
 
     const ClickResultTrends = () => {
         if (queryValueLength > 0) {
-            // console.log(
-            //     'ClickResultTrends - the results searcher has been clicked!'
-            // )
-            // console.log('queryValueLength')
             document
                 .getElementById('results-query-container-1')
                 ?.classList.add('results-query-container-9')
@@ -145,44 +121,6 @@ export const ResultsSearcher = () => {
     }
     DisplayResultTrends()
 
-    // const ResultsPressEnter = (e: { preventDefault: () => void }) => {
-    //     e.preventDefault()
-    //     console.info('ZONIKS')
-    //     // if (queryValueLength > 0) {
-    //     //     // console.log('Results form submitted!')
-    //     //     navigate('/search?q=' + queryValue)
-    //     //     // document.getElementById('query')?.blur()
-    //     //     console.info('INTERESTING')
-    //     //     document
-    //     //         .getElementById('results-query-container-1')
-    //     //         ?.classList.remove('results-query-container-9')
-    //     //     document
-    //     //         .getElementById('results-helper-container-1')
-    //     //         ?.classList.remove('results-helper-container-2')
-    //     // }
-
-    // }
-
-    function handleSubmit(e: { preventDefault: () => void }) {
-        e.preventDefault()
-        console.log('OMGGGGGGGGGG')
-    }
-
-    const DeleteSavedQuery = () => {
-        console.log('DeleteSavedQuery')
-        const inputQuery = document.getElementById('query')
-        // inputQuery?.value == 'Winner'
-        // inputQuery?.focus()
-        inputQuery?.setAttribute('value', 'awesome!')
-    }
-
-    const ResultsPressEnter = () => {
-        if (queryValueLength > 0) {
-            console.log('Results form submitted!')
-            navigate('/search?q=' + queryValue)
-        }
-    }
-
     return (
         <form className="results-form-container-1">
             <div id="container">
@@ -218,11 +156,7 @@ export const ResultsSearcher = () => {
                                 <>
                                     {queryValueLength === 0 ? (
                                         <div className="results-x-microphone">
-                                            <div
-                                                className="results-x"
-                                                // onClick={DeleteSavedQuery}
-                                                // aria-hidden
-                                            >
+                                            <div className="results-x">
                                                 <span className="results-x-2">
                                                     <img
                                                         src={theX}

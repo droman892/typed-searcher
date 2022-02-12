@@ -1,3 +1,5 @@
+@use '../../../styles/colors.scss' as *;
+
 @media only screen and (min-width: 520px) {
     .mobile-preloader {
         display: none !important;
@@ -23,9 +25,9 @@
 .mobile-notice-container {
     display: none;
     justify-content: center;
-    color: black;
+    color: $black;
     padding: 10px 20px;
-    background-color: white;
+    background-color: $white;
     min-width: 312px;
 }
 
@@ -35,18 +37,18 @@
     display: flex;
     top: 15rem;
     margin-top: 13rem;
-    background-color: white;
+    background-color: $white;
 }
 
 .mobile-support {
     display: inline-block;
-    color: black;
+    color: $black;
     text-decoration: underline;
 }
 
 .mobile-support:hover {
-    color: rgba(0, 0, 0, 0.753);
-    background-color: rgba(0,0,0,0);
+    color: $mobile-results;
+    background-color: $clear;
 }
 
 .mobile-none {

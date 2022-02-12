@@ -1,23 +1,14 @@
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { bindActionCreators } from 'redux'
-import { actionCreators, State } from '../../state'
-import { createQuery } from '../../state/actionCreators'
+import { actionCreators } from '../../state'
 import './MobileHelperData.scss'
 
 export const MobileHelperData = (props) => {
-    // console.log(props)
-    // const queryValue = useSelector((state: State) => state.searchQuery)
-    // let queryPath = queryValue
-    // queryPath = queryPath.replace(/\s+/g, '+')
-
-    // console.log(props.helperValue)
-
     const dispatch = useDispatch()
     const { createQuery } = bindActionCreators(actionCreators, dispatch)
 
     let helperLink = props.helperValue
-    // console.log(props.helperValue)
     helperLink = helperLink.replace(/\s+/g, '+')
 
     const SetState = () => {

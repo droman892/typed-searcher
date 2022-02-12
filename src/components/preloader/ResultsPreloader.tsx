@@ -24,7 +24,9 @@ export const ResultsPreloader = () => {
 
             <div className="notice-container" id="notice-container">
                 <div className="notice">
-                    <h4 className="load-text">Oops! - 500: Internal Server Error</h4>
+                    <h4 className="load-text">
+                        Oops! - 500: Internal Server Error
+                    </h4>
                     <h5 className="explanation load-text">
                         Looks like something happened with the server...
                     </h5>

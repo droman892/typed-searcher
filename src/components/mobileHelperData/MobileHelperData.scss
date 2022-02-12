@@ -1,36 +1,4 @@
-// .mobile-results-helpers-data {
-//     border: none;
-//     margin: 0 6px 0 10px;
-//     border-top: 1px solid #dadce0;
-//     background: #fff;
-//     position: relative;
-//     text-align: left;
-//     border-radius: 0;
-//     z-index: 989;
-//     overflow-x: hidden;
-//     cursor: default;
-//     -webkit-user-select: none;
-// }
-
-// .mobile-results-helpers-data-2 {
-//     box-shadow: none;
-//     list-style-type: none !important;
-//     padding: 0;
-//     margin: 0;
-// }
-
-// .mobile-results-helpers-data-3 {
-//     padding: 0;
-//     margin: 0;
-// }
-
-// .mobile-results-helpers-data-4 {
-//     display: flex;
-//     flex-direction: column;
-//     min-width: 0;
-//     padding: 0;
-//     margin: 0;
-// }
+@use '../../styles/colors.scss' as *;
 
 .mobile-results-helpers-data-5 {
     padding: 0 0 0 5px;
@@ -65,7 +33,7 @@
 .mobile-results-helpers-data-input-2 {
     display: flex;
     font-size: 16px;
-    color: rgba(0,0,0,.87);
+    color: $mobile-results;
     line-height: 22px;
     flex: 1;
     align-items: center;
@@ -75,7 +43,7 @@
 .mobile-results-helpers-data-input-3 {
     flex: 1;
     font-weight: normal;
-    color: #202124;
+    color: $dark;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
