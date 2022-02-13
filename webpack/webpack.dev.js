@@ -1,5 +1,6 @@
 const webpack = require('webpack')
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
+const Dotenv = require('dotenv-webpack')
 
 module.exports = {
     mode: 'development',
@@ -12,8 +13,9 @@ module.exports = {
     devtool: 'cheap-module-source-map',
     plugins: [
         new webpack.DefinePlugin({
-            'process.env.name': JSON.stringify('David'),
+            'process.env.name': JSON.stringify(process.env),
         }),
         new ReactRefreshWebpackPlugin(),
+        new Dotenv(),
     ],
 }
