@@ -1,7 +1,7 @@
 {
   "name": "typed-searcher",
   "short_name": "typed-searcher",
-  "description": "Project with React, Node, Webpack, Babel, SASS/SCSS, and TypeScript.",
+  "description": "Project with React, Node, Webpack, Babel, Axios, SASS/SCSS, and TypeScript.",
   "dir": "auto",
   "lang": "en-US",
   "display": "standalone",
