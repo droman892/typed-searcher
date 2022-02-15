@@ -8,6 +8,8 @@ export const HelperListItems = () => {
     const queryValue = useSelector((state: State) => state.searchQuery)
     const [responseData, setResponseData] = useState('')
 
+    const keywordAPIKey = process.env.REACT_APP_API_KEY
+
     useEffect(() => {
         const options = {
             method: 'GET',
@@ -16,8 +18,7 @@ export const HelperListItems = () => {
             headers: {
                 'content-type': 'application/json',
                 'x-rapidapi-host': 'keywords4.p.rapidapi.com',
-                'x-rapidapi-key':
-                    '9cdabbc96amsh83dd832ad95c9e2p1f9988jsn41ca0b264b55',
+                'x-rapidapi-key': keywordAPIKey,
             },
         }
 

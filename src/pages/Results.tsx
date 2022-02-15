@@ -33,6 +33,8 @@ export const Results = () => {
     const timing = stats.ts || 0
     const resultsTiming = timing.toFixed(2)
 
+    const keywordAPIKey = process.env.REACT_APP_API_KEY
+
     // const [currentURL, setCurrentURL] = useState(queryMade)
     // console.log('CURRENT URL: ' + currentURL)
 
