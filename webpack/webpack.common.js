@@ -34,9 +34,10 @@ module.exports = {
         ],
     },
     output: {
-        path: path.resolve(__dirname, '..', './build'),
+        // path: path.resolve(__dirname, '..', './build'),
+        path: '/',
         filename: 'bundle.js',
-        publicPath: '/typed-searcher/',
+        publicPath: '/',
         // Use the path below (instead of /) for when deploying to GitHub Pages; have Bundle Analyzer commented out
         // publicPath: '/typed-searcher/',
     },
