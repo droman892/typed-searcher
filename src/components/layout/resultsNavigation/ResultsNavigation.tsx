@@ -9,58 +9,11 @@ import GoogleLogo from '../../../assets/images/GoogleLogo.svg'
 import userProfile from '../../../assets/images/userProfile.png'
 import { ResultsMobileNavigation } from '../resultsMobileNavigation/ResultsMobileNavigation'
 import { Link } from 'react-router-dom'
-import { ResultsHelperListItems } from '../../keywords/ResultsHelperListItems'
 import { MobileResultsData } from '../../keywords/MobileResultsData'
-import { useEffect, useState } from 'react'
-import axios from 'axios'
-import { MobileResultsPreloader } from '../../preloader/mobileResultsPreloader/MobileResultsPreloader'
+import { useState } from 'react'
 
 export const ResultsNavigation = () => {
-    const [stats, setStats] = useState('')
-
     const [resultsResponseData, setResultsResponseData] = useState('')
-
-    const queryString = window.location.search
-
-    const urlParams = new URLSearchParams(queryString)
-    const queryMade = urlParams.get('q') || ''
-
-    // useEffect(() => {
-    //     const options = {
-    //         method: 'GET',
-    //         url: `https://google-search3.p.rapidapi.com/api/v1/search/q=${queryMade}&num=10`,
-    //         headers: {
-    //             'x-user-agent': 'desktop',
-    //             'x-proxy-location': 'EU',
-    //             'x-rapidapi-host': 'google-search3.p.rapidapi.com',
-    //             'x-rapidapi-key':
-    //                 '9cdabbc96amsh83dd832ad95c9e2p1f9988jsn41ca0b264b55',
-    //         },
-    //     }
-
-    //     axios
-    //         .request(options)
-    //         .then(function (response) {
-    //             // console.log(response.data)
-    //             // console.log(response.data.results)
-
-    //             if (response.data !== undefined) {
-    //                 const resultsStatsArray = response.data
-    //                 // console.log(resultsStatsArray)
-
-    //                 setStats(resultsStatsArray)
-    //             }
-
-    //             if (response.data.results !== undefined) {
-    //                 const resultsDataArray = response.data.results
-    //                 console.log(resultsDataArray)
-    //                 setResultsResponseData(resultsDataArray)
-    //             }
-    //         })
-    //         .catch(function (error) {
-    //             console.error(error)
-    //         })
-    // }, [queryMade])
 
     return (
         <header>
@@ -221,25 +174,6 @@ export const ResultsNavigation = () => {
                         id="mobile-results-query-data"
                         className="mobile-results-query-data"
                     >
-                        {/* <h1>MOBILE DATA</h1>
-                        <h1>MOBILE DATA</h1>
-                        <h1>MOBILE DATA</h1>
-                        <h1>MOBILE DATA</h1>
-                        <h1>MOBILE DATA</h1>
-                        <h1>MOBILE DATA</h1>
-                        <h1>MOBILE DATA</h1>
-                        <h1>MOBILE DATA</h1> */}
-
-                        {/* {resultsResponseData[0] ? (
-                            <MobileResultsData
-                                urlPath={resultsResponseData[0].link}
-                                head={resultsResponseData[0].title}
-                                desc={resultsResponseData[0].description}
-                            />
-                        ) : (
-                            <MobileResultsPreloader />
-                        )} */}
-
                         {resultsResponseData[1] ? (
                             <MobileResultsData
                                 urlPath={resultsResponseData[1].link}

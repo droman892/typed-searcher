@@ -8,22 +8,14 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { v4 as uuidv4 } from 'uuid'
 
-
-import { useParams } from "react-router-dom";
-
-import { useNavigate } from "react-router-dom";
+import { useParams } from 'react-router-dom'
 
 export const Results = () => {
-
     const params = useParams()
 
-  console.log(params)
-
-    const navigate = useNavigate()
+    console.log(params)
 
     const [resultsResponseData, setResultsResponseData] = useState([])
-
-    const [pageFreshness, setPageFreshness] = useState(false)
 
     const queryString = window.location.search
 
@@ -39,14 +31,6 @@ export const Results = () => {
     const resultsTiming = timing.toFixed(2)
 
     const keywordAPIKey = process.env.REACT_APP_API_KEY
-
-    useEffect(() => {
-        console.log(queryMade)
-    })
-
-    console.log(queryMade)
-
-    const [testCount, setTestCount] = useState(0)
 
     useEffect(() => {
         const options = {
@@ -155,117 +139,6 @@ export const Results = () => {
                     ) : (
                         ''
                     )}
-
-                    {/* <h1>MORNING</h1>
-                    <h1>MORNING</h1>
-                    <h1>MORNING</h1>
-                    <h1>MORNING</h1>
-                    <h1>MORNING</h1>
-                    <h1>MORNING</h1>
-                    <h1>MORNING</h1>
-                    <h1>MORNING</h1> */}
-
-                    {/* <>
-                        {resultsResponseData[0] ? (
-                            <MobileResultsData
-                                urlPath={resultsResponseData[0].link}
-                                head={resultsResponseData[0].title}
-                                desc={resultsResponseData[0].description}
-                            />
-                        ) : (
-                            <MobileResultsPreloader />
-                        )}
-
-                        {resultsResponseData[1] ? (
-                            <MobileResultsData
-                                urlPath={resultsResponseData[1].link}
-                                head={resultsResponseData[1].title}
-                                desc={resultsResponseData[1].description}
-                            />
-                        ) : (
-                            ''
-                        )}
-
-                        {resultsResponseData[2] ? (
-                            <MobileResultsData
-                                urlPath={resultsResponseData[2].link}
-                                head={resultsResponseData[2].title}
-                                desc={resultsResponseData[2].description}
-                            />
-                        ) : (
-                            ''
-                        )}
-
-                        {resultsResponseData[3] ? (
-                            <MobileResultsData
-                                urlPath={resultsResponseData[3].link}
-                                head={resultsResponseData[3].title}
-                                desc={resultsResponseData[3].description}
-                            />
-                        ) : (
-                            ''
-                        )}
-
-                        {resultsResponseData[4] ? (
-                            <MobileResultsData
-                                urlPath={resultsResponseData[4].link}
-                                head={resultsResponseData[4].title}
-                                desc={resultsResponseData[4].description}
-                            />
-                        ) : (
-                            ''
-                        )}
-
-                        {resultsResponseData[5] ? (
-                            <MobileResultsData
-                                urlPath={resultsResponseData[5].link}
-                                head={resultsResponseData[5].title}
-                                desc={resultsResponseData[5].description}
-                            />
-                        ) : (
-                            ''
-                        )}
-
-                        {resultsResponseData[6] ? (
-                            <MobileResultsData
-                                urlPath={resultsResponseData[6].link}
-                                head={resultsResponseData[6].title}
-                                desc={resultsResponseData[6].description}
-                            />
-                        ) : (
-                            ''
-                        )}
-
-                        {resultsResponseData[7] ? (
-                            <MobileResultsData
-                                urlPath={resultsResponseData[7].link}
-                                head={resultsResponseData[7].title}
-                                desc={resultsResponseData[7].description}
-                            />
-                        ) : (
-                            ''
-                        )}
-
-                        {resultsResponseData[8] ? (
-                            <MobileResultsData
-                                urlPath={resultsResponseData[8].link}
-                                head={resultsResponseData[8].title}
-                                desc={resultsResponseData[8].description}
-                            />
-                        ) : (
-                            ''
-                        )}
-
-                        {resultsResponseData[9] ? (
-                            <MobileResultsData
-                                urlPath={resultsResponseData[9].link}
-                                head={resultsResponseData[9].title}
-                                desc={resultsResponseData[9].description}
-                            />
-                        ) : (
-                            ''
-                        )}
-                    </> */}
                 </div>
             </main>
         </DefaultResultsLayout>

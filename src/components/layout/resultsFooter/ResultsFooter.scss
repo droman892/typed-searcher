@@ -58,6 +58,10 @@
     color: $results-footer;
 }
 
+.results-footer:hover {
+    color: $button-text;
+}
+
 .results-footer-link {
     padding-left: 27px !important;
     margin: 0 !important;

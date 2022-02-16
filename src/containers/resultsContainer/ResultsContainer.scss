@@ -142,14 +142,17 @@
 
 .google-blue {
     color: $google-blue;
+    cursor: pointer;
 }
 
 .google-green {
     color: $google-green;
+    cursor: pointer;
 }
 
 .google-red {
     color: $google-red;
+    cursor: pointer;
 }
 
 .google-table {
@@ -213,4 +216,5 @@
 .unbold-blue {
     font-weight: normal;
     color: $all-border;
+    cursor: pointer;
 }
