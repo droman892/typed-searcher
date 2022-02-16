@@ -8,14 +8,6 @@ import { DefaultHomeLayout } from '../components/layout/DefaultHomeLayout'
 import '../styles/styles.scss'
 
 export const Home = () => {
-
-    // console.log(process.env.NODE_ENV)
-
-    // console.log(process.env.NODE_ENV)
-
-    //  console.log(process.env.REACT_APP_KEYWORDS)
-    //  console.log(process.env.REACT_APP_NOT_SECRET_CODE)
-
     const dispatch = useDispatch()
     const { createQuery } = bindActionCreators(actionCreators, dispatch)
 

@@ -8,13 +8,20 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { v4 as uuidv4 } from 'uuid'
 
+
+import { useParams } from "react-router-dom";
+
+import { useNavigate } from "react-router-dom";
+
 export const Results = () => {
 
+    const params = useParams()
+
+  console.log(params)
+
+    const navigate = useNavigate()
 
     const [resultsResponseData, setResultsResponseData] = useState([])
-
-    // const [elmo, setElmo] = useState([9, 4, 3])
-    // console.log(elmo)
 
     const [pageFreshness, setPageFreshness] = useState(false)
 
@@ -22,8 +29,6 @@ export const Results = () => {
 
     const urlParams = new URLSearchParams(queryString)
     const queryMade = urlParams.get('q') || ''
-
-    console.log(queryMade)
 
     const [stats, setStats] = useState('')
 
@@ -35,78 +40,58 @@ export const Results = () => {
 
     const keywordAPIKey = process.env.REACT_APP_API_KEY
 
-    // const [currentURL, setCurrentURL] = useState(queryMade)
-    // console.log('CURRENT URL: ' + currentURL)
+    useEffect(() => {
+        console.log(queryMade)
+    })
 
-    // const handleURL = () => {
-    //     console.log('URL CHANGED')
-    //     setCurrentURL(queryMade)
-    // }
+    console.log(queryMade)
 
-    // useEffect(() => {
-    //     console.log('success')
-    //     window.addEventListener('url', handleURL)
+    const [testCount, setTestCount] = useState(0)
 
-    //     return () => {
-    //         console.log('okerrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr')
-    //     }
+    useEffect(() => {
+        const options = {
+            method: 'GET',
+            url: `https://google-search3.p.rapidapi.com/api/v1/search/q=${queryMade}&num=10`,
+            headers: {
+                'x-user-agent': 'desktop',
+                'x-proxy-location': 'EU',
+                'x-rapidapi-host': 'google-search3.p.rapidapi.com',
+                'x-rapidapi-key': keywordAPIKey,
+            },
+        }
 
-    // }, [handleURL, queryMade])
+        axios
+            .request(options)
+            .then(function (response) {
+                // console.log(response.data)
+                // console.log(response.data.results)
 
-    // useEffect(() => {
-    //     return history.listen((window.location) => {
-    //         console.log(`You changed the page to: ${location.pathname}`)
-    //     })
-    // }, [history])
+                if (response.data !== undefined) {
+                    const resultsStatsArray = response.data
+                    // console.log(resultsStatsArray)
 
-    // useEffect(() => {
-    //     const options = {
-    //         method: 'GET',
-    //         url: `https://google-search3.p.rapidapi.com/api/v1/search/q=${queryMade}&num=10`,
-    //         headers: {
-    //             'x-user-agent': 'desktop',
-    //             'x-proxy-location': 'EU',
-    //             'x-rapidapi-host': 'google-search3.p.rapidapi.com',
-    //             'x-rapidapi-key':
-    //                 '9cdabbc96amsh83dd832ad95c9e2p1f9988jsn41ca0b264b55',
-    //         },
-    //     }
+                    setStats(resultsStatsArray)
+                }
 
-    //     axios
-    //         .request(options)
-    //         .then(function (response) {
-    //             // console.log(response.data)
-    //             // console.log(response.data.results)
+                if (response.data.results !== undefined) {
+                    const resultsDataArray = response.data.results
+                    console.log(resultsDataArray)
+                    setResultsResponseData(resultsDataArray)
+                }
 
-    //             if (response.data !== undefined) {
-    //                 const resultsStatsArray = response.data
-    //                 // console.log(resultsStatsArray)
-
-    //                 setStats(resultsStatsArray)
-    //             }
-
-    //             if (response.data.results !== undefined) {
-    //                 const resultsDataArray = response.data.results
-    //                 console.log(resultsDataArray)
-    //                 setResultsResponseData(resultsDataArray)
-    //             }
-
-    //             console.log('QUERY MADE')
-    //         })
-    //         .catch(function (error) {
-    //             console.error(error)
-    //         })
-    // }, [queryMade])
+                console.log('QUERY MADE')
+            })
+            .catch(function (error) {
+                console.error(error)
+            })
+    }, [queryMade])
 
     return (
         <DefaultResultsLayout>
             <main className="results-page-container-1">
                 <div className="results-page-container-2">
                     <div className="results-page-container-3">
-                        <h1>DAVID ROMAN</h1>
-                        {/* {currentURL} */}
                         <ResultsContainer
-                            resultsData="GREAT"
                             resultsLength={resultsResponseData.length || 0}
                             resultsCount={resultsCount}
                             resultsTiming={resultsTiming}

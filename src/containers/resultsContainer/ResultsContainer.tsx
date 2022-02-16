@@ -9,7 +9,7 @@ import { ResultsDataContainer } from '../resultsDataContainer/ResultsDataContain
 import { ResultsHelperListItems } from '../../components/keywords/ResultsHelperListItems'
 
 export const ResultsContainer = (props) => {
-    console.log(props)
+    // console.log(props)
     let searchQuery: string = useSelector((state) => state.searchQuery)
     searchQuery = searchQuery.replace(/\s+/g, '+')
 

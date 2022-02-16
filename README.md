@@ -1,4 +1,8 @@
-![Typed Searcher]()
+![Typed Searcher](https://user-images.githubusercontent.com/25372739/154176338-2539e28f-810b-49fe-a847-334d5fdd6aff.png)
+
+![Typed Searcher - Mobile](https://user-images.githubusercontent.com/25372739/154176541-b52f0392-71f9-4069-856b-d1b7fb3f83d4.png)
+
+
 
 <p align="center"> This is a Google look-alike application featuring both of Google's own keywords and search API. </p>  
 
