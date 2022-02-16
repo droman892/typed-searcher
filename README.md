@@ -38,7 +38,7 @@ Dropdown on click: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css
 
 ## Preview
 
-![Typed Searcher - GIF]()
+![Typed Searcher - GIF](https://user-images.githubusercontent.com/25372739/154178397-9b825b63-6849-4088-ae39-d68f1076dbe5.gif)
 
 [Live Preview]()
 
