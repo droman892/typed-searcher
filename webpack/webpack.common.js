@@ -3,6 +3,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
+const webpack = require('webpack')
+const dotenv = require('dotenv')
+
+dotenv.config()
+
 module.exports = {
     entry: path.resolve(__dirname, '..', './src/index.tsx'),
     resolve: {
@@ -34,10 +39,9 @@ module.exports = {
         ],
     },
     output: {
-        // path: path.resolve(__dirname, '..', './build'),
-        path: '/',
+        path: path.resolve(__dirname, '..', './build'),
         filename: 'bundle.js',
-        publicPath: '/',
+        publicPath: '/typed-searcher/',
         // Use the path below (instead of /) for when deploying to GitHub Pages; have Bundle Analyzer commented out
         // publicPath: '/typed-searcher/',
     },
@@ -56,6 +60,9 @@ module.exports = {
         }),
         new FaviconsWebpackPlugin({
             logo: '../typed-searcher/src/assets/images/logo.png',
+        }),
+        new webpack.ProvidePlugin({
+            process: 'process/browser',
         }),
     ],
 }
