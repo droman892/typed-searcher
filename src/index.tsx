@@ -6,7 +6,7 @@ import { store } from './state/index'
 
 ReactDOM.render(
     <Provider store={store}>
-        <BrowserRouter basename="/typed-searcher">
+        <BrowserRouter>
             <App />
         </BrowserRouter>
     </Provider>,
