@@ -8,6 +8,8 @@ const dotenv = require('dotenv')
 
 dotenv.config()
 
+const Dotenv = require('dotenv-webpack')
+
 module.exports = {
     entry: path.resolve(__dirname, '..', './src/index.tsx'),
     resolve: {
@@ -64,5 +66,6 @@ module.exports = {
         new webpack.ProvidePlugin({
             process: 'process/browser',
         }),
+        new Dotenv(),
     ],
 }
