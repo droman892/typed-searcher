@@ -8,13 +8,7 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { v4 as uuidv4 } from 'uuid'
 
-import { useParams } from 'react-router-dom'
-
 export const Results = () => {
-    const params = useParams()
-
-    console.log(params)
-
     const [resultsResponseData, setResultsResponseData] = useState([])
 
     const queryString = window.location.search
@@ -59,11 +53,9 @@ export const Results = () => {
 
                 if (response.data.results !== undefined) {
                     const resultsDataArray = response.data.results
-                    console.log(resultsDataArray)
+                    // console.log(resultsDataArray)
                     setResultsResponseData(resultsDataArray)
                 }
-
-                console.log('QUERY MADE')
             })
             .catch(function (error) {
                 console.error(error)

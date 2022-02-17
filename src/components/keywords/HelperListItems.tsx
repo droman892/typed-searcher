@@ -8,9 +8,6 @@ export const HelperListItems = () => {
     const queryValue = useSelector((state: State) => state.searchQuery)
     const [responseData, setResponseData] = useState('')
 
-    console.log(process.env.REACT_APP_API_KEY || 123)
-    console.log(process.env.API_KEY || 456)
-
     const keywordAPIKey = process.env.REACT_APP_API_KEY
 
     useEffect(() => {

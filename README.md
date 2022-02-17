@@ -32,7 +32,7 @@
 
 ![Typed Searcher - GIF](https://user-images.githubusercontent.com/25372739/154178397-9b825b63-6849-4088-ae39-d68f1076dbe5.gif)
 
-[Live Preview]()
+[Live Preview](http://david-roman.tech/typed-searcher/)
 
 ## Business Use Case
 
@@ -51,7 +51,7 @@
 - Clone the repo: `git clone https://github.com/droman892/typed-searcher.git` 
 ## Usage
 
-After the project files are downloaded, in the terminal, in the root folder, run `npm run install` to install the dependencies.  Then, run `npm run start` to start the application [on `localhost:8000`].  
+After the project files are downloaded, in the terminal, in the root folder, run `npm run install` to install the dependencies.  Then, run `npm run start` to start the application on `localhost:8000`.  
 
 ## Roadmap
 
